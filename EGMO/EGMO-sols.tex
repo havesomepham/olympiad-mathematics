@@ -105,11 +105,69 @@ This follows similarily for $II_B$ and $II_C.$ Now we know that $AI_A, BI_B, CI_
 
 Hence, we are done. \end{proof}
 
-  \textbf{Problem 2.26 (USAMO 1990/5)}.   An acute-angled triangle $ABC$ is given in the plane. The circle with diameter $\overline{AB}$ intersects altitude $\overline{CC'}$ and its extension at points $M$ and $N$, and the circle with diameter $\overline{AC}$ intersects altitude $\overline{BB}$ and its extensions at $P$ and $Q$. Prove that the points $M, N, P , Q$ lie on a common circle.
+  \textbf{Problem 2.26 (USAMO 1990/5)}.   An acute-angled triangle $ABC$ is given in the plane. The circle with diameter $\overline{AB}$ intersects altitude $\overline{CC'}$ and its extension at points $M$ and $N$, and the circle with diameter $\overline{AC}$ intersects altitude $\overline{BB'}$ and its extensions at $P$ and $Q$. Prove that the points $M, N, P , Q$ lie on a common circle.
 
   \begin{proof}  Let the circle with diameter $\overline{AB}$ be called $\omega_1$ and the circle with diameter $\overline{AC}$ be called $\omega_2.$  By Theorem 2.9, it suffices to show that the intersection of $\overline{MN}$ and $\overline{PQ}$ lies on the radical axis of $\omega_1$ and $\omega_2.$ Since $\overline{MN}$ and $\overline{PQ}$ are altitudes of $\triangle ABC,$ their intersection is the orthocenter of $\triangle ABC.$ We will call this point $H.$ Note that $\overline{AH}$ is the third altitude of $\triangle ABC.$ Call the foot of this altitude $A'.$ Now note that $\angle AA'B = \angle AA'C = 90\degree,$ and since $\overline{AB}$ and $\overline{AC}$ are diameters of their respective circles, $\omega_1$ and $\omega_2$ must intersect at $A'.$ Hence, $\overline{AA'}$ is the radical axis of $\omega_1$ and $\omega_2,$ and since $A,A',H$ are colinear, $H$ lies on this line. \end{proof}
 
-  
+  \begin{figure}[h]
+    \centering
+    \begin{asy}
+      import graph;
+import olympiad;
+import cse5;
+defaultpen(fontsize(10pt));
+usepackage("amsmath");
+usepackage("amssymb");
+settings.tex="latex";
+settings.outformat="pdf";
+size(9cm);
+
+pair A = dir(120);
+pair B = dir(210);
+pair C = dir(330);
+pair Cprime = foot(C,A,B);
+pair Bprime = foot(B,A,C);
+path AB = A--B;
+path AC = A--C;
+path cAB = Circle(midpoint(AB),distance(midpoint      (AB),A));
+path cAC = Circle(midpoint(AC),distance(midpoint      (AC),A));
+draw(A--B--C--cycle);
+draw(cAB);
+draw(cAC);
+path CCprime =  L(C, Cprime);
+path BBprime =  L(B, Bprime);
+pair []  m = IPs(CCprime, cAB);
+pair []  p = IPs(cAC, BBprime);
+pair M = m[1];
+pair N = m[0];
+pair P = p[0];
+pair Q = p[1];
+draw(M--C);
+draw(P--B);
+draw(circumcircle(M,N,P), dashed);
+
+pair [] H = IPs(CCprime, BBprime);
+pair H = H[0];
+pair Aprime = foot(A,B,C);
+draw(A--Aprime);
+draw(rightanglemark(B, Cprime, C, 3));
+draw(rightanglemark(B, Bprime, A, 3));
+draw(rightanglemark(A, Aprime, C, 3));
+
+dot("$A$", A, 1.5dir(90));
+dot("$B$", B, dir(B));
+dot("$C$", C, dir(C));
+dot("$A'$", Aprime, 1.5dir(-100));
+dot("$B'$", Bprime, 2dir(0));
+dot("$C'$", Cprime, dir(30));
+dot("$H$", H, 2dir(20));
+dot("$M$", M, dir(M));
+dot("$N$", N, dir(-90));
+dot("$P$", P, dir(P));
+dot("$Q$", Q, 2dir(-100));
+    \end{asy}
+    \caption{Problem 2.26}
+  \end{figure}
 
   \textbf{Problem 2.27 (BAMO 2012/4)}.   Given a segment $\overline{AB}$ in the plane, choose on it a point $M$ different from $A$ and $B$. Two equilateral triangles $AMC$ and $BMD$ in the plane are constructed on the same side of segment $\overline{AB}.$ The circumcircles of the two triangles intersect in point $M$ and another point $N.$
 
