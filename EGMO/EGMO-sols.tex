@@ -38,6 +38,7 @@
 \providecommand{\hrulebar}{\par
 \hspace{\fill}\rule{0.95\linewidth}{.7pt}\hspace{\fill}
 \par\nointerlineskip \vspace{\baselineskip}}
+\setlength{\parindent}{0pt}
 
 \begin{document}
 \title{Euclidean Geometry in Mathematical Olympiads Solutions}
@@ -191,7 +192,7 @@ We will now prove (b) using radical axes. First, construct an equilateral triang
 
   
 
-  Problem 2.29 (IMO 2008/1)\textbf{}.   Let $H$ be the orthocenter of an acute-angled triangle $ABC.$ The circle $\Gamma_A$ centered at the midpoint of $\overline{BC}$ and passing through $H$ intersects the sideline $BC$ at points $A_1$ and $A_2.$ Similarly, define the points $B_1, B_2, C_1,$ and $C_2.$ Prove that six points $A_1, A_2, B_1, B_2, C_1,$ and $C_2$ are concyclic.
+  \textbf{Problem 2.29 (IMO 2008/1)}.   Let $H$ be the orthocenter of an acute-angled triangle $ABC.$ The circle $\Gamma_A$ centered at the midpoint of $\overline{BC}$ and passing through $H$ intersects the sideline $BC$ at points $A_1$ and $A_2.$ Similarly, define the points $B_1, B_2, C_1,$ and $C_2.$ Prove that six points $A_1, A_2, B_1, B_2, C_1,$ and $C_2$ are concyclic.
 
   \begin{proof}  We will first show that $B_1, B_2, C_1, C_2$ are concyclic. Since $\Gamma_A,\Gamma_B, \Gamma_C$ all intersect at $H$, $H$ is the radical center. We claim that $\overline{AH}$ is the radical axis of $\Gamma_B$ and $\Gamma_C.$ By similar triangles, $M_BM_C$ is parallel to $BC,$ and since $\overline{AH} \perp BC,$ $\overline{AH} \perp M_BM_C.$ The centers of circles $\Gamma_B$ and $\Gamma_C$ are $M_B$ and $M_C,$ respectively, thus $\overline{AH}$ is the radical axis of circles $\Gamma_B$ and $\Gamma_C.$ Since $\overline{B_1B_2}$ and $\overline{C_1C_2}$ intersect at $A,$ by Theorem 2.9 we have shown that $B_1, B_2,C_1,C_2$ are concyclic. Note that the circumcenter of $(B_1B_2C_1C_2)$ is the intersection of the perpendicular bisectors of $B_1B_2$ and $C_1C_2,$ which is the orthocenter $O$ of triangle $ABC.$ Thus what we have proven is that $OB_1 = OB_2 = OC_1 = OC_2.$ A similar argument can be persued for $OA_1$ and $OA_2,$ hence we are done. \end{proof}
 
@@ -436,6 +437,36 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \textbf{Problem 3.21 (USAMO 2003/4)}. Let $ABC$ be a triangle. A circle passing through $A$ and $B$ intersects segments $AC$ and $BC$ at $D$ and $E$, respectively. Lines $AB$ and $DE$ intersect at $F$, while lines $BD$ and $CF$ intersect at $M$. Prove that $MF = MC$ if and only if $MB \cdot MD = MC^2$.
 
 \begin{proof}
-  
+  By assuming $MB\cdot  MD = MC^2,$ we have that $\frac{MB}{MC} = \frac{MC}{MD},$ and since $\angle BMC = \angle CMD,$ this implies that $\triangle BMC \sim \triangle CMD$. Since $ABDE$ is a cyclic quadrilateral, $\angle DAE = \angle DBE.$ Now we have that
+  $$\angle CAE = \angle DAE = \angle DBE = \angle MBC = \angle MCD = \angle FCA,$$
+  hence $\ol{AE} \parallel \ol{CF}.$ Therefore $\triangle ABE \sim \triangle FBC$ and $\frac{FB}{AB} = \frac{CB}{EB}.$ Then 
+  \begin{align*}
+    \frac{FB}{AB} &= \frac{CB}{EB} \\
+    \frac{FA + AB}{AB} &= \frac{CE + EB}{EB} \\
+    1 + \frac{FA}{AB} &= 1 + \frac{CE}{EB} \\
+    \frac{FA}{AB}&=\frac{CE}{EB}.
+  \end{align*}
+  By Ceva's on $\triangle BCF$, we have that
+  $$\frac{FA}{AB}\cdot\frac{BE}{EC}\cdot\frac{CM}{MF} = 1.$$
+  Since $\frac{FA}{AB}=\frac{CE}{EB},$ we have that $MF = MC.$ \\
+
+  We will now go in the reverse direction. We assume $MF = MC.$ By Ceva's on $\triangle BCF,$ 
+  $$\frac{FA}{AB}\cdot\frac{BE}{EC}\cdot\frac{CM}{MF} = 1.$$
+  and since $MF = MC,$ we have that $\frac{FA}{AB}\cdot\frac{BE}{EC} = 1.$ It follows that
+  \begin{align*}
+    \frac{FA}{AB} &= \frac{CE}{EB} \\
+    1 + \frac{FA}{AB} &= 1 + \frac{CE}{EB}\\
+    \frac{AB}{AB} + \frac{FA}{AB} &= \frac{EB}{EB} + \frac{CE}{EB} \\
+    \frac{FB}{AB} &= \frac{CB}{EB}. 
+  \end{align*}
+  Thus $\triangle ABE \sim \triangle FBC.$ This implies that $\ol{AE} \parallel \ol{CF}.$  Since $ABDE$ is a cylic quadrilateral, we have that $\angle FCA = \angle DAE = \angle DBE,$ and since $\angle BMC = \angle CMD,$ we have that $\triangle BMC \sim \triangle CMD$ by $AA\sim.$ Thus $\frac{MB}{MC} = \frac{MC}{MD} \rightarrow MB\cdot MD = MC^2,$ as desired. 
+\end{proof}
+
+\textbf{Theorem 3.22 (Monge’s Theorem)}. Consider disjoint circles $\omega_1, \omega_2, \omega_3$ in the plane, no two congruent. For each pair of circles, we construct the intersection of their common external tangents. Prove that these three intersections are collinear. 
+
+\begin{proof}
+  Let the points $O_1,O_2,O_3,$ be the centers of $\omega_1, \omega_2, \omega_3$, respectively.
+  Let the external tangents of $\omega_1$ and $\omega_2$ meet at $X,$ and define $Y$ and $Z$ analogously. Note that $X,Y,Z$ are each on an extension of a side of $\triangle O_1O_2O_3.$ Let $T_1$ and $T_2$ be points of tangency of $\omega_1$ and $\omega_2$, respectively, where $T_1$ and $T_2$ are on the same side of line $XO_1O_2.$ Note that it is impossible for $X$ to be between $O_1$ and $O_2,$ since $X$ is the intersection of external tangents. Since tangents are always perpendicular to their circles, we have that $\triangle T_1O_1X \sim \triangle T_2O_2X$ by $AA\sim,$ thus with directed lengths we have $\frac{O_1X}{XO_2} = -\frac{r_1}{r_2},$ where $r_1$ and $r_2$ are the radii of $\omega_1$ and $\omega_2.$ Similar arguments can be applied to the other two pairs of circles to give $\frac{O_2Y}{YO_3} = -\frac{r_2}{r_3}$ and $\frac{O_3Z}{ZO_1} = -\frac{r_3}{r_1}.$ Thus
+  $$\frac{O_1X}{XO_2}\cdot\frac{O_2Y}{YO_3}\cdot\frac{O_3Z}{ZO_1} = \left(-\frac{r_1}{r_2}\right)\left(-\frac{r_2}{r_3}\right)\left(-\frac{r_3}{r_1}\right) = -1.$$ By Menelaus's Theorem, this proves that $X,Y,Z$ are collinear. 
 \end{proof}
 \end{document}
