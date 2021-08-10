@@ -46,7 +46,10 @@
 \maketitle
 
 \chapter{}
-PAGE PURPOSEFULLY LEFT BLANK
+\textbf{Problem 1.51 (IMO 1985/1)}. A circle has center on the side $\ol{AB}$ of the cyclic quadrilateral $ABCD$. The other three sides are tangent to the circle. Prove that $AD + BC = AB$.
+\begin{proof}
+  Call the center of the circle point $O.$ Let the point $T$ be where the circumcircle of $CDO$ intersects $\ol{AB}.$ By arc measures
+\end{proof}
 \chapter{}
 \textbf{Lemma 2.19}. Prove that the A-exradius has length
 $$r_a = \frac{s}{s-a}r,$$
@@ -469,4 +472,78 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   Let the external tangents of $\omega_1$ and $\omega_2$ meet at $X,$ and define $Y$ and $Z$ analogously. Note that $X,Y,Z$ are each on an extension of a side of $\triangle O_1O_2O_3.$ Let $T_1$ and $T_2$ be points of tangency of $\omega_1$ and $\omega_2$, respectively, where $T_1$ and $T_2$ are on the same side of line $XO_1O_2.$ Note that it is impossible for $X$ to be between $O_1$ and $O_2,$ since $X$ is the intersection of external tangents. Since tangents are always perpendicular to their circles, we have that $\triangle T_1O_1X \sim \triangle T_2O_2X$ by $AA\sim,$ thus with directed lengths we have $\frac{O_1X}{XO_2} = -\frac{r_1}{r_2},$ where $r_1$ and $r_2$ are the radii of $\omega_1$ and $\omega_2.$ Similar arguments can be applied to the other two pairs of circles to give $\frac{O_2Y}{YO_3} = -\frac{r_2}{r_3}$ and $\frac{O_3Z}{ZO_1} = -\frac{r_3}{r_1}.$ Thus
   $$\frac{O_1X}{XO_2}\cdot\frac{O_2Y}{YO_3}\cdot\frac{O_3Z}{ZO_1} = \left(-\frac{r_1}{r_2}\right)\left(-\frac{r_2}{r_3}\right)\left(-\frac{r_3}{r_1}\right) = -1.$$ By Menelaus's Theorem, this proves that $X,Y,Z$ are collinear. 
 \end{proof}
+
+\textbf{Theorem 3.23 (Cevian Nest)}. Let $\ol{AX},\ol{BY},\ol{CZ}$ be concurrent cevians of $ABC$. Let $\ol{XD}, \ol{YE},\ol{ZF}$ be concurrent cevians in triangle $XYZ$. Prove that rays $AD,BE,CF$ concur. 
+
+\begin{proof}
+  By the Ratio Lemma on $\triangle ZAY,$ we have that
+  $$\frac{\sin\angle BAD}{\sin \angle CAD} = \frac{\sin\angle ZAD}{\sin \angle YAD} = \frac{AY}{YC}\cdot\frac{ZD}{DY}.$$
+  Similarly, for $\triangle XBZ$ and $\triangle YCX$ we have that
+  $$\frac{\sin\angle CBE}{\sin \angle ABE} = \frac{BZ}{XB}\cdot\frac{XE}{EZ}$$ and $$\frac{\sin\angle ACF}{\sin \angle BCF} = \frac{CX}{YC}\cdot\frac{YF}{FX}.$$
+  Multiplying these three equations together gives us
+  \begin{align*}
+  \frac{\sin\angle BAD}{\sin \angle CAD}\cdot\frac{\sin\angle CBE}{\sin \angle ABE}\cdot\frac{\sin\angle ACF}{\sin \angle BCF} &= \left(\frac{AY}{YC}\cdot\frac{CX}{XB}\cdot\frac{BZ}{ZA}\right)\cdot\left(\frac{ZD}{DY}\cdot\frac{YF}{FX}\cdot\frac{XE}{EZ}\right)\\
+  &= 1\cdot1 \\
+  &= 1.
+\end{align*}
+  Note that each of the factors in parentheses on the RHS of the first equation are equal to 1 by Ceva's on $\triangle ABC$ and $\triangle XYZ,$ respectively. By the trigonometric form of Ceva's, this implies rays $AD,BE,CF$ concur.
+\end{proof}
+
+\textbf{Problem 3.24}. Let $ABC$ be an acute triangle and suppose $X$ is a point on $(ABC)$ with $\ol{AX} \parallel \ol{BC}$ and $X \neq A$. Denote by $G$ the centroid of triangle $ABC$, and by $K$ the foot of the altitude from $A$ to $BC$. Prove that $K,G,X$ are collinear.
+\begin{proof}
+  Denote by $A',B',C'$ the midpoints of sides $\ol{BC},\ol{CA},\ol{AB}.$ Note that $A',B',C',K$ are on the nine-point circle of $\triangle ABC.$ Also note that each side of $\triangle A'B'C'$ is parallel to a side of $\triangle ABC.$ Therefore there exists a homothety $h$ centered at $G$ such that $h(A) = A', h(B) = B', h(C) = C'.$ Since $\ol{AX} \parallel \ol{BC} \parallel \ol{A'K},$ $h$ sends $K$ to $X.$ Therefore $K,G,X$ are collinear. 
+\end{proof}
+
+\begin{figure}[h]
+  \centering
+  \begin{asy}
+    import graph;
+    import olympiad;
+    import cse5;
+    defaultpen(fontsize(10pt));
+    usepackage("amsmath");
+    usepackage("amssymb");
+    settings.tex="latex";
+    settings.outformat="pdf";
+    size(10cm);
+
+    pair A = dir(120);
+    pair B = dir(210);
+    pair C = dir(330);
+    path ABC = circumcircle(A,B,C);
+    draw(A--B--C--cycle);
+    draw(ABC);
+    pair K = foot(A,B,C);
+    pair Aprime = midpoint(B--C);
+    pair Bprime = midpoint(C--A);
+    pair Cprime = midpoint(A--B);
+    draw(circumcircle(Aprime,Bprime,Cprime));
+    pair G = centroid(A,B,C);
+    draw(A--Aprime);
+    draw(B--Bprime);
+    draw(C--Cprime);
+    draw(Aprime--Bprime);
+    draw(Bprime--Cprime);
+    draw(Cprime--Aprime);
+    path AX = L(A, (1, ypart(A)));
+    pair [] X = IPs(AX,ABC);
+    pair X = X[1];
+    draw(A--X);
+    draw(K--X);
+    draw(A--K);
+    draw(rightanglemark(A,K,C,3));
+    draw(rightanglemark(K,A,X,3));
+
+    dot("$A$", A, dir(A));
+    dot("$B$", B, dir(B));
+    dot("$C$", C, dir(C));
+    dot("$K$", K, dir(K));
+    dot("$A'$", Aprime, dir(Aprime));
+    dot("$B'$", Bprime, dir(Bprime));
+    dot("$C'$", Cprime, dir(Cprime));
+    dot("$G$", G, dir(0));
+    dot("$X$", X, dir(X));
+  \end{asy}
+  \caption{Problem 3.24}
+\end{figure}
 \end{document}
