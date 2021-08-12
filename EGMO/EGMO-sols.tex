@@ -48,7 +48,7 @@
 \chapter{}
 \textbf{Problem 1.51 (IMO 1985/1)}. A circle has center on the side $\ol{AB}$ of the cyclic quadrilateral $ABCD$. The other three sides are tangent to the circle. Prove that $AD + BC = AB$.
 \begin{proof}
-  Call the center of the circle point $O.$ Let the point $T$ be where the circumcircle of $CDO$ intersects $\ol{AB}.$ By arc measures
+  Call the center of the circle point $O.$ Let the point $T$ be where $AD = AT.$
 \end{proof}
 \chapter{}
 \textbf{Lemma 2.19}. Prove that the A-exradius has length
@@ -491,10 +491,10 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 
 \textbf{Problem 3.24}. Let $ABC$ be an acute triangle and suppose $X$ is a point on $(ABC)$ with $\ol{AX} \parallel \ol{BC}$ and $X \neq A$. Denote by $G$ the centroid of triangle $ABC$, and by $K$ the foot of the altitude from $A$ to $BC$. Prove that $K,G,X$ are collinear.
 \begin{proof}
-  Denote by $A',B',C'$ the midpoints of sides $\ol{BC},\ol{CA},\ol{AB}.$ Note that $A',B',C',K$ are on the nine-point circle of $\triangle ABC.$ Also note that each side of $\triangle A'B'C'$ is parallel to a side of $\triangle ABC.$ Therefore there exists a homothety $h$ centered at $G$ such that $h(A) = A', h(B) = B', h(C) = C'.$ Since $\ol{AX} \parallel \ol{BC} \parallel \ol{A'K},$ $h$ sends $K$ to $X.$ Therefore $K,G,X$ are collinear. 
+  Denote by $A',B',C'$ the midpoints of sides $\ol{BC},\ol{CA},\ol{AB}.$ Note that $A',B',C',K$ are on the nine-point circle of $\triangle ABC.$ Also note that each side of $\triangle A'B'C'$ is parallel to a side of $\triangle ABC.$ Therefore there exists a homothety $h$ centered at $G$ such that $h(A) = A', h(B) = B', h(C) = C'.$ Since $\ol{AX} \parallel \ol{BC} \parallel \ol{A'K},$ $h$ sends $K$ to $X.$ Therefore $K,G,X$ are collinear. \\
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[t]
   \centering
   \begin{asy}
     import graph;
@@ -546,4 +546,18 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   \end{asy}
   \caption{Problem 3.24}
 \end{figure}
+
+\textbf{Problem 3.25 (USAMO 1993/2)}. Let $ABCD$ be a quadrilateral whose diagonals $\ol{AC}$ and $\ol{BD}$ are perpendicular and intersect at $E$. Prove that the reflections of $E$ across $\ol{AB},\ol{BC},\ol{CD},\ol{DA}$ are concyclic.
+
+\begin{proof}
+  Denote by $P,Q,R,S$ the projections of $E$ onto $\ol{AB},\ol{BC},\ol{CD},\ol{DA},$ respectively. Note that quadrilaterals $APES, BQEP, CREQ, DSER$ are cyclic. We will show $PQRS$ is cyclic by angle chase.
+  \begin{align*}
+    \dang SPQ &= \dang SPE + \dang EPQ \\
+    &= \dang SAE + \dang EBQ \\
+    &= 90\degree - \dang EDS + 90\degree - \dang QCE \\
+    &= \dang SRE + \dang ERQ \\
+    &= \dang SRQ.
+  \end{align*}
+  A homothety centered at $E$ with a scale factor of 2 sends $PQRS$ to the desired quadrialteral. Hence we are done. 
+\end{proof}
 \end{document}

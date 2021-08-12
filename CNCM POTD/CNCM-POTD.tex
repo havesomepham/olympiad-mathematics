@@ -6,6 +6,31 @@
 \usepackage{textcomp}
 \usepackage{gensymb}
 
+\providecommand{\ol}{\overline}
+\providecommand{\ul}{\underline}
+\providecommand{\wt}{\widetilde}
+\providecommand{\wh}{\widehat}
+\providecommand{\eps}{\varepsilon}
+\providecommand{\half}{\frac{1}{2}}
+\providecommand{\inv}{^{-1}}
+\newcommand{\dang}{\measuredangle} %% Directed angle
+\providecommand{\CC}{\mathbb C}
+\providecommand{\FF}{\mathbb F}
+\providecommand{\NN}{\mathbb N}
+\providecommand{\QQ}{\mathbb Q}
+\providecommand{\RR}{\mathbb R}
+\providecommand{\ZZ}{\mathbb Z}
+\providecommand{\ts}{\textsuperscript}
+\providecommand{\dg}{^\circ}
+\providecommand{\ii}{\item}
+\providecommand{\defeq}{\coloneqq}
+\DeclareMathOperator*{\lcm}{lcm}
+\DeclareMathOperator*{\argmin}{arg min}
+\DeclareMathOperator*{\argmax}{arg max}
+\providecommand{\hrulebar}{\par
+\hspace{\fill}\rule{0.95\linewidth}{.7pt}\hspace{\fill}
+\par\nointerlineskip \vspace{\baselineskip}}
+
 \setlength{\parindent}{0pt}
 \begin{document}
 \title{CNCM Problem of the Day Solutions}
@@ -37,4 +62,39 @@ Then
     &= 330.
 \end{align*}
 Then our final answer is $\frac16 f(\frac56) = \frac{330}{6}= \fbox{55}$.
+
+\section*{11 August 2021}
+Here let $R_n$ denote the remaining water after the $n$-th pour. 
+\begin{align*}
+    R_0 &= 1 \\
+    R_1 &= \left(1-\frac{1}{2}\right)R_0 = \frac{1}{2}\\
+    R_2 &= \left(1-\frac{1}{3}\right)R_1 = \frac{1}{3}\\ 
+    R_3 &= \left(1-\frac{1}{4}\right)R_2 = \frac{1}{4}
+\end{align*}
+Therefore we can assume by Engineer's Induction that $R_n = \frac{1}{n+1}.$ Hence $R_9 = \frac{1}{10}$ for a final answer of $\fbox{9}.$
+
+\section*{12 August 2021}
+For a two-game block, there is a probability of $\displaystyle \frac34\cdot\frac14 + \frac14\cdot\frac34 = \frac38$ of the entire match ending then and there. The only other outcome after two games is a tie, since each game must declare a winner, and this happens with probability $5/8.$ Thus the expected number of games in a match is the following:
+\begin{align*}
+    \frac38\cdot2 + \frac38\cdot\frac58\cdot4+ \frac38\cdot\left(\frac58\right)^2\cdot6 + \cdots 
+    &= \sum_{n=0}^{\infty} 2(n+1)\cdot\frac38\cdot\left(\frac58\right)^n \\
+    &= \frac34 \sum_{n=0}^{\infty} (n+1)\left(\frac58\right)^n \\
+    &= \frac34 \sum_{n=0}^{\infty} n\left(\frac58\right)^n + \frac34\sum_{n=0}^{\infty} \left(\frac58\right)^n.
+\end{align*}
+
+Define $f(x) = \sum_{n=0}^\infty nx^n.$ We would like to find the value of $f(5/8).$ Note that
+\begin{align*}
+    f(x) &= x\sum_{n=0}^{\infty} nx^{n-1} \\
+    &= x \frac{d}{dx}\sum_{n=0}^{\infty} x^n \\
+    &= x \frac{d}{dx}\left[\frac{1}{1-x}\right]\\
+    &= \frac{x}{(1-x)^2}.
+\end{align*}
+Thus $\displaystyle f(5/8)= \frac{5/8}{(1-5/8)^2} = \frac58 \cdot \frac{8^2}{3^2} = \frac{40}{9}.$ Then our original sum becomes
+\begin{align*}
+    \frac34 \sum_{n=0}^{\infty} n\left(\frac58\right)^n + \frac34\sum_{n=0}^{\infty} \left(\frac58\right)^n &= \frac34\cdot\frac{40}{9}+\frac34\cdot\frac{1}{1-5/8}\\
+    &= \frac{10}{3} + \frac{3}{4}\cdot\frac{8}{3} \\
+    &= \frac{10}{3} + 2 \\
+    &= \frac{16}{3}.
+\end{align*}
+Our final answer is $160+3 = \fbox{163}.$
 \end{document}
