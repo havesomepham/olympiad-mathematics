@@ -560,4 +560,12 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   \end{align*}
   A homothety centered at $E$ with a scale factor of 2 sends $PQRS$ to the desired quadrialteral. Hence we are done. 
 \end{proof}
+
+\textbf{Problem 3.26 (EGMO 2013/1)}. The side $BC$ of the triangle $ABC$ is extended beyond $C$ to $D$ so that $CD=BC$. The side $CA$ is extended beyond $A$ to $E$ so that $AE=2CA$. Prove that if $AD=BE$ then the triangle $ABC$ is right-angled.
+
+\begin{proof}
+  Let $BC=a, CA=b, AB=c,\angle BAC = \theta.$ Thus $CD = a$ and $AE = 2b.$ Let $F$ be a point on $\ol{AB}$ such that $\ol{DF} \parallel \ol{AC}.$ By similar triangles, $AF=c, DF = 2b,$ and $\angle AFD = \theta.$ We also have that $\angle EAC = 180\degree - \theta.$ Thus by the Law of Cosines, 
+  $${BE}^2 = (2b)^2+c^2-2\cdot 2b \cdot c\cdot\cos(180\degree - \theta)$$ and $${AD}^2 = (2b)^2+c^2-2\cdot 2b \cdot c\cdot\cos(\theta).$$
+  Since $AD = BE,$ we have that $\cos(180\degree - \theta) = \cos(\theta).$ Therefore $\theta = 90\degree,$ as desired. 
+\end{proof}
 \end{document}
