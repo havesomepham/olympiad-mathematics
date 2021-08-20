@@ -47,7 +47,7 @@
 \begin{proof}
   \textbf{INCOMPLETE} Call the center of the circle point $O.$ Let the point $T$ be where $AD = AT.$
 \end{proof}
-
+\newpage
 \section{Circles}
 
 \begin{lemma*}
@@ -255,7 +255,7 @@ therefore quadrilateral $DAMN$ is cyclic. The radical axes of the circles $(DAMN
 \begin{proof}  \textbf{INCOMPLETE}
     Note that $CDEF$ is cyclic (need to prove). $M$ is the center of circle $(CDEF).$ Thus $CM=DM.$
   \end{proof}
-
+\newpage
 \section{Lengths and Ratios}
 \begin{theorem*}
   [3.2, Angle Bisector Theorem]   Let $ABC$ be a triangle and $D$ a point on $\overline{BC}$ so that $\overline{AD}$ is the internal angle bisector of $\angle BAC.$ Show that
@@ -655,6 +655,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   $$\frac{A'_1B}{\sin\angle A'_1AB} = \frac{AA'_1}{\sin(B+45\degree)} \text{ and } \frac{A'_1C}{\sin\angle A'_1AC} = \frac{AA'_1}{\sin(C+45\degree)}.$$
   Since $A'_1B = A'_1C,$ we have that $\displaystyle \frac{\sin(B+45\degree)}{\sin(C+45\degree)} = \frac{\sin\angle A'_1AB}{\sin\angle A'_1AC}.$ Doing this for $B'_1$ and $C'_1$ then multiplying all three equations together proves the desired conclusion by the Trigonometric form of Ceva's Theorem. 
 \end{proof}
+\newpage
 \section{Assorted Configurations}
 \begin{proposition*}
   Proposition [4.1]
@@ -697,4 +698,35 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   [4.8]
   Prove that $A, E$, and $X$ are collinear and that $\ol{DE}$ is a diameter of the incircle. 
 \end{problem*}
+\begin{proof}
+  Consider the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ This homothety brings the circle with center $I$ to the circle with center $I_A,$ so it must bring point $E$ to point $X.$ Hence $A,E,X$ are collinear. Now notice that $\ol{BC} \perp \ol{ID}$ and $\ol{B'C'} \perp \ol{IE}$ by tangency and $\ol{B'C'} \parallel \ol{BC}.$ This is enough to show $I,D,E$ are collinear, therefore $\ol{DE}$ is a diameter of the incircle. 
+\end{proof}
+\begin{lemma*}
+  [4.10, Diameter of the Excircle]
+  In the notation of Lemma 4.9, suppose $\ol{XY}$ is a diameter of the $A$-excircle. Show that $D$ lies on $\ol{AY}.$
+\end{lemma*}
+\begin{proof}
+  Consider again the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ Since $DE$ and $YX$ are diameters of the incircle and $A$-excircle, respectively, the homothety brings $D$ to $Y.$ Hence $D$ lies on $\ol{AY}.$
+\end{proof}
+\begin{problem*}
+  [4.11]
+  If $M$ is the midpoint of $\ol{BC},$ prove that $\ol{AE} \parallel \ol{IM}.$
+\end{problem*}
+\begin{proof}
+  Since $M$ is the midpoint of $BC,$ we know that $M$ is also the midpoint of $DX$ since $BD=XC.$ We also know that $I$ is the midpoint of $DE.$ Thus we find that $\triangle DEX \sim \triangle DIM,$ implying the result. 
+\end{proof}
+\begin{problem*}
+  [4.12]
+  Prove that points $X,I,M$ are collinear.
+\end{problem*}
+\begin{proof}
+  Note that $AK \parallel ED,$ so the homothety centered at $X$ that sends $\triangle AXK$ to $\triangle EXD$ sends $M$ to $I$ because they are midpoints of $AK$ and $ED,$ respectively. This implies that $X,I,M$ are collinear.
+\end{proof}
+\begin{problem*}
+  [4.13]
+  Show that $D,I_A,M$ are collinear.
+\end{problem*}
+\begin{proof}
+  Note that $AK \parallel XY,$ so the homothety centered at $D$ that sends $\triangle XDY$ to $\triangle KDA$ sends $I_A$ to $M$ since they are midpoints of $XY$ and $AK,$ respectively. This implies that $D,I_A,M$ are collinear.
+\end{proof}
 \end{document}
