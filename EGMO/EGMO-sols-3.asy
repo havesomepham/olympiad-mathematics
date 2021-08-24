@@ -60,7 +60,7 @@ usepackage("amsmath");
 usepackage("amssymb");
 settings.tex="latex";
 settings.outformat="pdf";
-size(10cm);
+size(7cm);
 
 pair A = dir(120);
 pair B = dir(210);

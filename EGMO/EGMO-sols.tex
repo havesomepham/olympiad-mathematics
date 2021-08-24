@@ -567,7 +567,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
     usepackage("amssymb");
     settings.tex="latex";
     settings.outformat="pdf";
-    size(10cm);
+    size(7cm);
 
     pair A = dir(120);
     pair B = dir(210);
@@ -694,6 +694,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   How are Lemma 1.18, Lemma 3.11, and Lemma 4.6 related?
 \end{problem*}
 Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the nine-point circle of $\triangle I_AI_BI_C$ (Lemma 3.11). Moreover, by Lemma 1.18, $I,B,C,I_A$ all lie on a circle centered at $L.$ Finally, by Lemma 4.6, we know $I$ is the orthocenter of $\triangle I_AI_BI_C,$ but we also can derive this from Lemma 3.11. This means that any two lemmas can prove the third.
+
 \begin{problem*}
   [4.8]
   Prove that $A, E$, and $X$ are collinear and that $\ol{DE}$ is a diameter of the incircle. 
@@ -701,6 +702,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Consider the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ This homothety brings the circle with center $I$ to the circle with center $I_A,$ so it must bring point $E$ to point $X.$ Hence $A,E,X$ are collinear. Now notice that $\ol{BC} \perp \ol{ID}$ and $\ol{B'C'} \perp \ol{IE}$ by tangency and $\ol{B'C'} \parallel \ol{BC}.$ This is enough to show $I,D,E$ are collinear, therefore $\ol{DE}$ is a diameter of the incircle. 
 \end{proof}
+
 \begin{lemma*}
   [4.10, Diameter of the Excircle]
   In the notation of Lemma 4.9, suppose $\ol{XY}$ is a diameter of the $A$-excircle. Show that $D$ lies on $\ol{AY}.$
@@ -708,6 +710,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Consider again the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ Since $DE$ and $YX$ are diameters of the incircle and $A$-excircle, respectively, the homothety brings $D$ to $Y.$ Hence $D$ lies on $\ol{AY}.$
 \end{proof}
+
 \begin{problem*}
   [4.11]
   If $M$ is the midpoint of $\ol{BC},$ prove that $\ol{AE} \parallel \ol{IM}.$
@@ -715,6 +718,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Since $M$ is the midpoint of $BC,$ we know that $M$ is also the midpoint of $DX$ since $BD=XC.$ We also know that $I$ is the midpoint of $DE.$ Thus we find that $\triangle DEX \sim \triangle DIM,$ implying the result. 
 \end{proof}
+
 \begin{problem*}
   [4.12]
   Prove that points $X,I,M$ are collinear.
@@ -722,6 +726,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Note that $AK \parallel ED,$ so the homothety centered at $X$ that sends $\triangle AXK$ to $\triangle EXD$ sends $M$ to $I$ because they are midpoints of $AK$ and $ED,$ respectively. This implies that $X,I,M$ are collinear.
 \end{proof}
+
 \begin{problem*}
   [4.13]
   Show that $D,I_A,M$ are collinear.
@@ -729,6 +734,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Note that $AK \parallel XY,$ so the homothety centered at $D$ that sends $\triangle XDY$ to $\triangle KDA$ sends $I_A$ to $M$ since they are midpoints of $XY$ and $AK,$ respectively. This implies that $D,I_A,M$ are collinear.
 \end{proof}
+
 \begin{problem*}
   [4.15]
   Show that $I$ must lie on $(AB'C').$
@@ -736,6 +742,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Since $B'C' \parallel BC, \angle IXB' = \angle IXC' = 90\degree.$ Also note that $\angle BFI = 90\degree = \angle IEC$ by tangency. Thus $\ol{FXE}$ is the Simson line of $I$ with respect to $\triangle AB'C'.$ Thus by Lemma 1.48 we are done. 
 \end{proof}
+
 \begin{problem*}
   [4.16]
   Prove that $XB'=XC'.$
@@ -743,6 +750,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Note that since $AI$ bisects $\angle B'AC',$ and by Problem 4.15 $I$ lies on $(AB'C'),$ then $I$ must be the midpoint of arc $B'IC'$ by the Incenter-Excenter Lemma. Since $X$ is the foot of the altitude from $I$ to $B'C',$ and $IB'=IC',$ it follows that $XB' = XC'.$ 
 \end{proof}
+
 \begin{problem*}
   [4.19]
   Show that if two of the angle relations in Lemma 4.18 hold, then so does the third.
@@ -754,6 +762,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Now WLOG assume $\dang BAP = \dang P^*AC$ and $\dang CBP = \dang P^*BA.$ This implies that both $\dang PAC = \dang BAP^*$ and $\dang PBA = \dang CBP^*.$ Thus equating the two above equations and simplifying gives us
   $$\frac{\sin\dang ACP}{\sin\dang PCB} = \frac{\sin \dang P^*CB}{\sin\dang ACP^*}.$$ Noticing that $\dang ACP + \dang PCB = \dang ACB = \dang ACP^*+\dang P^*CB,$ we can easily see that this implies $\dang ACP = \dang P^*CB.$
 \end{proof}
+
 \begin{problem*}
   [4.20]
   Prove that the cevians $AX', BY',$ and $CZ'$ concur as described above. 
@@ -764,6 +773,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   By relfection about the midpoint we know that $BX = X'C$ and $BX' = XC.$ Analgous arguments can be applied to the other sides of the triangle. Plugging these into our first equation gives us
   $$\frac{X'C}{BX'}\cdot\frac{Y'A}{CY'}\cdot\frac{Z'B}{AZ'}=1,$$ hence we are done.
 \end{proof}
+
 \begin{problem*}
   [4.21]
   Check that if $Q$ is the isogonal conjugate of $P$, then $P$ is the isogonal conjugate of $Q$. 
@@ -771,6 +781,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   This is trivial by the reflexive property of equality. For instance, if $\dang BAP = \dang P^*AC,$ then $\dang P^*AC = \dang BAP.$ 
 \end{proof}
+
 \begin{theorem*}
   [4.22, Isogonal Ratios]
   Let $D$ and $E$ be points on $\ol{BC}$ so that $\ol{AD}$ and $\ol{AE}$ are isogonal. Then
@@ -782,6 +793,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Multiplying the two equations together gives us
   $$\frac{BD}{DC}\cdot\frac{BE}{EC}=\left(\frac{AB}{AC}\right)^2,$$ as desired. (Note that $\angle BAD = \angle EAC$ and $\angle BAE = \angle DAC$ by the definition of being isogonal, so the $\sin$ simplify to 1.)
 \end{proof}
+
 \begin{problem*}
   [4.23]
   What is the isogonal conjugate of a triangle’s circumcenter? 
@@ -789,5 +801,23 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   We claim this point is the orthocenter, $H$. Note that $$\angle BAH = 90\degree - \angle CBA = 90\degree - \frac12\angle COA = \angle OAC.$$
   Analagous arguments can be used for the other vertices of $\triangle ABC,$ hence we are done.
+\end{proof}
+
+\begin{problem*}
+  [4.25]
+  Show that
+  $$\frac{CM}{MB} = \frac{\sin\angle B \sin\angle BAX}{\sin\angle C \sin\angle CAX} =1.$$
+\end{problem*}
+\begin{proof}
+  By Law of Sines we have
+  $$\frac{MB}{\sin\angle MAB} = \frac{MB}{\sin\angle CAX} = \frac{AM}{\sin\angle B}$$
+  and $$\frac{CM}{\sin\angle CAM} = \frac{CM}{\sin\angle BAX} = \frac{AM}{\sin\angle C}.$$
+  Solving for $AM$ and combining the two equations gives us
+  $$\frac{CM}{MB} = \frac{\sin\angle B \sin\angle BAX}{\sin\angle C \sin\angle CAX}.$$
+  Now note that $\angle ABX = 180\degree - \angle C$ and $\angle ACX = 180\degree - \angle B$ by the Tangent Criterion. Also note that $\sin\theta = \sin(180\degree - \theta).$ Thus by the Law of Sines we have
+  $$\frac{AX}{\sin\angle ABX} = \frac{AX}{\sin\angle C} = \frac{BX}{\sin\angle BAX}$$ 
+  and $$\frac{AX}{\sin\angle ACX} = \frac{AX}{\sin\angle B} = \frac{CX}{\sin\angle CAX}.$$
+  Now noting that $BX = CX$ and combining the equations we get 
+  $$\frac{\sin\angle B \sin\angle BAX}{\sin\angle C \sin\angle CAX} = 1,$$ as desired.
 \end{proof}
 \end{document}
