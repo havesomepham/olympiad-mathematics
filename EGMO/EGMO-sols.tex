@@ -58,52 +58,52 @@
 \end{lemma*}
 
 \begin{proof}
-    Drop perpendiculars from $I$ and $I_A$ to $AB$. Call the feet of these perpendiculars $B_1$ and $B_2$ respectively. Notice that $IB_1 = r$ and $I_AB_2 = r_a$ and that $\triangle AB_1I \sim \triangle AB_2I_A$. Therefore 
+  Drop perpendiculars from $I$ and $I_A$ to $AB$. Call the feet of these perpendiculars $B_1$ and $B_2$ respectively. Notice that $IB_1 = r$ and $I_AB_2 = r_a$ and that $\triangle AB_1I \sim \triangle AB_2I_A$. Therefore
 
-$$\frac{r}{r_a} = \frac{AB_1}{AB_2},$$
+  $$\frac{r}{r_a} = \frac{AB_1}{AB_2},$$
 
-but by Lemmas 2.15 and 2.17, we know that $AB_1 = s-a$ and $AB_2 = s$, hence 
+  but by Lemmas 2.15 and 2.17, we know that $AB_1 = s-a$ and $AB_2 = s$, hence
 
-$$r_a = \frac{s}{s-a}r,$$
+  $$r_a = \frac{s}{s-a}r,$$
 
-and we are done.
+  and we are done.
 \end{proof}
 
 \begin{lemma*}
   [2.20]
-  Let $ABC$ be a triangle. Suppose its incircle and $A$-excircle are tangent to $BC$ at $D$ and $X$, respectively. Show that $BD = CX$ and $BX = CD$. 
+  Let $ABC$ be a triangle. Suppose its incircle and $A$-excircle are tangent to $BC$ at $D$ and $X$, respectively. Show that $BD = CX$ and $BX = CD$.
 \end{lemma*}
 
 \begin{proof}  We will first show that $BD=CX$. Let the incircle be tangent to side $AB$ at point $F$ and let to side $AC$ at point $E$. Let the $A$-excircle be tangent to the extension of line $AC$ at $C_1$ and to the extension of line $AB$ at $B_1$. Then
 
-\begin{align*}
-BD &= BF \\
-&= AB_1 - AF - BB_1 \\
-&= (AC_1 - AE) - BX \\
-&= (CC_1 + CE) - (BC - CX) \\
-&= CX + (CD - BC) + CX \\
-&= 2CX - BD \\
-2BD&=2CX \rightarrow BD = CX.
-\end{align*}
+  \begin{align*}
+    BD  & = BF                      \\
+        & = AB_1 - AF - BB_1        \\
+        & = (AC_1 - AE) - BX        \\
+        & = (CC_1 + CE) - (BC - CX) \\
+        & = CX + (CD - BC) + CX     \\
+        & = 2CX - BD                \\
+    2BD & =2CX \rightarrow BD = CX.
+  \end{align*}
 
-It follows that $BX=CD$ because
+  It follows that $BX=CD$ because
 
-\begin{align*}
-BD &= CX \\
-BD + DX &= DX + CX \\
-BX &= CD. \space 
-\end{align*}
+  \begin{align*}
+    BD      & = CX         \\
+    BD + DX & = DX + CX    \\
+    BX      & = CD. \space
+  \end{align*}
 \end{proof}
 \begin{lemma*}
   [2.24]
   Let $ABC$ be a triangle with $I_A, I_B,$ and $I_C$ as excenters. Prove that triangle $I_AI_BI_C$ has orthocenter $I$ and that triangle $ABC$ is its orthic triangle.
 \end{lemma*}
 
-\begin{proof}  By the Incenter-Excenter Lemma, we know that $AI_A, BI_B,$ and $CI_C$ coincide at the incenter $I$. We also know from the Lemma that $II_A$ is the diameter of circle $BICI_A.$ Therefore we have that 
+\begin{proof}  By the Incenter-Excenter Lemma, we know that $AI_A, BI_B,$ and $CI_C$ coincide at the incenter $I$. We also know from the Lemma that $II_A$ is the diameter of circle $BICI_A.$ Therefore we have that
 
-$$\angle {I_CCI_A} = \angle {ICI_A} =  90\degree \text{ and } \angle {I_BBI_A} = \angle {IBI_A} = 90\degree .$$
+  $$\angle {I_CCI_A} = \angle {ICI_A} =  90\degree \text{ and } \angle {I_BBI_A} = \angle {IBI_A} = 90\degree .$$
 
-This follows similarily for $II_B$ and $II_C.$ Now we know that $AI_A, BI_B, CI_C$ are in fact the altitudes of triangle $I_AI_BI_C,$ therefore $I$ is the orthocenter of triangle $I_AI_BI_C.$ Note that since $A,B,$ and $C$ are the feet of the altitudes, $ABC$ is the orthic triangle of triangle $I_AI_BI_C.$ \end{proof}
+  This follows similarily for $II_B$ and $II_C.$ Now we know that $AI_A, BI_B, CI_C$ are in fact the altitudes of triangle $I_AI_BI_C,$ therefore $I$ is the orthocenter of triangle $I_AI_BI_C.$ Note that since $A,B,$ and $C$ are the feet of the altitudes, $ABC$ is the orthic triangle of triangle $I_AI_BI_C.$ \end{proof}
 
 \begin{theorem*}
   [2.25, The Pitot Theorem]
@@ -112,13 +112,13 @@ This follows similarily for $II_B$ and $II_C.$ Now we know that $AI_A, BI_B, CI_
 
 \begin{proof}  Call the points where $AB, BC, CD, DA$ are tangent to the circle $E, F, G, H,$ respectively. Let $AE = AH = a, BE = BF = b, CF = CG = c, DG = DH = d.$ Now note that our condition can be manipulated as follows:
 
-\begin{align*}
-    AB + CD &= BC + DA \\
-    (AE + BE) + (CG + DG) &= (BF + CF) + (AH + DH)\\
-    a + b + c + d &= b + c + a + d.
-\end{align*}
+  \begin{align*}
+    AB + CD               & = BC + DA               \\
+    (AE + BE) + (CG + DG) & = (BF + CF) + (AH + DH) \\
+    a + b + c + d         & = b + c + a + d.
+  \end{align*}
 
-Hence, we are done.
+  Hence, we are done.
 \end{proof}
 
 \begin{problem*}
@@ -128,93 +128,93 @@ Hence, we are done.
 
 \begin{proof}  Let the circle with diameter $\overline{AB}$ be called $\omega_1$ and the circle with diameter $\overline{AC}$ be called $\omega_2.$  By Theorem 2.9, it suffices to show that the intersection of $\overline{MN}$ and $\overline{PQ}$ lies on the radical axis of $\omega_1$ and $\omega_2.$ Since $\overline{MN}$ and $\overline{PQ}$ are altitudes of $\triangle ABC,$ their intersection is the orthocenter of $\triangle ABC.$ We will call this point $H.$ Note that $\overline{AH}$ is the third altitude of $\triangle ABC.$ Call the foot of this altitude $A'.$ Now note that $\angle AA'B = \angle AA'C = 90\degree,$ and since $\overline{AB}$ and $\overline{AC}$ are diameters of their respective circles, $\omega_1$ and $\omega_2$ must intersect at $A'.$ Hence, $\overline{AA'}$ is the radical axis of $\omega_1$ and $\omega_2,$ and since $A,A',H$ are colinear, $H$ lies on this line. \end{proof}
 
-  \begin{figure}[h]
-    \centering
-    \begin{asy}
-      import graph;
-import olympiad;
-import cse5;
-defaultpen(fontsize(10pt));
-usepackage("amsmath");
-usepackage("amssymb");
-settings.tex="latex";
-settings.outformat="pdf";
-size(9cm);
+\begin{figure}[h]
+  \centering
+  \begin{asy}
+    import graph;
+    import olympiad;
+    import cse5;
+    defaultpen(fontsize(10pt));
+    usepackage("amsmath");
+    usepackage("amssymb");
+    settings.tex="latex";
+    settings.outformat="pdf";
+    size(9cm);
 
-pair A = dir(120);
-pair B = dir(210);
-pair C = dir(330);
-pair Cprime = foot(C,A,B);
-pair Bprime = foot(B,A,C);
-path AB = A--B;
-path AC = A--C;
-path cAB = Circle(midpoint(AB),distance(midpoint      (AB),A));
-path cAC = Circle(midpoint(AC),distance(midpoint      (AC),A));
-draw(A--B--C--cycle);
-draw(cAB);
-draw(cAC);
-path CCprime =  L(C, Cprime);
-path BBprime =  L(B, Bprime);
-pair []  m = IPs(CCprime, cAB);
-pair []  p = IPs(cAC, BBprime);
-pair M = m[1];
-pair N = m[0];
-pair P = p[0];
-pair Q = p[1];
-draw(M--C);
-draw(P--B);
-draw(circumcircle(M,N,P), dashed);
+    pair A = dir(120);
+    pair B = dir(210);
+    pair C = dir(330);
+    pair Cprime = foot(C,A,B);
+    pair Bprime = foot(B,A,C);
+    path AB = A--B;
+    path AC = A--C;
+    path cAB = Circle(midpoint(AB),distance(midpoint      (AB),A));
+    path cAC = Circle(midpoint(AC),distance(midpoint      (AC),A));
+    draw(A--B--C--cycle);
+    draw(cAB);
+    draw(cAC);
+    path CCprime =  L(C, Cprime);
+    path BBprime =  L(B, Bprime);
+    pair []  m = IPs(CCprime, cAB);
+    pair []  p = IPs(cAC, BBprime);
+    pair M = m[1];
+    pair N = m[0];
+    pair P = p[0];
+    pair Q = p[1];
+    draw(M--C);
+    draw(P--B);
+    draw(circumcircle(M,N,P), dashed);
 
-pair [] H = IPs(CCprime, BBprime);
-pair H = H[0];
-pair Aprime = foot(A,B,C);
-draw(A--Aprime);
-draw(rightanglemark(B, Cprime, C, 3));
-draw(rightanglemark(B, Bprime, A, 3));
-draw(rightanglemark(A, Aprime, C, 3));
+    pair [] H = IPs(CCprime, BBprime);
+    pair H = H[0];
+    pair Aprime = foot(A,B,C);
+    draw(A--Aprime);
+    draw(rightanglemark(B, Cprime, C, 3));
+    draw(rightanglemark(B, Bprime, A, 3));
+    draw(rightanglemark(A, Aprime, C, 3));
 
-dot("$A$", A, 1.5dir(90));
-dot("$B$", B, dir(B));
-dot("$C$", C, dir(C));
-dot("$A'$", Aprime, 1.5dir(-100));
-dot("$B'$", Bprime, 2dir(0));
-dot("$C'$", Cprime, dir(30));
-dot("$H$", H, 2dir(20));
-dot("$M$", M, dir(M));
-dot("$N$", N, dir(-90));
-dot("$P$", P, dir(P));
-dot("$Q$", Q, 2dir(-100));
-    \end{asy}
-    \caption{Problem 2.26}
-  \end{figure}
+    dot("$A$", A, 1.5dir(90));
+    dot("$B$", B, dir(B));
+    dot("$C$", C, dir(C));
+    dot("$A'$", Aprime, 1.5dir(-100));
+    dot("$B'$", Bprime, 2dir(0));
+    dot("$C'$", Cprime, dir(30));
+    dot("$H$", H, 2dir(20));
+    dot("$M$", M, dir(M));
+    dot("$N$", N, dir(-90));
+    dot("$P$", P, dir(P));
+    dot("$Q$", Q, 2dir(-100));
+  \end{asy}
+  \caption{Problem 2.26}
+\end{figure}
 
 \begin{problem*}
   [2.27, BAMO 2012/4]   Given a segment $\overline{AB}$ in the plane, choose on it a point $M$ different from $A$ and $B$. Two equilateral triangles $AMC$ and $BMD$ in the plane are constructed on the same side of segment $\overline{AB}.$ The circumcircles of the two triangles intersect in point $M$ and another point $N.$
-\renewcommand{\labelenumi}{(\alph{enumi})}
-\begin{enumerate}
-  \ii Prove that $\overline{AD}$ and $\overline{BC}$ pass through point $N.$
+  \renewcommand{\labelenumi}{(\alph{enumi})}
+  \begin{enumerate}
+    \ii Prove that $\overline{AD}$ and $\overline{BC}$ pass through point $N.$
 
-  \ii Prove that no matter where one chooses point $M$ along segment $\overline{AB},$ all lines $MN$ will pass through some fixed point $K$ in the plane.
-\end{enumerate}
+    \ii Prove that no matter where one chooses point $M$ along segment $\overline{AB},$ all lines $MN$ will pass through some fixed point $K$ in the plane.
+  \end{enumerate}
 \end{problem*}
 \begin{proof}  We will prove (a) by angle chasing. Notice that since $ACNM$ and $BDNM$ are cyclic, we have that
 
-$$\angle AMC = \angle ANC = \angle ACM = \angle ANM = \angle MDB = \angle MNB = 60\degree,$$
+  $$\angle AMC = \angle ANC = \angle ACM = \angle ANM = \angle MDB = \angle MNB = 60\degree,$$
 
-and since $\angle ANC + \angle ANM + \angle MNB = 60\degree + 60\degree + 60\degree = 180\degree,$ we have that $BC$ is a straight line passing through $N.$ A very similar argument follows for $AD.$
+  and since $\angle ANC + \angle ANM + \angle MNB = 60\degree + 60\degree + 60\degree = 180\degree,$ we have that $BC$ is a straight line passing through $N.$ A very similar argument follows for $AD.$
 
-We will now prove (b) using radical axes. First, construct an equilateral triangle $ABE$ on the same side as the other two equilateral triangles. Let the circumcircles around triangles $AMC, BMD,$ and $ABE$ be $\omega_1, \omega_2,$ and $\omega_3,$ respectively. Note that $MN$ is the radical axis of circles $\omega_1$ and $\omega_2,$ the line tangent to circles $\omega_1$ and $\omega_3$ at point $A$ is the radical axis of circles $\omega_1$ and $\omega_3,$ and the line tangent to circles $\omega_2$ and $\omega_3$ at point $B$ is the radical axis of circles $\omega_2$ and $\omega_3.$ Since the centers of  $\omega_1, \omega_2,$ and $\omega_3$ are not colinear, their radical axes (one of which is $MN$) must coincide at the radical center $K.$ Since changing the location of $M$ on $AB$ does not change the tangents at $A$ and $B,$ the point $K$ does not move, hence all possible lines $MN$ must pass through $K.$ \end{proof}
+  We will now prove (b) using radical axes. First, construct an equilateral triangle $ABE$ on the same side as the other two equilateral triangles. Let the circumcircles around triangles $AMC, BMD,$ and $ABE$ be $\omega_1, \omega_2,$ and $\omega_3,$ respectively. Note that $MN$ is the radical axis of circles $\omega_1$ and $\omega_2,$ the line tangent to circles $\omega_1$ and $\omega_3$ at point $A$ is the radical axis of circles $\omega_1$ and $\omega_3,$ and the line tangent to circles $\omega_2$ and $\omega_3$ at point $B$ is the radical axis of circles $\omega_2$ and $\omega_3.$ Since the centers of  $\omega_1, \omega_2,$ and $\omega_3$ are not colinear, their radical axes (one of which is $MN$) must coincide at the radical center $K.$ Since changing the location of $M$ on $AB$ does not change the tangents at $A$ and $B,$ the point $K$ does not move, hence all possible lines $MN$ must pass through $K.$ \end{proof}
 
-  
 
-  \begin{problem*}
-    [2.28, JMO 2012/1]
-    Given a triangle $ABC$, let $P$ and $Q$ be points on segments $\overline{AB}$ and $\overline{AC}$, respectively, such that $AP = AQ.$ Let $S$ and $R$ be distinct points on segment $\overline{BC}$ such that $S$ lies between $B$ and $R$, $\angle BPS = \angle PRS$, and $\angle CQR = \angle QSR$. Prove that $P, Q, R, S$ are concyclic.
-  \end{problem*}
+
+\begin{problem*}
+  [2.28, JMO 2012/1]
+  Given a triangle $ABC$, let $P$ and $Q$ be points on segments $\overline{AB}$ and $\overline{AC}$, respectively, such that $AP = AQ.$ Let $S$ and $R$ be distinct points on segment $\overline{BC}$ such that $S$ lies between $B$ and $R$, $\angle BPS = \angle PRS$, and $\angle CQR = \angle QSR$. Prove that $P, Q, R, S$ are concyclic.
+\end{problem*}
 
 \begin{proof}  Since $\angle BPS = \angle PRS$ by the Tangent Criterion, $\overline{AB}$ is tangent to $(PRS).$ Likewise we have that $\overline{AC}$ is tangent to $(QRS).$ Suppose $(PRS)$ and $(QRS)$ are not the same circle. Then since $AP=AQ$ are both tangents to their respective circles, $A$ must lie on the radical axis $\overline{BC},$ but since $ABC$ is a triangle, this is obviously impossible. Hence $P,Q,R,S$ are concyclic. \end{proof}
 
-  
+
 
 \begin{problem*}
   [2.29, IMO 2008/1]
@@ -226,52 +226,52 @@ We will now prove (b) using radical axes. First, construct an equilateral triang
 \end{proof}
 
 \begin{problem*}
-    [2.30, USAMO 1997/2]
-    Let $ABC$ be a triangle. Take points $D, E, F$ on the perpendicular bisectors of $\overline{BC}, \overline{CA}, \overline{AB}$ respectively. Show that the lines through $A, B, C$  perpendicular to $\overline{EF}, \overline{FD}, \overline{DE}$ respectively are concurrent.
+  [2.30, USAMO 1997/2]
+  Let $ABC$ be a triangle. Take points $D, E, F$ on the perpendicular bisectors of $\overline{BC}, \overline{CA}, \overline{AB}$ respectively. Show that the lines through $A, B, C$  perpendicular to $\overline{EF}, \overline{FD}, \overline{DE}$ respectively are concurrent.
 \end{problem*}
 
 \begin{proof}  Consider the circles with centers $D,E,F$ with chords $BC, CA, AB,$ respectively. Note that the radical axes of these three circles are the lines through $A,B,C$ perpendicular to $\overline{EF}, \overline{FD}, \overline{DE},$ and since the centers of these three circles are not colinear, their radical axes must intersect at a point. \end{proof} (These centers  can  be colinear, but we won't talk about that)
 
 \begin{problem*}
-    [2.31, IMO 1995/1]
-    Let  $A, B, C, D$ be four distinct points on a line, in that order. The circles with diameters $\overline{AC}$ and $\overline{BD}$ intersect at $X$ and $Y.$ The line $XY$ meets $\overline{BC}$ at $Z.$ Let $P$ be a point on the line $XY$ other than $Z$. The line $CP$ intersects the circle with diameter $AC$ at $C$ and $M$, and the line $BP$ intersects the circle with diameter $BD$ at $B$ and $N$. Prove that the lines $AM, DN, XY$ are concurrent.
-  \end{problem*}
+  [2.31, IMO 1995/1]
+  Let  $A, B, C, D$ be four distinct points on a line, in that order. The circles with diameters $\overline{AC}$ and $\overline{BD}$ intersect at $X$ and $Y.$ The line $XY$ meets $\overline{BC}$ at $Z.$ Let $P$ be a point on the line $XY$ other than $Z$. The line $CP$ intersects the circle with diameter $AC$ at $C$ and $M$, and the line $BP$ intersects the circle with diameter $BD$ at $B$ and $N$. Prove that the lines $AM, DN, XY$ are concurrent.
+\end{problem*}
 
 \begin{proof}  Since $P$ lies on the radical axis of these two circles, and $\overline{BN} \cap \overline{CM} =P,$ $MNBC$ is cyclic by Theorem 2.9. (Reminder that the symbol $\measuredangle$ denotes the directed angle.) Note that
 
-$$\measuredangle NMC = \measuredangle NBC = \measuredangle NBD = 90\degree - \measuredangle BDN =  90\degree - \measuredangle ADN,$$
+  $$\measuredangle NMC = \measuredangle NBC = \measuredangle NBD = 90\degree - \measuredangle BDN =  90\degree - \measuredangle ADN,$$
 
-so 
+  so
 
-$$\measuredangle NMA =   \measuredangle NMC -90\degree = (90\degree - \measuredangle ADN) - 90\degree = -\measuredangle ADN = \measuredangle NDA,$$
+  $$\measuredangle NMA =   \measuredangle NMC -90\degree = (90\degree - \measuredangle ADN) - 90\degree = -\measuredangle ADN = \measuredangle NDA,$$
 
-therefore quadrilateral $DAMN$ is cyclic. The radical axes of the circles $(DAMN), (AMC),$ and $(BND)$ are $\overline{AM}, \overline{DN}, \overline{XY},$ and since the centers of these circles are never colinear, they must intersect at the radical center.
+  therefore quadrilateral $DAMN$ is cyclic. The radical axes of the circles $(DAMN), (AMC),$ and $(BND)$ are $\overline{AM}, \overline{DN}, \overline{XY},$ and since the centers of these circles are never colinear, they must intersect at the radical center.
 \end{proof}
 
 \begin{problem*}
-    [2.32, USAMO 1998/2]
-    Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be concentric circles, with $\mathcal{C}_2$ in the interior of $\mathcal{C}_1$. From a point $A$ on $\mathcal{C}_1$ one draws the tangent $\overline{AB}$ to $\mathcal{C}_2$  ($B \in  \mathcal{C}_2$). Let $C$ be the second point of intersection of ray $AB$ and $\mathcal{C}_1$, and let $D$ be the midpoint of $\overline{AB}$. A line passing through $A$ intersects $\mathcal{C}_2$ at $E$ and $F$ in such a way that the perpendicular bisectors of $DE$ and $CF$ intersect at a point $M$ on $AB$. Find, with proof, the ratio $AM/MC$.
+  [2.32, USAMO 1998/2]
+  Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be concentric circles, with $\mathcal{C}_2$ in the interior of $\mathcal{C}_1$. From a point $A$ on $\mathcal{C}_1$ one draws the tangent $\overline{AB}$ to $\mathcal{C}_2$  ($B \in  \mathcal{C}_2$). Let $C$ be the second point of intersection of ray $AB$ and $\mathcal{C}_1$, and let $D$ be the midpoint of $\overline{AB}$. A line passing through $A$ intersects $\mathcal{C}_2$ at $E$ and $F$ in such a way that the perpendicular bisectors of $DE$ and $CF$ intersect at a point $M$ on $AB$. Find, with proof, the ratio $AM/MC$.
 \end{problem*}
 \begin{proof}  \textbf{INCOMPLETE}
-    Note that $CDEF$ is cyclic (need to prove). $M$ is the center of circle $(CDEF).$ Thus $CM=DM.$
-  \end{proof}
+  Note that $CDEF$ is cyclic (need to prove). $M$ is the center of circle $(CDEF).$ Thus $CM=DM.$
+\end{proof}
 \newpage
 \section{Lengths and Ratios}
 \begin{theorem*}
   [3.2, Angle Bisector Theorem]   Let $ABC$ be a triangle and $D$ a point on $\overline{BC}$ so that $\overline{AD}$ is the internal angle bisector of $\angle BAC.$ Show that
-  
+
   $$\frac{AB}{AC} = \frac{DB}{DC}.$$
 \end{theorem*}
 
 \begin{proof}  Let $\angle BAD = \alpha = \angle CAD$ and $\angle ADB = \beta.$ Note that $\angle ADC = 180\degree - \beta.$ By Law of Sines, we have
 
-$$\frac{DB}{\sin\alpha} = \frac{AB}{\sin\beta} \text{  and  } \frac{DC}{\sin\alpha} = \frac{AC}{\sin(180\degree - \beta)}.$$
+  $$\frac{DB}{\sin\alpha} = \frac{AB}{\sin\beta} \text{  and  } \frac{DC}{\sin\alpha} = \frac{AC}{\sin(180\degree - \beta)}.$$
 
-Note that $\sin(180\degree-\beta) = \sin\beta.$ Rearranging terms, we have that
+  Note that $\sin(180\degree-\beta) = \sin\beta.$ Rearranging terms, we have that
 
-$$\frac{\sin\beta}{\sin\alpha} = \frac{AB}{BD} = \frac{AC}{CD}.$$
+  $$\frac{\sin\beta}{\sin\alpha} = \frac{AB}{BD} = \frac{AC}{CD}.$$
 
-It follows that $\frac{AB}{AC} = \frac{DB}{DC}.$
+  It follows that $\frac{AB}{AC} = \frac{DB}{DC}.$
 \end{proof}
 
 \begin{problem*}
@@ -281,36 +281,36 @@ It follows that $\frac{AB}{AC} = \frac{DB}{DC}.$
 
 \begin{proof}  Recall that the trigonometric from of Ceva's Theorem is as follows:
 
-Let $\overline{AX}, \overline{BY}, \overline{CZ}$ be cevians of a triangle $ABC.$ They concur if and only if 
+  Let $\overline{AX}, \overline{BY}, \overline{CZ}$ be cevians of a triangle $ABC.$ They concur if and only if
 
-$$\frac{\sin \angle BAX \sin \angle CBY \sin \angle ACZ}{\sin \angle XAC \sin \angle YBA \sin \angle ZCB} = 1.$$
+  $$\frac{\sin \angle BAX \sin \angle CBY \sin \angle ACZ}{\sin \angle XAC \sin \angle YBA \sin \angle ZCB} = 1.$$
 
-By the Law of Sines, we have that
+  By the Law of Sines, we have that
 
-$$\frac{\sin\angle BAX}{BX} = \frac{\sin B}{AX}$$
+  $$\frac{\sin\angle BAX}{BX} = \frac{\sin B}{AX}$$
 
-and
+  and
 
-$$\frac{\sin\angle XAC}{XC} = \frac{\sin C}{AX}.$$
+  $$\frac{\sin\angle XAC}{XC} = \frac{\sin C}{AX}.$$
 
-Combining these two equations gives us
+  Combining these two equations gives us
 
-$$AX = \frac{BX \sin B}{\sin\angle BAX}=\frac{XC \sin C}{\sin\angle XAC} \Rightarrow \frac{\sin \angle BAX}{\sin \angle XAC} = \frac{BX}{XC} \cdot \frac{\sin C}{\sin B}.$$
+  $$AX = \frac{BX \sin B}{\sin\angle BAX}=\frac{XC \sin C}{\sin\angle XAC} \Rightarrow \frac{\sin \angle BAX}{\sin \angle XAC} = \frac{BX}{XC} \cdot \frac{\sin C}{\sin B}.$$
 
-Similarly, we have that 
+  Similarly, we have that
 
-$$\frac{\sin \angle CBY}{\sin \angle YBA} = \frac{CY}{YA}\cdot \frac{\sin A}{\sin C} $$
+  $$\frac{\sin \angle CBY}{\sin \angle YBA} = \frac{CY}{YA}\cdot \frac{\sin A}{\sin C} $$
 
-and
+  and
 
-$$
-\frac{\sin \angle ACZ}{\sin \angle ZCB} = \frac{AZ}{ZB}\cdot \frac{\sin B}{\sin A}. $$
+  $$
+    \frac{\sin \angle ACZ}{\sin \angle ZCB} = \frac{AZ}{ZB}\cdot \frac{\sin B}{\sin A}. $$
 
-Plugging these values into the original equation, we have that
+  Plugging these values into the original equation, we have that
 
-$$\frac{BX}{XC}\cdot \frac{CY}{YA} \cdot \frac{AZ}{ZB} = 1,$$
+  $$\frac{BX}{XC}\cdot \frac{CY}{YA} \cdot \frac{AZ}{ZB} = 1,$$
 
-and we know this is true from the original statement of Ceva's Theorem.
+  and we know this is true from the original statement of Ceva's Theorem.
 \end{proof}
 
 \begin{problem*}
@@ -321,23 +321,23 @@ and we know this is true from the original statement of Ceva's Theorem.
 \begin{proof}
   Suppose $\overline{EF} \parallel \overline{BC}.$ Call the point where $\overline{AM}$ intersects $\overline{EF}$ point $Q.$ Notice that $\triangle BPM \sim \triangle EPQ$ and $\triangle CPM \sim \triangle FPQ.$ Thus we have the following relationship:
 
-$$\frac{BM}{EQ} = \frac{MP}{QP} = \frac{CM}{FQ}.$$
+  $$\frac{BM}{EQ} = \frac{MP}{QP} = \frac{CM}{FQ}.$$
 
-Now also notice that $\triangle BAM \sim \triangle FAQ$ and $\triangle CAM \sim \triangle EAQ.$ Thus we have the following relationship:
+  Now also notice that $\triangle BAM \sim \triangle FAQ$ and $\triangle CAM \sim \triangle EAQ.$ Thus we have the following relationship:
 
-$$\frac{BM}{FQ} = \frac{MA}{QA} = \frac{CM}{EQ}.$$
+  $$\frac{BM}{FQ} = \frac{MA}{QA} = \frac{CM}{EQ}.$$
 
-Putting these two relationships together, it follows that $BM=CM.$  
+  Putting these two relationships together, it follows that $BM=CM.$
 
-We will now prove the other direction. Suppose $BM=MC.$ Then by Ceva's Theorem we have that
+  We will now prove the other direction. Suppose $BM=MC.$ Then by Ceva's Theorem we have that
 
-\begin{align*} 
-\frac{CE}{AE}&=\frac{BF}{AF}\\
-\frac{CE}{BF}&=\frac{AE}{AF} = \frac{CE+AE}{BF+AF}=\frac{AC}{AB}\\
-\frac{AE}{AC}&=\frac{AF}{AB}.\\
-\end{align*}
+  \begin{align*}
+    \frac{CE}{AE} & =\frac{BF}{AF}                                     \\
+    \frac{CE}{BF} & =\frac{AE}{AF} = \frac{CE+AE}{BF+AF}=\frac{AC}{AB} \\
+    \frac{AE}{AC} & =\frac{AF}{AB}.                                    \\
+  \end{align*}
 
-Since $\angle FAE=\angle BAC,$ we have that $\triangle FAE \sim \triangle BAC.$ Thus $\angle AEF = \angle ACB,$ therefore $\overline{EF} \parallel \overline{BC}.$
+  Since $\angle FAE=\angle BAC,$ we have that $\triangle FAE \sim \triangle BAC.$ Thus $\angle AEF = \angle ACB,$ therefore $\overline{EF} \parallel \overline{BC}.$
 \end{proof}
 
 \begin{problem*}
@@ -347,19 +347,19 @@ Since $\angle FAE=\angle BAC,$ we have that $\triangle FAE \sim \triangle BAC.$ 
 \begin{proof}
   Consider a homothety centered at $G$ with $M=h(A), N=h(B), L = h(C).$ Note that $\triangle ACB \sim \triangle NCM$ by midpoints and that $\triangle {ALG} \sim \triangle {Mh(L)G}$ by homothety. Also notice that $h(L)$ is the midpoint of $NM.$ Since ${AB}/{NM} = 2/1,$
 
-$$\frac{AB}{NM} = \frac{AL}{Mh(L)} = \frac{AG}{MG} = \frac21.$$
+  $$\frac{AB}{NM} = \frac{AL}{Mh(L)} = \frac{AG}{MG} = \frac21.$$
 \end{proof}
 
 
 
-  \begin{lemma*}
-    [3.13, Euler Line]
-    In triangle $ABC$, prove that $O, G, H$ (with their usual meanings) are collinear and that $G$ divides $\overline{OH}$ in a $2:1$ ratio.
-  \end{lemma*}
+\begin{lemma*}
+  [3.13, Euler Line]
+  In triangle $ABC$, prove that $O, G, H$ (with their usual meanings) are collinear and that $G$ divides $\overline{OH}$ in a $2:1$ ratio.
+\end{lemma*}
 
- \begin{proof}  We will first show that $O,G,H$ are collinear. Call the point where the perpendicular from $O$ meets $\overline{BC},\overline{CA}, \overline{AB}$ points $A',B',C',$ respectively. Since $\overline{BC},\overline{CA}, \overline{AB}$ are chords of the circle $(ABC),$ points $A',B',C'$ are in fact the midpoints of their respective line segments. Thus $A'$ lies on $\overline{AG},$ $B'$ lies on $\overline{BG},$ and $C'$ lies on $\overline{CG}.$ Now notice that $\overline{AH} \parallel \overline{OA'}, \overline{BH} \parallel \overline{OB'}, \overline{CH} \parallel \overline{OC'}$ since they are all perpendicular to some side of the triangle $ABC.$  Thus, a homothety $h$ centered at $G$ exists such that $h(A) = A', h(B) = B', h(C) = C'.$ Thus, $h(O) = H,$ so $O,G,H$ are collinear. 
+\begin{proof}  We will first show that $O,G,H$ are collinear. Call the point where the perpendicular from $O$ meets $\overline{BC},\overline{CA}, \overline{AB}$ points $A',B',C',$ respectively. Since $\overline{BC},\overline{CA}, \overline{AB}$ are chords of the circle $(ABC),$ points $A',B',C'$ are in fact the midpoints of their respective line segments. Thus $A'$ lies on $\overline{AG},$ $B'$ lies on $\overline{BG},$ and $C'$ lies on $\overline{CG}.$ Now notice that $\overline{AH} \parallel \overline{OA'}, \overline{BH} \parallel \overline{OB'}, \overline{CH} \parallel \overline{OC'}$ since they are all perpendicular to some side of the triangle $ABC.$  Thus, a homothety $h$ centered at $G$ exists such that $h(A) = A', h(B) = B', h(C) = C'.$ Thus, $h(O) = H,$ so $O,G,H$ are collinear.
 
-We will now show that $G$ divides $\overline{OH}$ in a $2:1$ ratio. This is equivalent to showing that the homothety $h$ must have a scale factor $k = -2.$ From Lemma 3.9 (Centroid Division) we have that $AG/GA' = 2/1.$ Since $G$ lies in between $A$ and $A',$ we have that $k=-2,$ as desired. (!!!) \end{proof}
+  We will now show that $G$ divides $\overline{OH}$ in a $2:1$ ratio. This is equivalent to showing that the homothety $h$ must have a scale factor $k = -2.$ From Lemma 3.9 (Centroid Division) we have that $AG/GA' = 2/1.$ Since $G$ lies in between $A$ and $A',$ we have that $k=-2,$ as desired. (!!!) \end{proof}
 
 
 
@@ -369,17 +369,17 @@ We will now show that $G$ divides $\overline{OH}$ in a $2:1$ ratio. This is equi
 \end{problem*}
 
 \begin{proof}
-  Notice by Lemma 2.15 we have that 
+  Notice by Lemma 2.15 we have that
 
-\begin{align*}
-AE &= AF = s-a\\
-BD &= BF = s-b\\
-CD &= CE = s-c.
-\end{align*}
+  \begin{align*}
+    AE & = AF = s-a  \\
+    BD & = BF = s-b  \\
+    CD & = CE = s-c.
+  \end{align*}
 
-Thus, by Ceva's Theorem, we have that
+  Thus, by Ceva's Theorem, we have that
 
-$$\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{AF}{FB} = \frac{s-b}{s-c}\cdot\frac{s-c}{s-a}\cdot\frac{s-a}{s-b} =1.$$
+  $$\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{AF}{FB} = \frac{s-b}{s-c}\cdot\frac{s-c}{s-a}\cdot\frac{s-a}{s-b} =1.$$
 \end{proof}
 
 
@@ -391,46 +391,46 @@ $$\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{AF}{FB} = \frac{s-b}{s-c}\cdot\frac{
 
 \begin{proof}  Reflect $X$ and $Y$ across $\overline{BC}$ and call these points $X'$ and $Y'$ respectively. Notice that $X'$ and $Y'$ lie on $({ABCD}).$ Thus ${ADX'Y'}$ is a cyclic quadrilateral. Then we have that
 
-$$\measuredangle {AXY} = \measuredangle {X'XY}= \measuredangle {Y'X'X} = \measuredangle {Y'X'A} = \measuredangle {Y'DA} = \measuredangle {YDA}.$$
+  $$\measuredangle {AXY} = \measuredangle {X'XY}= \measuredangle {Y'X'X} = \measuredangle {Y'X'A} = \measuredangle {Y'DA} = \measuredangle {YDA}.$$
 
-Similarly, we have that $\measuredangle {DAX} = \measuredangle {XYD}.$ Hence ${AXYD}$ is a parallelogram.
+  Similarly, we have that $\measuredangle {DAX} = \measuredangle {XYD}.$ Hence ${AXYD}$ is a parallelogram.
 \end{proof}
 
 \begin{problem*}
   [3.18]
-  Let $\overline{AD}, \overline{BE}, \overline{CF}$ be concurrent cevians in a triangle, meeting at $P$. Prove that 
-  
+  Let $\overline{AD}, \overline{BE}, \overline{CF}$ be concurrent cevians in a triangle, meeting at $P$. Prove that
+
   $$\frac{PD}{AD} + \frac{PE}{BE} + \frac{PF}{CF} = 1.$$
 \end{problem*}
 
 \begin{proof}  By Area Ratios, we can transform each term in our desired equation as follows:
 
-\begin{align*}
-  \frac{PD}{AD} &= \frac{[BPC]}{[BAC]}, \\
-  \frac{PE}{BE} &= \frac{[CPA]}{[CBA]}, \\
-  \frac{PF}{CF} &= \frac{[APB]}{[ACB]}. \\
-\end{align*}
+  \begin{align*}
+    \frac{PD}{AD} & = \frac{[BPC]}{[BAC]}, \\
+    \frac{PE}{BE} & = \frac{[CPA]}{[CBA]}, \\
+    \frac{PF}{CF} & = \frac{[APB]}{[ACB]}. \\
+  \end{align*}
 
-Therefore our desired equation turns into
+  Therefore our desired equation turns into
 
-$$\frac{[BPC]}{[BAC]} + \frac{[CPA]}{[CBA]} +\frac{[APB]}{[ACB]} = 1.$$
+  $$\frac{[BPC]}{[BAC]} + \frac{[CPA]}{[CBA]} +\frac{[APB]}{[ACB]} = 1.$$
 
-Notice that $[{BPC}] + [{CPA}] + [{APB}] = [{ABC}].$ Hence we are done. \end{proof} 
+  Notice that $[{BPC}] + [{CPA}] + [{APB}] = [{ABC}].$ Hence we are done. \end{proof}
 
 \begin{problem*}
   [3.19, Shortlist 2006/G3]
-  Let $ABCDE$ be a convex pentagon such that 
-  
+  Let $ABCDE$ be a convex pentagon such that
+
   $$\angle BAC = \angle CAD = \angle DAE \text{  and   } \angle ABC = \angle ACD = \angle ADE. $$
-  
+
   Diagonals $BD$ and $CE$ meet at $P$. Prove that ray $AP$ bisects $\overline{CD}$.
-  
+
 \end{problem*}
 \begin{proof}  Let $B'$ be intersection of diagonals $AC$ and $BD$, and let $E'$ be the intersection of diagonals $AD$ and $CE$. Also let $A'$ be the intersection of ray $AP$ with $CD.$ Notice that the given angle conditions imply that $\triangle ABC \sim \triangle ACD \sim \triangle ADE.$ From this it follows that quadrilaterals $ABCD$ and $ACDE$ are similar. Since $B'$ and $E'$ are the intersections of the diagonals of their respective quadrilaterals, we have that $\frac{CB'}{B'A} = \frac{DE'}{E'A}.$ By Ceva's on $\triangle ACD,$ we have that
 
-$$\frac{AE'}{E'D}\cdot\frac{DA'}{A'C}\cdot\frac{CB'}{B'A} = 1.$$
+  $$\frac{AE'}{E'D}\cdot\frac{DA'}{A'C}\cdot\frac{CB'}{B'A} = 1.$$
 
-Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{proof}
+  Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{proof}
 
 
 
@@ -440,7 +440,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \end{problem*}
 
 \begin{proof}
-  Let $A',B',C'$ be the circumcenters of $({BCH}),({CAH}),({ABH}),$ respectively. Note that $H$ is the radical center of $({ABH}),({BCH}),({CAH}).$ Thus $\overline{AH} \perp \overline{B'C'}.$ Also notice by properties of circumcenters, $A'$ is on the perpendicular bisector of $\overline{BC}.$ Let $O$ be where the perpendicular bisectors of $\triangle ABC$ intersect (namely, the circumcenter of $\triangle ABC$). Since $\overline{A'O} \parallel \overline{AH},$ $\overline{A'O} \perp \overline{B'C'}.$ This follows similarly for $B'$ and $C',$ hence $O$ is the orthocenter of $\triangle A'B'C'.$ Also notice that, by construction, $H$ is the circumcenter of $\triangle A'B'C'.$ Therefore, a homothety of scale factor $-1$ exists that sends $H$ to $O$, $A$ to $A'$, $B$ to $B'$, and $C$ to $C'$. Hence, $\triangle ABC \cong \triangle A'B'C'.$ 
+  Let $A',B',C'$ be the circumcenters of $({BCH}),({CAH}),({ABH}),$ respectively. Note that $H$ is the radical center of $({ABH}),({BCH}),({CAH}).$ Thus $\overline{AH} \perp \overline{B'C'}.$ Also notice by properties of circumcenters, $A'$ is on the perpendicular bisector of $\overline{BC}.$ Let $O$ be where the perpendicular bisectors of $\triangle ABC$ intersect (namely, the circumcenter of $\triangle ABC$). Since $\overline{A'O} \parallel \overline{AH},$ $\overline{A'O} \perp \overline{B'C'}.$ This follows similarly for $B'$ and $C',$ hence $O$ is the orthocenter of $\triangle A'B'C'.$ Also notice that, by construction, $H$ is the circumcenter of $\triangle A'B'C'.$ Therefore, a homothety of scale factor $-1$ exists that sends $H$ to $O$, $A$ to $A'$, $B$ to $B'$, and $C$ to $C'$. Hence, $\triangle ABC \cong \triangle A'B'C'.$
 \end{proof}
 
 \begin{figure}[h]
@@ -483,8 +483,8 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
     dot("$A'$", Ao, dir(Ao));
     dot("$B'$", Bo, dir(Bo));
     dot("$C'$", Co, dir(Co));
-    \end{asy}
-\caption{Problem 3.20}
+  \end{asy}
+  \caption{Problem 3.20}
 \end{figure}
 
 \begin{problem*}
@@ -495,43 +495,43 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \begin{proof}
   By assuming $MB\cdot  MD = MC^2,$ we have that $\frac{MB}{MC} = \frac{MC}{MD},$ and since $\angle BMC = \angle CMD,$ this implies that $\triangle BMC \sim \triangle CMD$. Since $ABDE$ is a cyclic quadrilateral, $\angle DAE = \angle DBE.$ Now we have that
   $$\angle CAE = \angle DAE = \angle DBE = \angle MBC = \angle MCD = \angle FCA,$$
-  hence $\ol{AE} \parallel \ol{CF}.$ Therefore $\triangle ABE \sim \triangle FBC$ and $\frac{FB}{AB} = \frac{CB}{EB}.$ Then 
+  hence $\ol{AE} \parallel \ol{CF}.$ Therefore $\triangle ABE \sim \triangle FBC$ and $\frac{FB}{AB} = \frac{CB}{EB}.$ Then
   \begin{align*}
-    \frac{FB}{AB} &= \frac{CB}{EB} \\
-    \frac{FA + AB}{AB} &= \frac{CE + EB}{EB} \\
-    1 + \frac{FA}{AB} &= 1 + \frac{CE}{EB} \\
-    \frac{FA}{AB}&=\frac{CE}{EB}.
+    \frac{FB}{AB}      & = \frac{CB}{EB}      \\
+    \frac{FA + AB}{AB} & = \frac{CE + EB}{EB} \\
+    1 + \frac{FA}{AB}  & = 1 + \frac{CE}{EB}  \\
+    \frac{FA}{AB}      & =\frac{CE}{EB}.
   \end{align*}
   By Ceva's on $\triangle BCF$, we have that
   $$\frac{FA}{AB}\cdot\frac{BE}{EC}\cdot\frac{CM}{MF} = 1.$$
   Since $\frac{FA}{AB}=\frac{CE}{EB},$ we have that $MF = MC.$ \\
 
-  We will now go in the reverse direction. We assume $MF = MC.$ By Ceva's on $\triangle BCF,$ 
+  We will now go in the reverse direction. We assume $MF = MC.$ By Ceva's on $\triangle BCF,$
   $$\frac{FA}{AB}\cdot\frac{BE}{EC}\cdot\frac{CM}{MF} = 1.$$
   and since $MF = MC,$ we have that $\frac{FA}{AB}\cdot\frac{BE}{EC} = 1.$ It follows that
   \begin{align*}
-    \frac{FA}{AB} &= \frac{CE}{EB} \\
-    1 + \frac{FA}{AB} &= 1 + \frac{CE}{EB}\\
-    \frac{AB}{AB} + \frac{FA}{AB} &= \frac{EB}{EB} + \frac{CE}{EB} \\
-    \frac{FB}{AB} &= \frac{CB}{EB}. 
+    \frac{FA}{AB}                 & = \frac{CE}{EB}                 \\
+    1 + \frac{FA}{AB}             & = 1 + \frac{CE}{EB}             \\
+    \frac{AB}{AB} + \frac{FA}{AB} & = \frac{EB}{EB} + \frac{CE}{EB} \\
+    \frac{FB}{AB}                 & = \frac{CB}{EB}.
   \end{align*}
-  Thus $\triangle ABE \sim \triangle FBC.$ This implies that $\ol{AE} \parallel \ol{CF}.$  Since $ABDE$ is a cylic quadrilateral, we have that $\angle FCA = \angle DAE = \angle DBE,$ and since $\angle BMC = \angle CMD,$ we have that $\triangle BMC \sim \triangle CMD$ by $AA\sim.$ Thus $\frac{MB}{MC} = \frac{MC}{MD} \rightarrow MB\cdot MD = MC^2,$ as desired. 
+  Thus $\triangle ABE \sim \triangle FBC.$ This implies that $\ol{AE} \parallel \ol{CF}.$  Since $ABDE$ is a cylic quadrilateral, we have that $\angle FCA = \angle DAE = \angle DBE,$ and since $\angle BMC = \angle CMD,$ we have that $\triangle BMC \sim \triangle CMD$ by $AA\sim.$ Thus $\frac{MB}{MC} = \frac{MC}{MD} \rightarrow MB\cdot MD = MC^2,$ as desired.
 \end{proof}
 
 \begin{theorem*}
   [3.22, Monge’s Theorem]
-  Consider disjoint circles $\omega_1, \omega_2, \omega_3$ in the plane, no two congruent. For each pair of circles, we construct the intersection of their common external tangents. Prove that these three intersections are collinear. 
+  Consider disjoint circles $\omega_1, \omega_2, \omega_3$ in the plane, no two congruent. For each pair of circles, we construct the intersection of their common external tangents. Prove that these three intersections are collinear.
 \end{theorem*}
 
 \begin{proof}
   Let the points $O_1,O_2,O_3,$ be the centers of $\omega_1, \omega_2, \omega_3$, respectively.
   Let the external tangents of $\omega_1$ and $\omega_2$ meet at $X,$ and define $Y$ and $Z$ analogously. Note that $X,Y,Z$ are each on an extension of a side of $\triangle O_1O_2O_3.$ Let $T_1$ and $T_2$ be points of tangency of $\omega_1$ and $\omega_2$, respectively, where $T_1$ and $T_2$ are on the same side of line $XO_1O_2.$ Note that it is impossible for $X$ to be between $O_1$ and $O_2,$ since $X$ is the intersection of external tangents. Since tangents are always perpendicular to their circles, we have that $\triangle T_1O_1X \sim \triangle T_2O_2X$ by $AA\sim,$ thus with directed lengths we have $\frac{O_1X}{XO_2} = -\frac{r_1}{r_2},$ where $r_1$ and $r_2$ are the radii of $\omega_1$ and $\omega_2.$ Similar arguments can be applied to the other two pairs of circles to give $\frac{O_2Y}{YO_3} = -\frac{r_2}{r_3}$ and $\frac{O_3Z}{ZO_1} = -\frac{r_3}{r_1}.$ Thus
-  $$\frac{O_1X}{XO_2}\cdot\frac{O_2Y}{YO_3}\cdot\frac{O_3Z}{ZO_1} = \left(-\frac{r_1}{r_2}\right)\left(-\frac{r_2}{r_3}\right)\left(-\frac{r_3}{r_1}\right) = -1.$$ By Menelaus's Theorem, this proves that $X,Y,Z$ are collinear. 
+  $$\frac{O_1X}{XO_2}\cdot\frac{O_2Y}{YO_3}\cdot\frac{O_3Z}{ZO_1} = \left(-\frac{r_1}{r_2}\right)\left(-\frac{r_2}{r_3}\right)\left(-\frac{r_3}{r_1}\right) = -1.$$ By Menelaus's Theorem, this proves that $X,Y,Z$ are collinear.
 \end{proof}
 
 \begin{theorem*}
   [3.23, Cevian Nest]
-  Let $\ol{AX},\ol{BY},\ol{CZ}$ be concurrent cevians of $ABC$. Let $\ol{XD}, \ol{YE},\ol{ZF}$ be concurrent cevians in triangle $XYZ$. Prove that rays $AD,BE,CF$ concur. 
+  Let $\ol{AX},\ol{BY},\ol{CZ}$ be concurrent cevians of $ABC$. Let $\ol{XD}, \ol{YE},\ol{ZF}$ be concurrent cevians in triangle $XYZ$. Prove that rays $AD,BE,CF$ concur.
 \end{theorem*}
 
 \begin{proof}
@@ -541,10 +541,10 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   $$\frac{\sin\angle CBE}{\sin \angle ABE} = \frac{BZ}{XB}\cdot\frac{XE}{EZ}$$ and $$\frac{\sin\angle ACF}{\sin \angle BCF} = \frac{CX}{YC}\cdot\frac{YF}{FX}.$$
   Multiplying these three equations together gives us
   \begin{align*}
-  \frac{\sin\angle BAD}{\sin \angle CAD}\cdot\frac{\sin\angle CBE}{\sin \angle ABE}\cdot\frac{\sin\angle ACF}{\sin \angle BCF} &= \left(\frac{AY}{YC}\cdot\frac{CX}{XB}\cdot\frac{BZ}{ZA}\right)\cdot\left(\frac{ZD}{DY}\cdot\frac{YF}{FX}\cdot\frac{XE}{EZ}\right)\\
-  &= 1\cdot1 \\
-  &= 1.
-\end{align*}
+    \frac{\sin\angle BAD}{\sin \angle CAD}\cdot\frac{\sin\angle CBE}{\sin \angle ABE}\cdot\frac{\sin\angle ACF}{\sin \angle BCF} & = \left(\frac{AY}{YC}\cdot\frac{CX}{XB}\cdot\frac{BZ}{ZA}\right)\cdot\left(\frac{ZD}{DY}\cdot\frac{YF}{FX}\cdot\frac{XE}{EZ}\right) \\
+                                                                                                                                 & = 1\cdot1                                                                                                                           \\
+                                                                                                                                 & = 1.
+  \end{align*}
   Note that each of the factors in parentheses on the RHS of the first equation are equal to 1 by Ceva's on $\triangle ABC$ and $\triangle XYZ,$ respectively. By the trigonometric form of Ceva's, this implies rays $AD,BE,CF$ concur.
 \end{proof}
 
@@ -617,13 +617,13 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \begin{proof}
   Denote by $P,Q,R,S$ the projections of $E$ onto $\ol{AB},\ol{BC},\ol{CD},\ol{DA},$ respectively. Note that quadrilaterals $APES, BQEP, CREQ, DSER$ are cyclic. We will show $PQRS$ is cyclic by angle chase.
   \begin{align*}
-    \dang SPQ &= \dang SPE + \dang EPQ \\
-    &= \dang SAE + \dang EBQ \\
-    &= 90\degree - \dang EDS + 90\degree - \dang QCE \\
-    &= \dang SRE + \dang ERQ \\
-    &= \dang SRQ.
+    \dang SPQ & = \dang SPE + \dang EPQ                         \\
+              & = \dang SAE + \dang EBQ                         \\
+              & = 90\degree - \dang EDS + 90\degree - \dang QCE \\
+              & = \dang SRE + \dang ERQ                         \\
+              & = \dang SRQ.
   \end{align*}
-  A homothety centered at $E$ with a scale factor of 2 sends $PQRS$ to the desired quadrialteral. Hence we are done. 
+  A homothety centered at $E$ with a scale factor of 2 sends $PQRS$ to the desired quadrialteral. Hence we are done.
 \end{proof}
 
 \begin{problem*}
@@ -632,9 +632,9 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \end{problem*}
 
 \begin{proof}
-  Let $BC=a, CA=b, AB=c,\angle BAC = \theta.$ Thus $CD = a$ and $AE = 2b.$ Let $F$ be a point on $\ol{AB}$ such that $\ol{DF} \parallel \ol{AC}.$ By similar triangles, $AF=c, DF = 2b,$ and $\angle AFD = \theta.$ We also have that $\angle EAC = 180\degree - \theta.$ Thus by the Law of Cosines, 
+  Let $BC=a, CA=b, AB=c,\angle BAC = \theta.$ Thus $CD = a$ and $AE = 2b.$ Let $F$ be a point on $\ol{AB}$ such that $\ol{DF} \parallel \ol{AC}.$ By similar triangles, $AF=c, DF = 2b,$ and $\angle AFD = \theta.$ We also have that $\angle EAC = 180\degree - \theta.$ Thus by the Law of Cosines,
   $${BE}^2 = (2b)^2+c^2-2\cdot 2b \cdot c\cdot\cos(180\degree - \theta)$$ and $${AD}^2 = (2b)^2+c^2-2\cdot 2b \cdot c\cdot\cos(\theta).$$
-  Since $AD = BE,$ we have that $\cos(180\degree - \theta) = \cos(\theta).$ Therefore $\theta = 90\degree,$ as desired. 
+  Since $AD = BE,$ we have that $\cos(180\degree - \theta) = \cos(\theta).$ Therefore $\theta = 90\degree,$ as desired.
 \end{proof}
 
 \begin{problem*}
@@ -642,7 +642,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
   Let $O$ be the circumcenter and $H$ the orthocenter of an acute triangle $ABC$. Prove that the area of one of the triangles $AOH, BOH,$ and $COH$ is equal to the sum of the areas of the other two.
 \end{problem*}
 \begin{proof}
-  (NOT ORIGINAL) WLOG let $B$ and $C$ be on the same side of line $\ol{OH}.$ Let $M$ be the midpoint of $BC.$ Denote by $A',B',C',M'$ the projections onto $OH$ of $A,B,C,M,$ respectively. Notice that a homothety centered at $G$ with a ratio of $-2$ sends $\triangle MM'G$ to $\triangle AA'G,$ so $AA' = 2MM' = BB' + CC',$ which implies the result.  
+  (NOT ORIGINAL) WLOG let $B$ and $C$ be on the same side of line $\ol{OH}.$ Let $M$ be the midpoint of $BC.$ Denote by $A',B',C',M'$ the projections onto $OH$ of $A,B,C,M,$ respectively. Notice that a homothety centered at $G$ with a ratio of $-2$ sends $\triangle MM'G$ to $\triangle AA'G,$ so $AA' = 2MM' = BB' + CC',$ which implies the result.
 \end{proof}
 
 \begin{problem*}
@@ -653,7 +653,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \begin{proof}
   (NOT ENTIRELY ORIGINAL) Denote by $A_{\square}$ the square with center $A_1$. Denote by $P,Q$ the vertices of $A_{\square}$ on sides $AB$ and $AC,$ respectively. Consider a homothety centered at $A$ that sends $P$ to $B$ and $Q$ to $C.$ The center $A'_1,$ of the new square lies on $AA_1.$ Similar arguments hold for homotheties centered at $B$ and $C.$ Thus we just need to show that $AA'_1, BB'_1, CC'_1$ are concurrent. By the Law of Sines,
   $$\frac{A'_1B}{\sin\angle A'_1AB} = \frac{AA'_1}{\sin(B+45\degree)} \text{ and } \frac{A'_1C}{\sin\angle A'_1AC} = \frac{AA'_1}{\sin(C+45\degree)}.$$
-  Since $A'_1B = A'_1C,$ we have that $\displaystyle \frac{\sin(B+45\degree)}{\sin(C+45\degree)} = \frac{\sin\angle A'_1AB}{\sin\angle A'_1AC}.$ Doing this for $B'_1$ and $C'_1$ then multiplying all three equations together proves the desired conclusion by the Trigonometric form of Ceva's Theorem. 
+  Since $A'_1B = A'_1C,$ we have that $\displaystyle \frac{\sin(B+45\degree)}{\sin(C+45\degree)} = \frac{\sin\angle A'_1AB}{\sin\angle A'_1AC}.$ Doing this for $B'_1$ and $C'_1$ then multiplying all three equations together proves the desired conclusion by the Trigonometric form of Ceva's Theorem.
 \end{proof}
 \newpage
 \section{Assorted Configurations}
@@ -667,7 +667,7 @@ Since $\frac{CB'}{B'A}\cdot\frac{AE'}{E'D} = 1,$ we have that $DA' = A'C.$ \end{
 \end{proof}
 \begin{problem*}
   [4.2]
-  Let $K'$ be the reflection of $K$ across $\ol{BC}$. Show that $K'$ is the orthocenter of $\triangle PBC$. 
+  Let $K'$ be the reflection of $K$ across $\ol{BC}$. Show that $K'$ is the orthocenter of $\triangle PBC$.
 \end{problem*}
 \begin{proof}
   Note that $K'$ is already on the altitude $PX.$ Also note that $K$ is on the circumcircle of $\triangle PBC.$ Since $K$ and $K'$ are reflections of each other over $BC,$ by Lemma 1.17 we have that $K'$ is the orthocenter of $\triangle PBC.$
@@ -697,10 +697,10 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 
 \begin{problem*}
   [4.8]
-  Prove that $A, E$, and $X$ are collinear and that $\ol{DE}$ is a diameter of the incircle. 
+  Prove that $A, E$, and $X$ are collinear and that $\ol{DE}$ is a diameter of the incircle.
 \end{problem*}
 \begin{proof}
-  Consider the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ This homothety brings the circle with center $I$ to the circle with center $I_A,$ so it must bring point $E$ to point $X.$ Hence $A,E,X$ are collinear. Now notice that $\ol{BC} \perp \ol{ID}$ and $\ol{B'C'} \perp \ol{IE}$ by tangency and $\ol{B'C'} \parallel \ol{BC}.$ This is enough to show $I,D,E$ are collinear, therefore $\ol{DE}$ is a diameter of the incircle. 
+  Consider the homothety bringing $\triangle AB'C'$ to $\triangle ABC.$ This homothety brings the circle with center $I$ to the circle with center $I_A,$ so it must bring point $E$ to point $X.$ Hence $A,E,X$ are collinear. Now notice that $\ol{BC} \perp \ol{ID}$ and $\ol{B'C'} \perp \ol{IE}$ by tangency and $\ol{B'C'} \parallel \ol{BC}.$ This is enough to show $I,D,E$ are collinear, therefore $\ol{DE}$ is a diameter of the incircle.
 \end{proof}
 
 \begin{lemma*}
@@ -716,7 +716,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   If $M$ is the midpoint of $\ol{BC},$ prove that $\ol{AE} \parallel \ol{IM}.$
 \end{problem*}
 \begin{proof}
-  Since $M$ is the midpoint of $BC,$ we know that $M$ is also the midpoint of $DX$ since $BD=XC.$ We also know that $I$ is the midpoint of $DE.$ Thus we find that $\triangle DEX \sim \triangle DIM,$ implying the result. 
+  Since $M$ is the midpoint of $BC,$ we know that $M$ is also the midpoint of $DX$ since $BD=XC.$ We also know that $I$ is the midpoint of $DE.$ Thus we find that $\triangle DEX \sim \triangle DIM,$ implying the result.
 \end{proof}
 
 \begin{problem*}
@@ -740,7 +740,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Show that $I$ must lie on $(AB'C').$
 \end{problem*}
 \begin{proof}
-  Since $B'C' \parallel BC, \angle IXB' = \angle IXC' = 90\degree.$ Also note that $\angle BFI = 90\degree = \angle IEC$ by tangency. Thus $\ol{FXE}$ is the Simson line of $I$ with respect to $\triangle AB'C'.$ Thus by Lemma 1.48 we are done. 
+  Since $B'C' \parallel BC, \angle IXB' = \angle IXC' = 90\degree.$ Also note that $\angle BFI = 90\degree = \angle IEC$ by tangency. Thus $\ol{FXE}$ is the Simson line of $I$ with respect to $\triangle AB'C'.$ Thus by Lemma 1.48 we are done.
 \end{proof}
 
 \begin{problem*}
@@ -748,7 +748,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Prove that $XB'=XC'.$
 \end{problem*}
 \begin{proof}
-  Note that since $AI$ bisects $\angle B'AC',$ and by Problem 4.15 $I$ lies on $(AB'C'),$ then $I$ must be the midpoint of arc $B'IC'$ by the Incenter-Excenter Lemma. Since $X$ is the foot of the altitude from $I$ to $B'C',$ and $IB'=IC',$ it follows that $XB' = XC'.$ 
+  Note that since $AI$ bisects $\angle B'AC',$ and by Problem 4.15 $I$ lies on $(AB'C'),$ then $I$ must be the midpoint of arc $B'IC'$ by the Incenter-Excenter Lemma. Since $X$ is the foot of the altitude from $I$ to $B'C',$ and $IB'=IC',$ it follows that $XB' = XC'.$
 \end{proof}
 
 \begin{problem*}
@@ -756,7 +756,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Show that if two of the angle relations in Lemma 4.18 hold, then so does the third.
 \end{problem*}
 \begin{proof}
-  Note by the trigonometric form of Ceva's Theorem we have that 
+  Note by the trigonometric form of Ceva's Theorem we have that
   $$\frac{\sin\dang BAP \cdot \sin\dang CBP \cdot \sin\dang ACP}{\sin\dang PAC \cdot \sin\dang PBA \cdot \sin\dang PCB} = 1$$ and
   $$\frac{\sin\dang P^*AC \cdot \sin\dang P^*BA \cdot \sin\dang P^*CB}{\sin\dang BAP^* \cdot \sin\dang CBP^* \cdot \sin\dang ACP^*} = 1.$$
   Now WLOG assume $\dang BAP = \dang P^*AC$ and $\dang CBP = \dang P^*BA.$ This implies that both $\dang PAC = \dang BAP^*$ and $\dang PBA = \dang CBP^*.$ Thus equating the two above equations and simplifying gives us
@@ -765,7 +765,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 
 \begin{problem*}
   [4.20]
-  Prove that the cevians $AX', BY',$ and $CZ'$ concur as described above. 
+  Prove that the cevians $AX', BY',$ and $CZ'$ concur as described above.
 \end{problem*}
 \begin{proof}
   By Ceva's we know that
@@ -776,10 +776,10 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 
 \begin{problem*}
   [4.21]
-  Check that if $Q$ is the isogonal conjugate of $P$, then $P$ is the isogonal conjugate of $Q$. 
+  Check that if $Q$ is the isogonal conjugate of $P$, then $P$ is the isogonal conjugate of $Q$.
 \end{problem*}
 \begin{proof}
-  This is trivial by the reflexive property of equality. For instance, if $\dang BAP = \dang P^*AC,$ then $\dang P^*AC = \dang BAP.$ 
+  This is trivial by the reflexive property of equality. For instance, if $\dang BAP = \dang P^*AC,$ then $\dang P^*AC = \dang BAP.$
 \end{proof}
 
 \begin{theorem*}
@@ -789,14 +789,14 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \end{theorem*}
 \begin{proof}
   By the Ratio Lemma, we have that
-  $$\frac{BD}{DC} = \frac{AB}{AC}\cdot\frac{\sin\angle BAD}{\sin\angle DAC}$$ and $$\frac{BE}{EC} = \frac{AB}{AC}\cdot\frac{\sin\angle BAE}{\sin\angle EAC}.$$ 
+  $$\frac{BD}{DC} = \frac{AB}{AC}\cdot\frac{\sin\angle BAD}{\sin\angle DAC}$$ and $$\frac{BE}{EC} = \frac{AB}{AC}\cdot\frac{\sin\angle BAE}{\sin\angle EAC}.$$
   Multiplying the two equations together gives us
   $$\frac{BD}{DC}\cdot\frac{BE}{EC}=\left(\frac{AB}{AC}\right)^2,$$ as desired. (Note that $\angle BAD = \angle EAC$ and $\angle BAE = \angle DAC$ by the definition of being isogonal, so the $\sin$ simplify to 1.)
 \end{proof}
 
 \begin{problem*}
   [4.23]
-  What is the isogonal conjugate of a triangle’s circumcenter? 
+  What is the isogonal conjugate of a triangle’s circumcenter?
 \end{problem*}
 \begin{proof}
   We claim this point is the orthocenter, $H$. Note that $$\angle BAH = 90\degree - \angle CBA = 90\degree - \frac12\angle COA = \angle OAC.$$
@@ -815,9 +815,9 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Solving for $AM$ and combining the two equations gives us
   $$\frac{CM}{MB} = \frac{\sin\angle B \sin\angle BAX}{\sin\angle C \sin\angle CAX}.$$
   Now note that $\angle ABX = 180\degree - \angle C$ and $\angle ACX = 180\degree - \angle B$ by the Tangent Criterion. Also note that $\sin\theta = \sin(180\degree - \theta).$ Thus by the Law of Sines we have
-  $$\frac{AX}{\sin\angle ABX} = \frac{AX}{\sin\angle C} = \frac{BX}{\sin\angle BAX}$$ 
+  $$\frac{AX}{\sin\angle ABX} = \frac{AX}{\sin\angle C} = \frac{BX}{\sin\angle BAX}$$
   and $$\frac{AX}{\sin\angle ACX} = \frac{AX}{\sin\angle B} = \frac{CX}{\sin\angle CAX}.$$
-  Now noting that $BX = CX$ and combining the equations we get 
+  Now noting that $BX = CX$ and combining the equations we get
   $$\frac{\sin\angle B \sin\angle BAX}{\sin\angle C \sin\angle CAX} = 1,$$ as desired.
 \end{proof}
 \end{document}
