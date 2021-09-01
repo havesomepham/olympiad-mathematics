@@ -274,3 +274,12 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+TEST/Monge.asy
+TEST/Monge.pdf
+TEST/test-1.asy
+TEST/test-1.pdf
+TEST/test.asy
+TEST/test.pdf
+TEST/test.tex
+TEST/test1.asy
+TEST/test1.pdf
