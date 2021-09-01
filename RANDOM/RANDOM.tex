@@ -1,0 +1,63 @@
+\documentclass[letterpaper,oneside]{scrartcl}
+
+\usepackage[sexy]{evan}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\usepackage{asymptote}
+\begin{document}
+\title{Random Problems}
+\author{Ryder Pham}
+\maketitle
+
+\begin{problem*}
+    [OTIS Excerpts \#7]
+    Determine, with proof, the smallest positive integer $c$ such that for any positive integer $n$, the decimal representation of the number $c^n + 2014$ has digits all less than $5$.
+\end{problem*}
+\begin{proof}
+  We claim that $c=10.$ We know this value works because for $n\geq 1, c^n \in \{10,100,1000,\dots\},$ and since all digits from the 10s and to the left are less than 4, adding 1 to them will not violate our digit condition. We will now check that this is the smallest possible value for $c.$ 
+  \begin{itemize}
+    \ii $c=1$ fails at $n=1$ since $1+4=5.$
+    \ii $c=2$ fails at $n=1$ since $2+4=6.$
+    \ii $c=3$ fails at $n=1$ since $3+4=7.$
+    \ii $c=4$ fails at $n=1$ since $4+4=8.$
+    \ii $c=5$ fails at $n=1$ since $5+4=9.$
+    \ii $c=6$ fails at $n=2$ since $36+2014=2050.$
+    \ii $c=7$ fails at $n=2$ since $49+2014=2063.$
+    \ii $c=8$ fails at $n=2$ since $64+2014=2078.$
+    \ii $c=9$ fails at $n=2$ since $81+2014=2095.$
+  \end{itemize}
+  Since every value of $c$ less than $10$ fails, we are done. 
+\end{proof}
+\begin{problem*}
+  [OTIS Excerpts \#77, HMMT Februrary 2013]
+  Values $a_1,\dots,a_{2013}$ are chosen independently and at random from the set $\{1,\dots,2013\}.$ What is the expected number of distinct values in the set $\{a_1,\dots,a_{2013}\}?$
+\end{problem*}
+\begin{soln}
+  Let $P$ be the number of distinct values in ${a_1,\dots,a_{2013}}$, and for each $i=1,2,\dots,2013$ let
+  $$
+  P_i :=
+  \begin{cases}
+    1 & \text{if } a_i \neq a_j \text{ for all } j < i\\
+    0 & \text{otherwise.}
+  \end{cases}
+  $$
+  It is clear that $P = P_1+\cdots+P_{2013}.$ Thus it follows that 
+  \begin{align*}
+    E[P]&=E[P_1]+E[P_2]+\cdots+E[P_{2013}] \\
+    &= 1+(1-1/2013)+\cdots+(1-1/2013)^{2012}\\
+    &= \frac{1-(2012/2013)^{2013}}{1-2012/2013}\\
+    &= 2013\left(1-\left(\frac{2012}{2013}\right)^{2013}\right).
+  \end{align*}
+\end{soln}
+\begin{problem*}
+  [100 Geometry Problems \# 8]
+  Let $ABC$ be a triangle with $\angle CAB$ a right angle. The point $L$ lies on the side $BC$ between $B$ and $C$. The circle $BAL$ meets the line $AC$ again at $M$ and the circle $CAL$ meets the line $AB$ again at $N.$ Prove that $L, M,$ and $N$ lie on a straight line.
+\end{problem*}
+\begin{proof}
+  Since $ANLC$ and $ALBM$ are cyclic quadrilaterals, $\angle CAN = \angle CLN = \angle 90\degree = \angle BAM = \angle BLM.$ Since $\angle CLN + \angle BLN = 180\degree,$ we have $\angle BLN = \angle BLM = 90\degree,$ as desired.
+\end{proof}
+\end{document}
