@@ -13,6 +13,8 @@
 \author{Ryder Pham}
 \maketitle
 
+\textbf{Note:} The symbol $\dang$ refers to the directed angle in this text. 
+
 \begin{problem*}
     [OTIS Excerpts \#7]
     Determine, with proof, the smallest positive integer $c$ such that for any positive integer $n$, the decimal representation of the number $c^n + 2014$ has digits all less than $5$.
@@ -54,10 +56,40 @@
   \end{align*}
 \end{soln}
 \begin{problem*}
-  [100 Geometry Problems \# 8]
+  [100 Geometry Problems \#8]
   Let $ABC$ be a triangle with $\angle CAB$ a right angle. The point $L$ lies on the side $BC$ between $B$ and $C$. The circle $BAL$ meets the line $AC$ again at $M$ and the circle $CAL$ meets the line $AB$ again at $N.$ Prove that $L, M,$ and $N$ lie on a straight line.
 \end{problem*}
 \begin{proof}
   Since $ANLC$ and $ALBM$ are cyclic quadrilaterals, $\angle CAN = \angle CLN = \angle 90\degree = \angle BAM = \angle BLM.$ Since $\angle CLN + \angle BLN = 180\degree,$ we have $\angle BLN = \angle BLM = 90\degree,$ as desired.
+\end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#11]
+  A closed planar shape is said to be equiable if the numerical values of its perimeter and area are the same. For example, a square with side length 4 is equiable since its perimeter and area are both 16. Show that any closed shape in the plane can be dilated to become equiable. (A dilation is an affine transformation in which a shape is stretched or shrunk. In other words, if $\mathcal{A}$ is a dilated version of $\mathcal{B}$ then $\mathcal{A}$ is similar to $\mathcal{B}$.) 
+\end{problem*}
+\begin{proof}
+  Note that for any scaling of the perimeter by a factor of $k$, the area increases by a factor of $k^2.$ It is not hard to see that by making the perimeter arbitrarily large, at some point the area must be larger than the perimeter, and by making the perimeter arbitrarily small, the area must be smaller than the perimeter. Thus by the Intermediate Value Theorem there must be a scale factor $k$ such that the perimeter equals the area. 
+\end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#13]
+  Points $A$ and $B$ are located on circle $\Gamma$, and point $C$ is an arbitrary point in the interior of $\Gamma$. Extend $AC$ and $BC$ past $C$ so that they hit $\Gamma$ at $M$ and $N$ respectively. Let $X$ denote the foot of the perpendicular from $M$ to $BN$, and let $Y$ denote the foot of the perpendicular from $N$ to $AM$. Prove that $AB \parallel XY$ . 
+\end{problem*}
+\begin{proof}
+  It suffices to show that $\triangle ABC \sim \triangle YXC,$ as this would prove that $AB \parallel XY.$ Note that $NXYM$ is a cyclic quadrilateral because $\dang NXM = 90\degree = \dang NYM.$ By angle chasing we get
+  $$\dang ABC = \dang ABN = \dang AMN  = \dang YMN = \dang YXN = \dang YXC.$$
+  We know $\dang ACB = \dang YCX$ by vertical angles, hence $\triangle ABC \sim \triangle YXC$ by $AA\sim.$ This completes the proof.
+\end{proof}
+\begin{problem*}
+  [100 Geometry Problem \#14, AIME 2007]
+  Square $ABCD$ has side length 13, and points $E$ and $F$ are exterior to the square such that $BE = DF = 5$ and $AE = CF = 12$. Find $EF^2$. 
+\end{problem*}
+\begin{soln}
+  Extend $BE$ and $CF$ to meet at $G$ and extend $AE$ and $DF$ to meet at $H.$ Note by symmetry, $FGHE$ is a square of sidelength $12+5=17.$ Thus $EF^2 = 17^2+17^2 = \fbox{578}.$
+\end{soln}
+\begin{problem*}
+  [100 Geometry Problems \#15]
+  Let $\Gamma$ be the circumcircle of $\triangle ABC,$ and let $D,E,F$ be the midpoints of arcs $AB,BC,CA,$ respectively. Prove that $DF\perp AE.$
+\end{problem*}
+\begin{proof}
+  Denote by $I$ the incenter of $\triangle ABC.$ By the Incenter-Excenter Lemma, $I$ lies on $AE.$ Also by the Lemma, $D$ and $F$ are the circumcenters of $(AIB)$ and $(AIC),$ respectively. The radical axis of these two circles is $AI,$ thus $AI \perp DF \Longrightarrow AE \perp DF.$
 \end{proof}
 \end{document}
