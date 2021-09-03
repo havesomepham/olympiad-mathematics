@@ -124,4 +124,32 @@ $$ Solving this gets us $(\alpha_1,\alpha_2) = (-49/5, 69/5).$ Thus what we have
     & = \frac{651367}{16807}.\\
 \end{align*}
 Therefore our final answer is $651367+16807+28795=\fbox{696969}.$
+\newpage
+\section*{2 September 2021}
+Let $BD =x.$ By the Angle Bisector Theorem
+$$\frac{8}{12} = \frac{x}{10-x}.$$
+Solving for $x$ gives us $x=4.$ Thus $BD=4$ and $CD=6.$ By Stewart's Theorem on $\triangle ABC$ we have
+\begin{align*}
+    b^2m+c^2n&=a(d^2+mn)\\
+    8^2\cdot6+12^2\cdot4&=10(d^2+6\cdot4)\\
+    384+576&=10d^2+240\\
+    d^2&=72\\
+    AD&=6\sqrt2.
+\end{align*}
+We will now find $BD'$. Applying Stewart's Theorem again on $\triangle ABD'$ gives us
+\begin{align*}
+    8^2\cdot2\sqrt2+c^2\cdot6\sqrt2&=8\sqrt2(4^2+24)\\
+    128+6c^2&=128+192\\
+    c^2&=32\\
+    BD'&=4\sqrt2.
+\end{align*}
+Similarly to find $CD'$ we apply Stewart's Theorem a third time on $\triangle ACD',$ which gives us
+\begin{align*}
+    b^2m+c^2n&=a(d^2+mn)\\
+    12^2\cdot2\sqrt2+c^2\cdot6\sqrt2&=8\sqrt2(6^2+24)\\
+    288+6c^2&=288+192\\
+    c^2&=32\\
+    CD'&=4\sqrt2.
+\end{align*}
+Thus $BD'\cdot CD' = (4\sqrt2)^2=\fbox{32}.$
 \end{document}
