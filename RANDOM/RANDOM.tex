@@ -92,4 +92,51 @@
 \begin{proof}
   Denote by $I$ the incenter of $\triangle ABC.$ By the Incenter-Excenter Lemma, $I$ lies on $AE.$ Also by the Lemma, $D$ and $F$ are the circumcenters of $(AIB)$ and $(AIC),$ respectively. The radical axis of these two circles is $AI,$ thus $AI \perp DF \Longrightarrow AE \perp DF.$
 \end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 1-1.7]
+  Denote by $F_n$ the $n$-th Fibonacci Number. Prove that
+  \[F_1+F_2+F_3+\dots+F_n=F_{n+2}-1.\]
+\end{problem*}
+\begin{proof}
+  We will use induction.\\
+  \indent\textit{Base Case:} \(n=1.\) Notice that \(1=F_1=F_3-1=2-1.\)\\
+  \indent\textit{Induction Hypothesis:} Assume our desired equation is true for all \(n \leq k\). We will now show that our desired equation holds for \(n = k+1.\) Note that
+  \[(F_1+\dots+F_k)+F_{k+1}=F_{k+2}-1+F_{k+1}=F_{k+3}-1,\]
+  where the first equality holds by our Induction Hypothesis and the second holds by the definition of the Fibonacci Sequence. This concludes the proof.
+\end{proof}
+\newpage
+\begin{problem*}
+  [Andrews, NT, Problem 1-1.8]
+  Prove that
+  \[F_1+F_3+F_5+\dots+F_{2n-1}=F_{2n}.\]
+\end{problem*}
+\begin{proof}
+  We will use induction.\\
+  \indent\textit{Base Case:} \(n=1.\) \(F_1=F_2=1.\)\\
+  \indent\textit{Induction Hypothesis:} Assume our desired equation is true for all \(n\leq k.\) We will now show that it also holds for \(n=k+1.\) Note that
+  \[(F_1+F_3+\dots+F_{2k-1})+F_{2(k+1)-1}=F_{2k}+F_{2k+1}=F_{2k+2}=F_{2(k+1)}.\] Hence we are done.
+\end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 1-1.17]
+  Prove that \(n(n^2-1)(3n+2)\) is divisible by 24 for each positive integer \(n\).
+\end{problem*}
+\begin{proof}
+  We will use induction.\\
+  \indent\textit{Base Case:} \(n=1.\) Note that \((1)((1)^2-1)(3(1)+2)=0,\) which is divisible by 24.\\
+  \indent\textit{Induction Hypothesis:} Assume the problem statement is true for all \(n\leq k\). We will now show it is true for \(n=k+1.\) Note that\
+  \begin{align*}
+  (k+1)((k+1)^2-1)(3(k+1)+2)&=(k+1)(k^2+2k)(3k+5)\\
+  &= k(k+1)(k+2)(3k+5)\\
+  &= k(k+1)((k-1)+3)((3k+2)+3)\\
+  &= k(k+1)(k-1)(3k+2)+k(k+1)\\
+  &\cdot[3(3k+2)+3(k-1)+3(3)].
+  \end{align*}
+  We know the first term of the RHS is divisible by 24 by our Induction Hypothesis. It suffices to show that \(k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]\) is divisible by 24. It follows that
+  \begin{align*}
+    k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]&=k(k+1)[9k+6+3k-3+9]\\
+    &= k(k+1)(12k+12)\\
+    &= 12k(k+1)(k+1).
+  \end{align*}
+  It is obvious that one of \(k,k+1\) is even. Hence we are done.
+\end{proof}
 \end{document}

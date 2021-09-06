@@ -839,11 +839,26 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   (NOT ENTIRELY ORIGINAL) We will first show that $\ol{BC}$ is the $B$-symmedian of $\triangle BAK,$ and the proof regarding the $C$-symmedian will follow analagously. Let $N$ be the point that bisects $AK.$ It suffices to show that $\angle KBN = \angle B,$ since this would satisfy our isogonality requirement for the symmedian. Note that $\angle NKB = \angle AKB = \angle ACB = \angle C.$ Thus, it now suffices to show that $\angle BNK = \angle A.$ Note that $\angle BNK = \angle BNX = \angle BCX = \angle A,$ where the second equality holds by (e) making $B,C,N,X$ concylic and the third equality holds by $\ol{CX}$ being tangent to $(ABC).$ Hence, we're done.
 \end{proof}
 \begin{problem*}
-  [4.30]
-  Prove (g) of Lemma 4.26. 
+  [4.31]
+  Show that this homothety takes $K$ to $M$, and in particular that $T,K,$ and $M$ are collinear.
 \end{problem*}
 \begin{proof}
-  What we want to prove is $\ol{BC}$ is the interior angle bisector of $\angle AMK,$ and $\ol{MK}$ is the exterior angle bisector. It suffices to show that $\dang AMB = \dang BMK.$ By (b) we have that
-  $$\dang AMB = \dang AMC = \dang ABK$$ 
+  Note that by tangency, $PK \perp AB.$ By midpoints, $OM \perp AB.$ Thus $PK \parallel OM.$ Also note that $TP=PK$ and $TO=OM,$ thus $\triangle TPK \sim \triangle TOM.$ Thus the homothety centered at $T$ sends $P$ to $O$ and $K$ to $M.$ This also proves that $T,K,M$ are collinear. 
+\end{proof}
+\begin{problem*}
+  [4.32]
+  Show that $\triangle TMB \sim \triangle BMK.$
+\end{problem*}
+\begin{proof}
+  By angle chasing we have
+  $$\angle MTB = \angle MAB = \angle MBA = \angle MBK.$$
+  We also have $\angle TMB = \angle BMK,$ thus $\triangle TMB \sim \triangle BMK$ by $AA\sim$.
+\end{proof}
+\begin{problem*}
+  [4.34]
+  Prove that the points $C,L,I,T$ are concyclic.
+\end{problem*}
+\begin{proof}
+  We want to show that $\dang TCI = \dang TCM = \dang TLK.$ This is equivalent to showing that the arc measures of $\overset{\frown}{TK}$ and $\overset{\frown}{TM}$ are equal. Since there is a homothety centered at $T$ that sends $K$ to $M,$ the circle $\omega$ will be sent to the circle $\Omega,$ so the two arc measures are equal. Hence, we are done.
 \end{proof}
 \end{document}
