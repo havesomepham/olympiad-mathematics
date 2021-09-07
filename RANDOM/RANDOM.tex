@@ -125,18 +125,28 @@
   \indent\textit{Base Case:} \(n=1.\) Note that \((1)((1)^2-1)(3(1)+2)=0,\) which is divisible by 24.\\
   \indent\textit{Induction Hypothesis:} Assume the problem statement is true for all \(n\leq k\). We will now show it is true for \(n=k+1.\) Note that\
   \begin{align*}
-  (k+1)((k+1)^2-1)(3(k+1)+2)&=(k+1)(k^2+2k)(3k+5)\\
+  &(k+1)((k+1)^2-1)(3(k+1)+2)\\
+  &=(k+1)(k^2+2k)(3k+5)\\
   &= k(k+1)(k+2)(3k+5)\\
   &= k(k+1)((k-1)+3)((3k+2)+3)\\
-  &= k(k+1)(k-1)(3k+2)+k(k+1)\\
-  &\cdot[3(3k+2)+3(k-1)+3(3)].
+  &= k(k+1)(k-1)(3k+2)+k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)].
   \end{align*}
   We know the first term of the RHS is divisible by 24 by our Induction Hypothesis. It suffices to show that \(k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]\) is divisible by 24. It follows that
   \begin{align*}
-    k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]&=k(k+1)[9k+6+3k-3+9]\\
+    &k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]\\
+    &= k(k+1)[9k+6+3k-3+9]\\
     &= k(k+1)(12k+12)\\
     &= 12k(k+1)(k+1).
   \end{align*}
   It is obvious that one of \(k,k+1\) is even. Hence we are done.
+\end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 1-2.4]
+  Prove that each integer may be uniquely represented in the form 
+  \[n=\sum_{j=0}^{s}c_j 3^j,\]
+  where \(c_s\neq0,\) and each \(c_j\) is equal to \(-1,0,\) or \(1\).
+\end{problem*}
+\begin{proof}
+  It is easy to show that every non-zero integer can be uniquely represented in base 3. To covert from base 3 to the representation described in the problem, replace \(2\cdot3^k\) with \(1\cdot3^{k+1}+(-1)\cdot3^k\) until all coefficients are \(-1,0,\) or \(1\).
 \end{proof}
 \end{document}
