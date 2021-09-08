@@ -13,14 +13,14 @@
 \author{Ryder Pham}
 \maketitle
 
-\textbf{Note:} The symbol $\dang$ refers to the directed angle in this text. 
+\textbf{Note:} The symbol $\dang$ refers to the directed angle in this text.
 
 \begin{problem*}
-    [OTIS Excerpts \#7]
-    Determine, with proof, the smallest positive integer $c$ such that for any positive integer $n$, the decimal representation of the number $c^n + 2014$ has digits all less than $5$.
+  [OTIS Excerpts \#7]
+  Determine, with proof, the smallest positive integer $c$ such that for any positive integer $n$, the decimal representation of the number $c^n + 2014$ has digits all less than $5$.
 \end{problem*}
 \begin{proof}
-  We claim that $c=10.$ We know this value works because for $n\geq 1, c^n \in \{10,100,1000,\dots\},$ and since all digits from the 10s and to the left are less than 4, adding 1 to them will not violate our digit condition. We will now check that this is the smallest possible value for $c.$ 
+  We claim that $c=10.$ We know this value works because for $n\geq 1, c^n \in \{10,100,1000,\dots\},$ and since all digits from the 10s and to the left are less than 4, adding 1 to them will not violate our digit condition. We will now check that this is the smallest possible value for $c.$
   \begin{itemize}
     \ii $c=1$ fails at $n=1$ since $1+4=5.$
     \ii $c=2$ fails at $n=1$ since $2+4=6.$
@@ -32,7 +32,7 @@
     \ii $c=8$ fails at $n=2$ since $64+2014=2078.$
     \ii $c=9$ fails at $n=2$ since $81+2014=2095.$
   \end{itemize}
-  Since every value of $c$ less than $10$ fails, we are done. 
+  Since every value of $c$ less than $10$ fails, we are done.
 \end{proof}
 \begin{problem*}
   [OTIS Excerpts \#77, HMMT Februrary 2013]
@@ -41,18 +41,18 @@
 \begin{soln}
   Let $P$ be the number of distinct values in ${a_1,\dots,a_{2013}}$, and for each $i=1,2,\dots,2013$ let
   $$
-  P_i :=
-  \begin{cases}
-    1 & \text{if } a_i \neq a_j \text{ for all } j < i\\
-    0 & \text{otherwise.}
-  \end{cases}
+    P_i :=
+    \begin{cases}
+      1 & \text{if } a_i \neq a_j \text{ for all } j < i \\
+      0 & \text{otherwise.}
+    \end{cases}
   $$
-  It is clear that $P = P_1+\cdots+P_{2013}.$ Thus it follows that 
+  It is clear that $P = P_1+\cdots+P_{2013}.$ Thus it follows that
   \begin{align*}
-    E[P]&=E[P_1]+E[P_2]+\cdots+E[P_{2013}] \\
-    &= 1+(1-1/2013)+\cdots+(1-1/2013)^{2012}\\
-    &= \frac{1-(2012/2013)^{2013}}{1-2012/2013}\\
-    &= 2013\left(1-\left(\frac{2012}{2013}\right)^{2013}\right).
+    E[P] & =E[P_1]+E[P_2]+\cdots+E[P_{2013}]                           \\
+         & = 1+(1-1/2013)+\cdots+(1-1/2013)^{2012}                     \\
+         & = \frac{1-(2012/2013)^{2013}}{1-2012/2013}                  \\
+         & = 2013\left(1-\left(\frac{2012}{2013}\right)^{2013}\right).
   \end{align*}
 \end{soln}
 \begin{problem*}
@@ -64,14 +64,14 @@
 \end{proof}
 \begin{problem*}
   [100 Geometry Problems \#11]
-  A closed planar shape is said to be equiable if the numerical values of its perimeter and area are the same. For example, a square with side length 4 is equiable since its perimeter and area are both 16. Show that any closed shape in the plane can be dilated to become equiable. (A dilation is an affine transformation in which a shape is stretched or shrunk. In other words, if $\mathcal{A}$ is a dilated version of $\mathcal{B}$ then $\mathcal{A}$ is similar to $\mathcal{B}$.) 
+  A closed planar shape is said to be equiable if the numerical values of its perimeter and area are the same. For example, a square with side length 4 is equiable since its perimeter and area are both 16. Show that any closed shape in the plane can be dilated to become equiable. (A dilation is an affine transformation in which a shape is stretched or shrunk. In other words, if $\mathcal{A}$ is a dilated version of $\mathcal{B}$ then $\mathcal{A}$ is similar to $\mathcal{B}$.)
 \end{problem*}
 \begin{proof}
-  Note that for any scaling of the perimeter by a factor of $k$, the area increases by a factor of $k^2.$ It is not hard to see that by making the perimeter arbitrarily large, at some point the area must be larger than the perimeter, and by making the perimeter arbitrarily small, the area must be smaller than the perimeter. Thus by the Intermediate Value Theorem there must be a scale factor $k$ such that the perimeter equals the area. 
+  Note that for any scaling of the perimeter by a factor of $k$, the area increases by a factor of $k^2.$ It is not hard to see that by making the perimeter arbitrarily large, at some point the area must be larger than the perimeter, and by making the perimeter arbitrarily small, the area must be smaller than the perimeter. Thus by the Intermediate Value Theorem there must be a scale factor $k$ such that the perimeter equals the area.
 \end{proof}
 \begin{problem*}
   [100 Geometry Problems \#13]
-  Points $A$ and $B$ are located on circle $\Gamma$, and point $C$ is an arbitrary point in the interior of $\Gamma$. Extend $AC$ and $BC$ past $C$ so that they hit $\Gamma$ at $M$ and $N$ respectively. Let $X$ denote the foot of the perpendicular from $M$ to $BN$, and let $Y$ denote the foot of the perpendicular from $N$ to $AM$. Prove that $AB \parallel XY$ . 
+  Points $A$ and $B$ are located on circle $\Gamma$, and point $C$ is an arbitrary point in the interior of $\Gamma$. Extend $AC$ and $BC$ past $C$ so that they hit $\Gamma$ at $M$ and $N$ respectively. Let $X$ denote the foot of the perpendicular from $M$ to $BN$, and let $Y$ denote the foot of the perpendicular from $N$ to $AM$. Prove that $AB \parallel XY$ .
 \end{problem*}
 \begin{proof}
   It suffices to show that $\triangle ABC \sim \triangle YXC,$ as this would prove that $AB \parallel XY.$ Note that $NXYM$ is a cyclic quadrilateral because $\dang NXM = 90\degree = \dang NYM.$ By angle chasing we get
@@ -80,7 +80,7 @@
 \end{proof}
 \begin{problem*}
   [100 Geometry Problem \#14, AIME 2007]
-  Square $ABCD$ has side length 13, and points $E$ and $F$ are exterior to the square such that $BE = DF = 5$ and $AE = CF = 12$. Find $EF^2$. 
+  Square $ABCD$ has side length 13, and points $E$ and $F$ are exterior to the square such that $BE = DF = 5$ and $AE = CF = 12$. Find $EF^2$.
 \end{problem*}
 \begin{soln}
   Extend $BE$ and $CF$ to meet at $G$ and extend $AE$ and $DF$ to meet at $H.$ Note by symmetry, $FGHE$ is a square of sidelength $12+5=17.$ Thus $EF^2 = 17^2+17^2 = \fbox{578}.$
@@ -125,24 +125,24 @@
   \indent\textit{Base Case:} \(n=1.\) Note that \((1)((1)^2-1)(3(1)+2)=0,\) which is divisible by 24.\\
   \indent\textit{Induction Hypothesis:} Assume the problem statement is true for all \(n\leq k\). We will now show it is true for \(n=k+1.\) Note that\
   \begin{align*}
-  &(k+1)((k+1)^2-1)(3(k+1)+2)\\
-  &=(k+1)(k^2+2k)(3k+5)\\
-  &= k(k+1)(k+2)(3k+5)\\
-  &= k(k+1)((k-1)+3)((3k+2)+3)\\
-  &= k(k+1)(k-1)(3k+2)+k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)].
+     & (k+1)((k+1)^2-1)(3(k+1)+2)                            \\
+     & =(k+1)(k^2+2k)(3k+5)                                  \\
+     & = k(k+1)(k+2)(3k+5)                                   \\
+     & = k(k+1)((k-1)+3)((3k+2)+3)                           \\
+     & = k(k+1)(k-1)(3k+2)+k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)].
   \end{align*}
   We know the first term of the RHS is divisible by 24 by our Induction Hypothesis. It suffices to show that \(k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]\) is divisible by 24. It follows that
   \begin{align*}
-    &k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)]\\
-    &= k(k+1)[9k+6+3k-3+9]\\
-    &= k(k+1)(12k+12)\\
-    &= 12k(k+1)(k+1).
+     & k(k+1)\cdot[3(3k+2)+3(k-1)+3(3)] \\
+     & = k(k+1)[9k+6+3k-3+9]            \\
+     & = k(k+1)(12k+12)                 \\
+     & = 12k(k+1)(k+1).
   \end{align*}
   It is obvious that one of \(k,k+1\) is even. Hence we are done.
 \end{proof}
 \begin{problem*}
   [Andrews, NT, Problem 1-2.4]
-  Prove that each integer may be uniquely represented in the form 
+  Prove that each integer may be uniquely represented in the form
   \[n=\sum_{j=0}^{s}c_j 3^j,\]
   where \(c_s\neq0,\) and each \(c_j\) is equal to \(-1,0,\) or \(1\).
 \end{problem*}
@@ -156,11 +156,11 @@
     \ii[(i)] if \(n\) and \(m\) are in \(J,\) then \(n+m\) and \(n-m\) are in \(J\)
     \ii[(ii)] if \(n\) is in \(J\) and \(r\) is an integer, then \(rn\) is in \(J.\)
   \end{enumerate}
-  Let \(\mathcal{J}_m\) be the set of all integers that are integral multiples of a particular integer \(m.\) Prove that \(\mathcal{J}_m\) is an integral ideal. 
+  Let \(\mathcal{J}_m\) be the set of all integers that are integral multiples of a particular integer \(m.\) Prove that \(\mathcal{J}_m\) is an integral ideal.
 \end{problem*}
 \begin{proof}
   Note that criteria (i) is satified since for any two multiples of \(m\) (call them \(am\) and \(bm\)), \(am+bm=(a+b)m\) and \(am-bm=(a-b)m\) are in \(\mathcal{J}_m.\)
-  Also note that criteria (ii) is satisfied since for any integer \(r\) and any element of the set \(\mathcal{J}_m\) (call this element \(cm\)), \((rc)m\) is in \(\mathcal{J}_m\). 
+  Also note that criteria (ii) is satisfied since for any integer \(r\) and any element of the set \(\mathcal{J}_m\) (call this element \(cm\)), \((rc)m\) is in \(\mathcal{J}_m\).
 \end{proof}
 \newpage
 \begin{problem*}
@@ -169,7 +169,7 @@
 \end{problem*}
 \begin{proof}
   If \(J\neq\{0\}=\mathcal{J}_0,\) then there exist non-zero integers in \(J,\) and with the right choice of \(r\) it is not hard to see that there must exist positive integers in \(J.\)
-  By the well-ordering principle of the natural numbers, there must be a least positive integer in \(J,\) say \(m.\) We will now show that \(J=\mathcal{J}_m.\) 
+  By the well-ordering principle of the natural numbers, there must be a least positive integer in \(J,\) say \(m.\) We will now show that \(J=\mathcal{J}_m.\)
   It is clear that every multiple of \(m\) is also in \(J\) by the definition of integral ideals. Also note that \(m\) is not the multiple of any positive integer less than it since there are no positive integers in \(J\) that are less than \(m.\)
   Finally, no non-multiples of \(m\) can be in the set. Say there exists some element \(k\) in \(J\) such that \(m<k\) and \(k\) is not a multiple of \(m.\) Then by Euclid's Division Lemma we have that \(k=qm+r\) for some integers \(q,r<m.\) However, by the definition of integral ideals, \(qm\) is in \(J\), so \(r\) must be in \(J,\) violating the minimality of \(m.\)
   Hence \(J=\mathcal{J}_m,\) as desired.
@@ -179,20 +179,20 @@
   Prove that if \(a\) and \(b\) are odd integers, then \(a^2-b^2\) is divisble by 8.
 \end{problem*}
 \begin{proof}
-  Let \(a=2k+1\) and \(b=2l+1\) for some integers \(k,l.\) Then 
+  Let \(a=2k+1\) and \(b=2l+1\) for some integers \(k,l.\) Then
   \[a^2-b^2=(2k+1)^2-(2l+1)^2=4(k^2+k-(l^2+l))=4(k(k+1)-l(l+1)).\]
   Notice that \(k(k+1)\) and \(l(l+1)\) are both even. Hence \(a^2-b^2\) is divisible by 8, as desired.
 \end{proof}
 \begin{problem*}
   [Andrews, NT, Problem 2-1.7]
-  Prove that if \(a\) is an odd integer, then \(a^2+(a+2)^2+(a+4)^2+1\) is divisible by 12.\\
+  Prove that if \(a\) is an odd integer, then \(a^2+(a+2)^2+(a+4)^2+1\) is divisible by 12.
 \end{problem*}
 \begin{proof}
   Let \(a=2k+1.\) Then
   \begin{align*}
-    a^2+(a+2)^2+(a+4)^2+1&=(2k+1)^2+(2k+3)^2+(2k+5)^2+1\\
-    &=4k^2+4k+1+4k^2+12k+9+4k^2+20k+25+1\\
-    &=12k^2+36k+36,
+    a^2+(a+2)^2+(a+4)^2+1 & =(2k+1)^2+(2k+3)^2+(2k+5)^2+1       \\
+                          & =4k^2+4k+1+4k^2+12k+9+4k^2+20k+25+1 \\
+                          & =12k^2+36k+36,
   \end{align*}
   which is obviously divisible by 12.
 \end{proof}
