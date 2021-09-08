@@ -183,4 +183,17 @@
   \[a^2-b^2=(2k+1)^2-(2l+1)^2=4(k^2+k-(l^2+l))=4(k(k+1)-l(l+1)).\]
   Notice that \(k(k+1)\) and \(l(l+1)\) are both even. Hence \(a^2-b^2\) is divisible by 8, as desired.
 \end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 2-1.7]
+  Prove that if \(a\) is an odd integer, then \(a^2+(a+2)^2+(a+4)^2+1\) is divisible by 12.\\
+\end{problem*}
+\begin{proof}
+  Let \(a=2k+1.\) Then
+  \begin{align*}
+    a^2+(a+2)^2+(a+4)^2+1&=(2k+1)^2+(2k+3)^2+(2k+5)^2+1\\
+    &=4k^2+4k+1+4k^2+12k+9+4k^2+20k+25+1\\
+    &=12k^2+36k+36,
+  \end{align*}
+  which is obviously divisible by 12.
+\end{proof}
 \end{document}
