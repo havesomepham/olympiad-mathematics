@@ -149,4 +149,38 @@
 \begin{proof}
   It is easy to show that every non-zero integer can be uniquely represented in base 3. To covert from base 3 to the representation described in the problem, replace \(2\cdot3^k\) with \(1\cdot3^{k+1}+(-1)\cdot3^k\) until all coefficients are \(-1,0,\) or \(1\).
 \end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 2-1.4]
+  Any set of integers \(J\) that fulfills the following two conditions is called an \textit{integral ideal:}
+  \begin{enumerate}
+    \ii[(i)] if \(n\) and \(m\) are in \(J,\) then \(n+m\) and \(n-m\) are in \(J\)
+    \ii[(ii)] if \(n\) is in \(J\) and \(r\) is an integer, then \(rn\) is in \(J.\)
+  \end{enumerate}
+  Let \(\mathcal{J}_m\) be the set of all integers that are integral multiples of a particular integer \(m.\) Prove that \(\mathcal{J}_m\) is an integral ideal. 
+\end{problem*}
+\begin{proof}
+  Note that criteria (i) is satified since for any two multiples of \(m\) (call them \(am\) and \(bm\)), \(am+bm=(a+b)m\) and \(am-bm=(a-b)m\) are in \(\mathcal{J}_m.\)
+  Also note that criteria (ii) is satisfied since for any integer \(r\) and any element of the set \(\mathcal{J}_m\) (call this element \(cm\)), \((rc)m\) is in \(\mathcal{J}_m\). 
+\end{proof}
+\newpage
+\begin{problem*}
+  [Andrews, NT, Problem 2-1.5]
+  Prove that every integral ideal \(J\) is identical with \(\mathcal{J}_m\) for some \(m.\)
+\end{problem*}
+\begin{proof}
+  If \(J\neq\{0\}=\mathcal{J}_0,\) then there exist non-zero integers in \(J,\) and with the right choice of \(r\) it is not hard to see that there must exist positive integers in \(J.\)
+  By the well-ordering principle of the natural numbers, there must be a least positive integer in \(J,\) say \(m.\) We will now show that \(J=\mathcal{J}_m.\) 
+  It is clear that every multiple of \(m\) is also in \(J\) by the definition of integral ideals. Also note that \(m\) is not the multiple of any positive integer less than it since there are no positive integers in \(J\) that are less than \(m.\)
+  Finally, no non-multiples of \(m\) can be in the set. Say there exists some element \(k\) in \(J\) such that \(m<k\) and \(k\) is not a multiple of \(m.\) Then by Euclid's Division Lemma we have that \(k=qm+r\) for some integers \(q,r<m.\) However, by the definition of integral ideals, \(qm\) is in \(J\), so \(r\) must be in \(J,\) violating the minimality of \(m.\)
+  Hence \(J=\mathcal{J}_m,\) as desired.
+\end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 2-1.6]
+  Prove that if \(a\) and \(b\) are odd integers, then \(a^2-b^2\) is divisble by 8.
+\end{problem*}
+\begin{proof}
+  Let \(a=2k+1\) and \(b=2l+1\) for some integers \(k,l.\) Then 
+  \[a^2-b^2=(2k+1)^2-(2l+1)^2=4(k^2+k-(l^2+l))=4(k(k+1)-l(l+1)).\]
+  Notice that \(k(k+1)\) and \(l(l+1)\) are both even. Hence \(a^2-b^2\) is divisible by 8, as desired.
+\end{proof}
 \end{document}
