@@ -179,4 +179,15 @@ Thus
     &=12\cdot167\cdot12\cdot3\left(\frac{167^2\sqrt3+4\cdot167+\sqrt3}{167^2\sqrt3+4\cdot167+\sqrt3}\right)\\
     &=\fbox{72144}.
 \end{align*}
+\section*{8 September 2021}
+We have \(f(x)=\log_2(x+\underbrace{\log_2(x+\log_2(x+\cdots))}_{f(x)}) = \log_2(x+f(x))\). Solving for \(x\) gives us \(x=2^{f(x)}-f(x).\) Thus 
+\[f^{-1}(x)=2^x-x.\]
+It follows that
+\begin{align*}
+    \sum_{k=2}^{10} \left[2^k-k\right] &= \sum_{k=2}^{10}2^k-\sum_{k=2}^{10}k\\
+    &= \sum_{k=0}^{8} 2^{k+2}-\sum_{k=0}^{8}(k+2)\\
+    &= 4\cdot\frac{2^9-1}{2-1}-\frac{8\cdot9}{2}-2\cdot9\\
+    &= 4(511)-36-18\\
+    &= \fbox{1990}.
+\end{align*}
 \end{document}
