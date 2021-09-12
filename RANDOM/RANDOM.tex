@@ -196,4 +196,32 @@
   \end{align*}
   which is obviously divisible by 12.
 \end{proof}
+\begin{problem*}
+  [Andrews, NT, Problem 2-2.4]
+  Prove \[\lcm(a,b)=\frac{ab}{\gcd(a,b)}.\]
+\end{problem*}
+\begin{proof}
+  Let \(a=kd\) and \(b=ld\) where \(d=\gcd(a,b).\) Then 
+  \[\frac{ab}{\gcd(a,b)}=\frac{kd\cdot ld}{d}=kld.\] 
+  Note that \(k\) and \(l\) are relatively prime. Also note that \(kld\) is a multiple of both \(a\) and \(b\). We have not double-counted any divisors since the greatest common divisor of \(a\) and \(b\) appears only once, hence we are done.
+\end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#20, Sharygin 2014]
+  Let \(ABC\) be an isosceles triangle with base \(AB\). Line \(\ell\) touches its circumcircle at point \(B\). Let \(CD\) be a perpendicular from \(C\) to \(\ell\), and \(AE, BF\) be the altitudes of \(ABC\). Prove that \(D,E,F\) are collinear.
+\end{problem*}
+\begin{proof}
+  Denote by \(H\) the orthocenter of \(\triangle ABC\). Also, call the intersection of \(\ol{CD}\) and \(\ol{EH}\) point \(G.\)
+
+  \textbf{Lemma 1:} \(G\) lies on \((ABC)\).
+
+  \indent Note that \(B,E,G,D\) are concyclic since \(\dang GEB = \dang GDB = 90\degree\). Thus
+  \[\dang CGA = \dang CGE = \dang DGE = \dang DBE = \dang DBC = \dang BAC = \dang CBA.\]
+  \indent Hence \(A,B,C,G\) are concylic, as desired.
+
+  \textbf{Lemma 2:} \(\triangle CEH \sim \triangle CDB.\)
+
+  It is well known that the reflection of an orthocenter of a triangle along one of its sides coincides with its circumcircle. Since \(G\) lies on \(\ol{EH}\) and, by Lemma 1, \(G\) lies on \((ABC)\), \(G\) is the reflection of \(H\) along \(CB\), making \(\triangle HCG\) isosceles. Note that \(\dang CHE = \dang EGC = \dang CBD\) and \(\dang CEH = \dang CDB = 90\degree\), so \(\triangle CEH \sim \triangle CDB\) by \(AA\sim\).
+
+  The previous result shows that there exists a spiral similarity between \(\triangle CEH\) and \(\triangle CDB\) centered at \(C\). Note that \(B\) is on \(\ol{HF}\), so it follows that \(D\) is on \(\ol{EF}\). Hence, we are done.
+\end{proof}
 \end{document}
