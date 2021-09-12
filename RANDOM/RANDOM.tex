@@ -190,9 +190,9 @@
 \begin{proof}
   Let \(a=2k+1.\) Then
   \begin{align*}
-    a^2+(a+2)^2+(a+4)^2+1 & =(2k+1)^2+(2k+3)^2+(2k+5)^2+1       \\
-                          & =4k^2+4k+1+4k^2+12k+9+4k^2+20k+25+1 \\
-                          & =12k^2+36k+36,
+    a^2+(a+2)^2+(a+4)^2+1 & = (2k+1)^2+(2k+3)^2+(2k+5)^2+1       \\
+                          & = 4k^2+4k+1+4k^2+12k+9+4k^2+20k+25+1 \\
+                          & = 12k^2+36k+36,
   \end{align*}
   which is obviously divisible by 12.
 \end{proof}
@@ -201,8 +201,8 @@
   Prove \[\lcm(a,b)=\frac{ab}{\gcd(a,b)}.\]
 \end{problem*}
 \begin{proof}
-  Let \(a=kd\) and \(b=ld\) where \(d=\gcd(a,b).\) Then 
-  \[\frac{ab}{\gcd(a,b)}=\frac{kd\cdot ld}{d}=kld.\] 
+  Let \(a=kd\) and \(b=ld\) where \(d=\gcd(a,b).\) Then
+  \[\frac{ab}{\gcd(a,b)}=\frac{kd\cdot ld}{d}=kld.\]
   Note that \(k\) and \(l\) are relatively prime. Also note that \(kld\) is a multiple of both \(a\) and \(b\). We have not double-counted any divisors since the greatest common divisor of \(a\) and \(b\) appears only once, hence we are done.
 \end{proof}
 \begin{problem*}
@@ -219,7 +219,7 @@
     \[\dang CGA = \dang CGE = \dang DGE = \dang DBE = \dang DBC = \dang BAC = \dang CBA.\]
     Hence \(A,B,C,G\) are concylic, as desired.
   \end{subproof}
-  
+
   \textbf{Lemma 2:} \(\triangle CEH \sim \triangle CDB.\)
 
   \begin{subproof}
@@ -228,4 +228,20 @@
 
   The previous result shows that there exists a spiral similarity between \(\triangle CEH\) and \(\triangle CDB\) centered at \(C\). Note that \(B\) is on \(\ol{HF}\), so it follows that \(D\) is on \(\ol{EF}\). Hence, we are done.
 \end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#21, Purple Comet 2013]
+  Two concentric circles have radii 1 and 4. Six congruent circles form a ring where each of the six circles is tangent to the two circles adjacent to it as shown. The three lightly shaded circles are internally tangent to the circle with radius 4 while the three darkly shaded circles are externally tangent to the circle with radius 1. The radius of the six congruent circles can be written \(\frac{k+\sqrt{m}}{n}\), where \(k,m\) and \(n\) are integers with \(k\) and \(n\) relatively prime. Find \(k+m+n\).
+\end{problem*}
+\begin{soln}
+  Number each of the six congruent circles from 1 to 6, with the first circle being lightly colored. We know that the centers of all six congruent circles \((O_1,O_2,\dots,O_6)\) are evenly spaced around the center of the two concentric circles, \(O\), by symmetry. That is, \(\angle O_1OO_2 = 60\degree.\) Denote by \(r\) the radius of each of the six circles. Note that \(O_1O=4-r\), \(O_2O = r+1\), and \(O_1O_2 = 2r\). Then by LoC on \(\triangle O_1OO_2\) we have
+  \begin{align*}
+    (2r)^2 & = (r+1)^2+(4-r)^2-2(r+1)(4-r)\cos(60\degree) \\
+    (2r)^2 & = (r+1)^2+(4-r)^2-(r+1)(4-r)                 \\
+    4r^2   & = r^2+2r+1+16-8r+r^2-(3r+4-r^2)              \\
+    0      & = r^2 +9r-13.
+  \end{align*}
+  Using the quadratic formula gives us
+  \[r=\frac{-9+\sqrt{133}}{2}.\]
+  Thus our final answer is \(-9+133+2 = \fbox{126}.\)
+\end{soln}
 \end{document}
