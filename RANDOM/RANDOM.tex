@@ -244,4 +244,40 @@
   \[r=\frac{-9+\sqrt{133}}{2}.\]
   Thus our final answer is \(-9+133+2 = \fbox{126}.\)
 \end{soln}
+\begin{problem*}
+  [100 Geometry Problems \#22]
+  Let \(A,B,C,D\) be points in the plane such that \(\angle BAC = \angle CBD.\) Prove that the circumcircle of \(\triangle ABC\) is tangent to \(BD\).
+\end{problem*}
+\begin{proof}
+  Let \(D\) be on the tangent of \(B,\) and let \(D'\) be on \((ABC)\) while on the same side of \(BC\) as \(D\). Note that \(\dang BAC = \dang BD'C\). As \(D'\) approaches \(B,\) line \(BD'\) approaches a tangent to \((ABC),\) but our angle property does not change. Hence, in the limit, \(\dang BAC = \dang CBD.\)
+\end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#23, Britain 1995]
+  Triangle \(ABC\) has a right angle at \(C\). The internal bisectors of angles \(BAC\) and \(ABC\) meet \(BC\) and \(CA\) at \(P\) and \(Q\) respectively. The points \(M\) and \(N\) are the feet of the perpendiculars from \(P\) and \(Q\) to \(AB\). Find angle \(MCN\). 
+\end{problem*}
+\begin{soln}
+  Note that \(BCQN\) and \(ACPM\) are cyclic quadrilaterals. Now consider \(\triangle CMN\). We have 
+\[\angle CNM = 90\degree - \angle QNC = 90\degree - \angle QBC = 90\degree - \frac12\angle B.\]
+Similarly, we have
+\[\angle CMN = 90\degree - \angle PMC = 90\degree - \angle CAP = 90\degree - \frac12\angle A.\]
+Considering \(\triangle CMN\) as a whole, we have
+\begin{align*}
+\angle MCN &= 180\degree - \angle CNM + \angle CMN \\
+&= 180- \left(90\degree - \frac12\angle B + 90\degree - \frac12\angle A\right)\\
+&= \frac12(\angle A + \angle B) \\
+&= \frac12\angle C\\
+&= \fbox{\(45\degree\)}.
+\end{align*}
+\end{soln}
+\begin{problem*}
+  [100 Geometry Problems \#24]
+  Let \(ABCD\) be a parallelogram with \(\angle A\) obtuse, and let \(M\) and \(N\) be the feet of the perpendicualrs from \(A\) to sides \(BC\) and \(CD\). Prove that \(\triangle MAN \sim \triangle ABC\).
+\end{problem*}
+\begin{proof}
+  Since \(\dang AMC = \dang ANC = 90\degree, AMCN\) is a cyclic quadrilateral. Thus 
+  \[\dang AMN = \dang ACN = \dang CAB\]
+  where the second equality holds because \(AB \parallel CD\). Also note that 
+  \[\dang BCA = \dang MCA = \dang MNA.\]
+  Therefore \(\triangle MAN \sim \triangle ABC\) by \(AA\sim\).
+\end{proof}
 \end{document}
