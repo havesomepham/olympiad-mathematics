@@ -303,10 +303,10 @@
 \begin{soln}
   For ease of notation denote by \(O_1\) the center of circle \(C_1\) and by \(O_2\) the center of circle \(C_2\). Also denote by \(\theta\) the measure of \(\angle O_1YZ\). Note that \(O_1, X,Y,Z\) all lie on \(C_2\). From this we know that \(\angle O_1XZ = 180\degree - \theta\). Also note that \(O_1X=r=O_1Y,\) where \(r\) is the radius of circle \(C_1\). By LoC on \(\triangle O_1YZ\) and \(\triangle O_1XZ\) we have
   \[
-  \begin{cases}
-    7^2+r^2-14r\cos\theta=11^2\\
-    13^2+r^2-26r\cos(180\degree-\theta)=11^2.
-  \end{cases}
+    \begin{cases}
+      7^2+r^2-14r\cos\theta=11^2 \\
+      13^2+r^2-26r\cos(180\degree-\theta)=11^2.
+    \end{cases}
   \]
   After noticing that \(\cos(180\degree-\theta)=-\cos\theta\), we can solve for \(r\cos\theta\) and set the two equations equal to each other, leaving us with
   \[\frac{r^2+7^2-11^2}{14}=\frac{r^2+13^2-11^2}{-26}.\]
@@ -314,9 +314,20 @@
 \end{soln}
 \begin{problem*}
   [100 Geometry Problems \#28]
-  Let \(ABCD\) be a cyclic quadrilateral with no two sides parallel. Lines \(AD\) and \(BC\) (extended) meet at \(K\), and \(AB\) and \(CD\) (extended) meet at \(M\). The angle bisector of \(\angle DKC\) intersects \(CD\) and \(AB\) at points \(E\) and \(F\), respectively; the angle bisector of \(\angle CMB\) intersects \(BC\) and \(AD\) at points \(G\) and \(H\), respectively. Prove that quadrilateral \(EGFH\) is a rhombus. 
+  Let \(ABCD\) be a cyclic quadrilateral with no two sides parallel. Lines \(AD\) and \(BC\) (extended) meet at \(K\), and \(AB\) and \(CD\) (extended) meet at \(M\). The angle bisector of \(\angle DKC\) intersects \(CD\) and \(AB\) at points \(E\) and \(F\), respectively; the angle bisector of \(\angle CMB\) intersects \(BC\) and \(AD\) at points \(G\) and \(H\), respectively. Prove that quadrilateral \(EGFH\) is a rhombus.
 \end{problem*}
 \begin{proof}
   Let \(\alpha = \angle AKF = \angle FKB\) and \(\beta = \angle BMG = \angle GMC\). Call the intersection of \(EF\) and \(GH\) point \(X\). Note that \(\angle AFK = 180\degree - (A + \alpha)\), so \(\angle KFB = A + \alpha\), then \(\angle MXF = 180\degree - (A + \alpha + \beta)\). Now note that since \(180\degree - C = A\), \(\angle KEC = 180\degree - (\alpha + A)\), so \(\angle XEC = A + \alpha \). Then \(\angle MXE = 180\degree - (A + \alpha + \beta) = \angle MXF,\) and since \(E,X,F\) are collinear, \(\angle MXE = \angle MXF = 90\degree\). Hence the diagonals of quadrilateral \(EGFH\) are perpendicular. Also note that \(\triangle MXF \cong \triangle MXE\) by \(ASA\cong\), so it follows that \(XF = XE\). A very similar process can be done to determine that \(XG = XH\), hence \(EGFH\) is a rhombus, and we are done.
 \end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#29]
+  In \(\triangle ABC, AB = 13, AC = 14,\) and \(BC = 15\). Let \(M\) denote the midpoint of \(\ol{AC}\). Point \(P\) is placed on line segment \(\ol{BM}\) such that \(\ol{AP} \perp \ol{PC}\). Suppose that \(p, q,\) and \(r\) are positive integers with \(p\) and \(r\) relatively prime and \(q\) squarefree such that the area of \(\triangle APC\) can be written in the form \(\frac{p\sqrt{q}}{r}.\) What is \(p + q + r\)?
+\end{problem*}
+\begin{soln}
+  (Not entirely original) Denote by \(D\) the foot of the altitude from \(B\) to \(AC\). With some simple calculations we find that \(AD = 5\), \(BD = 12\), and \(MD = 2\). Then by the Pythagorean Theorem we find that \(BM = 2\sqrt{37}\). Denote by \(E\) the foot of the altitude from \(P\) to \(AC\). Then we know that \(\triangle PME \sim \triangle BMD\) by \(AA\sim\). So,
+  \[\frac{PM}{PE}=\frac{BM}{BD}\Longrightarrow\frac{7}{PE}=\frac{2\sqrt{37}}{12}\Longrightarrow PE = \frac{42}{\sqrt{37}}.\]
+  Note that \(PE\) is the height of \(\triangle APC\). Thus 
+  \[[APC]= \frac12\cdot\frac{42}{\sqrt{37}}\cdot14= \frac{294\sqrt{37}}{37},\]
+  so our final answer is \(294+37+37=\fbox{368}\).
+\end{soln}
 \end{document}
