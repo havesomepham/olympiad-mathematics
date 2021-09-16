@@ -296,4 +296,20 @@
   \[\angle HAO = |\angle CAH - \angle BAH| = |90\degree - \angle C - (90 \degree - \angle B)| = |\angle B - \angle C|.\]
   The absolute value symbols are required to account for cases where \(\angle B < \angle C\). Hence, we are done.
 \end{proof}
+\begin{problem*}
+  [100 Geometry Problems \#27, AMC 12A 2012]
+  Circle \(C_1\) has its center \(O\) lying on circle \(C_2\). The two circles meet at \(X\) and \(Y\). Point \(Z\) in the exterior of \(C_1\) lies on circle \(C_2\) and \(XZ=13,OZ=11,\) and \(YZ=7\). What is the radius of circle \(C_1\)?
+\end{problem*}
+\begin{soln}
+  For ease of notation denote by \(O_1\) the center of circle \(C_1\) and by \(O_2\) the center of circle \(C_2\). Also denote by \(\theta\) the measure of \(\angle O_1YZ\). Note that \(O_1, X,Y,Z\) all lie on \(C_2\). From this we know that \(\angle O_1XZ = 180\degree - \theta\). Also note that \(O_1X=r=O_1Y,\) where \(r\) is the radius of circle \(C_1\). By LoC on \(\triangle O_1YZ\) and \(\triangle O_1XZ\) we have
+  \[
+  \begin{cases}
+    7^2+r^2-14r\cos\theta=11^2\\
+    13^2+r^2-26r\cos(180\degree-\theta)=11^2.
+  \end{cases}
+  \]
+  After noticing that \(\cos(180\degree-\theta)=-\cos\theta\), we can solve for \(r\cos\theta\) and set the two equations equal to each other, leaving us with
+  \[\frac{r^2+7^2-11^2}{14}=\frac{r^2+13^2-11^2}{-26}.\]
+  Solving for \(r\) gives us a final answer of \fbox{\(\sqrt{30}\)}.
+\end{soln}
 \end{document}
