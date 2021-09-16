@@ -312,4 +312,11 @@
   \[\frac{r^2+7^2-11^2}{14}=\frac{r^2+13^2-11^2}{-26}.\]
   Solving for \(r\) gives us a final answer of \fbox{\(\sqrt{30}\)}.
 \end{soln}
+\begin{problem*}
+  [100 Geometry Problems \#28]
+  Let \(ABCD\) be a cyclic quadrilateral with no two sides parallel. Lines \(AD\) and \(BC\) (extended) meet at \(K\), and \(AB\) and \(CD\) (extended) meet at \(M\). The angle bisector of \(\angle DKC\) intersects \(CD\) and \(AB\) at points \(E\) and \(F\), respectively; the angle bisector of \(\angle CMB\) intersects \(BC\) and \(AD\) at points \(G\) and \(H\), respectively. Prove that quadrilateral \(EGFH\) is a rhombus. 
+\end{problem*}
+\begin{proof}
+  Let \(\alpha = \angle AKF = \angle FKB\) and \(\beta = \angle BMG = \angle GMC\). Call the intersection of \(EF\) and \(GH\) point \(X\). Note that \(\angle AFK = 180\degree - (A + \alpha)\), so \(\angle KFB = A + \alpha\), then \(\angle MXF = 180\degree - (A + \alpha + \beta)\). Now note that since \(180\degree - C = A\), \(\angle KEC = 180\degree - (\alpha + A)\), so \(\angle XEC = A + \alpha \). Then \(\angle MXE = 180\degree - (A + \alpha + \beta) = \angle MXF,\) and since \(E,X,F\) are collinear, \(\angle MXE = \angle MXF = 90\degree\). Hence the diagonals of quadrilateral \(EGFH\) are perpendicular. Also note that \(\triangle MXF \cong \triangle MXE\) by \(ASA\cong\), so it follows that \(XF = XE\). A very similar process can be done to determine that \(XG = XH\), hence \(EGFH\) is a rhombus, and we are done.
+\end{proof}
 \end{document}
