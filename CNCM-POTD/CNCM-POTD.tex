@@ -114,14 +114,14 @@ $$
 $$ Solving this gets us $(\alpha_1,\alpha_2) = (-49/5, 69/5).$ Thus what we have left to evaluate is
 \begin{align*}
     a_7 & = -\frac{49}{5}\left(-\frac{8}{7}\right)^7+\frac{69}{5} \\
-    & = \frac{49}{5}\left(\frac{8}{7}\right)^7+\frac{69}{5} \\
-    & = \frac{1}{5}\cdot\frac{8^7}{7^5}+\frac{69}{5} \\
-    & = \frac{8^7+69\cdot7^5}{5\cdot7^5}\\
-    & = \frac{8^7+69\cdot16807}{5\cdot7^5}\\
-    & = \frac{2097152+69\cdot16807}{5\cdot7^5}\\
-    & = \frac{2097152+1159683}{5\cdot7^5}\\
-    & = \frac{3256835}{5\cdot7^5}\\
-    & = \frac{651367}{16807}.\\
+        & = \frac{49}{5}\left(\frac{8}{7}\right)^7+\frac{69}{5}   \\
+        & = \frac{1}{5}\cdot\frac{8^7}{7^5}+\frac{69}{5}          \\
+        & = \frac{8^7+69\cdot7^5}{5\cdot7^5}                      \\
+        & = \frac{8^7+69\cdot16807}{5\cdot7^5}                    \\
+        & = \frac{2097152+69\cdot16807}{5\cdot7^5}                \\
+        & = \frac{2097152+1159683}{5\cdot7^5}                     \\
+        & = \frac{3256835}{5\cdot7^5}                             \\
+        & = \frac{651367}{16807}.                                 \\
 \end{align*}
 Therefore our final answer is $651367+16807+28795=\fbox{696969}.$
 \newpage
@@ -130,64 +130,101 @@ Let $BD =x.$ By the Angle Bisector Theorem
 $$\frac{8}{12} = \frac{x}{10-x}.$$
 Solving for $x$ gives us $x=4.$ Thus $BD=4$ and $CD=6.$ By Stewart's Theorem on $\triangle ABC$ we have
 \begin{align*}
-    b^2m+c^2n&=a(d^2+mn)\\
-    8^2\cdot6+12^2\cdot4&=10(d^2+6\cdot4)\\
-    384+576&=10d^2+240\\
-    d^2&=72\\
-    AD&=6\sqrt2.
+    b^2m+c^2n            & =a(d^2+mn)       \\
+    8^2\cdot6+12^2\cdot4 & =10(d^2+6\cdot4) \\
+    384+576              & =10d^2+240       \\
+    d^2                  & =72              \\
+    AD                   & =6\sqrt2.
 \end{align*}
 We will now find $BD'$. Applying Stewart's Theorem again on $\triangle ABD'$ gives us
 \begin{align*}
-    8^2\cdot2\sqrt2+c^2\cdot6\sqrt2&=8\sqrt2(4^2+24)\\
-    128+6c^2&=128+192\\
-    c^2&=32\\
-    BD'&=4\sqrt2.
+    8^2\cdot2\sqrt2+c^2\cdot6\sqrt2 & =8\sqrt2(4^2+24) \\
+    128+6c^2                        & =128+192         \\
+    c^2                             & =32              \\
+    BD'                             & =4\sqrt2.
 \end{align*}
 Similarly to find $CD'$ we apply Stewart's Theorem a third time on $\triangle ACD',$ which gives us
 \begin{align*}
-    b^2m+c^2n&=a(d^2+mn)\\
-    12^2\cdot2\sqrt2+c^2\cdot6\sqrt2&=8\sqrt2(6^2+24)\\
-    288+6c^2&=288+192\\
-    c^2&=32\\
-    CD'&=4\sqrt2.
+    b^2m+c^2n                        & =a(d^2+mn)       \\
+    12^2\cdot2\sqrt2+c^2\cdot6\sqrt2 & =8\sqrt2(6^2+24) \\
+    288+6c^2                         & =288+192         \\
+    c^2                              & =32              \\
+    CD'                              & =4\sqrt2.
 \end{align*}
 Thus $BD'\cdot CD' = (4\sqrt2)^2=\fbox{32}.$
 \newpage
 \section*{6 September 2021}
-Let \(PY=x\)  and \(QY=y.\) 
+Let \(PY=x\)  and \(QY=y.\)
 Note that the area of \(\triangle XYZ\) (henceforth denoted \([XYZ]\)) is \(\frac{1}{2}\cdot12\cdot2004.\)
 Also note that \([XYZ]=[XPY]+[YPZ].\) It follows that
 \begin{align*}
-    [XYZ]&=[XPY]+[YPZ]\\
-    \frac12\cdot12\cdot2004 &= \frac12\cdot12\cdot\frac{x}{2}+\frac12\cdot2004\cdot\frac{x\sqrt3}{2}\\
-    12\cdot2004&=6x+1002\sqrt3x\\
-    x&= \frac{2\cdot2004}{1+167\sqrt3}\\
+    [XYZ]                   & =[XPY]+[YPZ]                                                            \\
+    \frac12\cdot12\cdot2004 & = \frac12\cdot12\cdot\frac{x}{2}+\frac12\cdot2004\cdot\frac{x\sqrt3}{2} \\
+    12\cdot2004             & =6x+1002\sqrt3x                                                         \\
+    x                       & = \frac{2\cdot2004}{1+167\sqrt3}                                        \\
 \end{align*}
 Similarly we have
 \begin{align*}
-    [XYZ]&=[XQY]+[YQZ]\\
-    \frac12\cdot12\cdot2004 &= \frac12\cdot12\cdot\frac{y\sqrt3}{2}+\frac12\cdot2004\cdot\frac{y}{2}\\
-    12\cdot2004&=6\sqrt3y+1002y\\
-    y&=\frac{2\cdot2004}{167+\sqrt3}\\
+    [XYZ]                   & =[XQY]+[YQZ]                                                            \\
+    \frac12\cdot12\cdot2004 & = \frac12\cdot12\cdot\frac{y\sqrt3}{2}+\frac12\cdot2004\cdot\frac{y}{2} \\
+    12\cdot2004             & =6\sqrt3y+1002y                                                         \\
+    y                       & =\frac{2\cdot2004}{167+\sqrt3}                                          \\
 \end{align*}
 Thus
 \begin{align*}
-    (PY+YZ)(QY+XY)&=\left(\frac{2\cdot12\cdot167}{1+167\sqrt3}+12\cdot167\right)\left(\frac{2\cdot12\cdot167}{167+\sqrt3}+12\right)\\
-    &=12\cdot167\cdot12\left(\frac{2+1+167\sqrt3}{1+167\sqrt3}\right)\left(\frac{2\cdot167+167+\sqrt3}{167+\sqrt3}\right)\\
-    &=12\cdot167\cdot12\left(\frac{3+167\sqrt3}{1+167\sqrt3}\right)\left(\frac{3\cdot167+\sqrt3}{167+\sqrt3}\right)\\
-    &=12\cdot167\cdot12\left(\frac{167^2\cdot3\sqrt3+12\cdot167+3\sqrt3}{167^2\sqrt3+4\cdot167+\sqrt3}\right)\\
-    &=12\cdot167\cdot12\cdot3\left(\frac{167^2\sqrt3+4\cdot167+\sqrt3}{167^2\sqrt3+4\cdot167+\sqrt3}\right)\\
-    &=\fbox{72144}.
+    (PY+YZ)(QY+XY) & =\left(\frac{2\cdot12\cdot167}{1+167\sqrt3}+12\cdot167\right)\left(\frac{2\cdot12\cdot167}{167+\sqrt3}+12\right)     \\
+                   & =12\cdot167\cdot12\left(\frac{2+1+167\sqrt3}{1+167\sqrt3}\right)\left(\frac{2\cdot167+167+\sqrt3}{167+\sqrt3}\right) \\
+                   & =12\cdot167\cdot12\left(\frac{3+167\sqrt3}{1+167\sqrt3}\right)\left(\frac{3\cdot167+\sqrt3}{167+\sqrt3}\right)       \\
+                   & =12\cdot167\cdot12\left(\frac{167^2\cdot3\sqrt3+12\cdot167+3\sqrt3}{167^2\sqrt3+4\cdot167+\sqrt3}\right)             \\
+                   & =12\cdot167\cdot12\cdot3\left(\frac{167^2\sqrt3+4\cdot167+\sqrt3}{167^2\sqrt3+4\cdot167+\sqrt3}\right)               \\
+                   & =\fbox{72144}.
 \end{align*}
 \section*{8 September 2021}
-We have \(f(x)=\log_2(x+\underbrace{\log_2(x+\log_2(x+\cdots))}_{f(x)}) = \log_2(x+f(x))\). Solving for \(x\) gives us \(x=2^{f(x)}-f(x).\) Thus 
+We have \(f(x)=\log_2(x+\underbrace{\log_2(x+\log_2(x+\cdots))}_{f(x)}) = \log_2(x+f(x))\). Solving for \(x\) gives us \(x=2^{f(x)}-f(x).\) Thus
 \[f^{-1}(x)=2^x-x.\]
 It follows that
 \begin{align*}
-    \sum_{k=2}^{10} \left[2^k-k\right] &= \sum_{k=2}^{10}2^k-\sum_{k=2}^{10}k\\
-    &= \sum_{k=0}^{8} 2^{k+2}-\sum_{k=0}^{8}(k+2)\\
-    &= 4\cdot\frac{2^9-1}{2-1}-\frac{8\cdot9}{2}-2\cdot9\\
-    &= 4(511)-36-18\\
-    &= \fbox{1990}.
+    \sum_{k=2}^{10} \left[2^k-k\right] & = \sum_{k=2}^{10}2^k-\sum_{k=2}^{10}k               \\
+                                       & = \sum_{k=0}^{8} 2^{k+2}-\sum_{k=0}^{8}(k+2)        \\
+                                       & = 4\cdot\frac{2^9-1}{2-1}-\frac{8\cdot9}{2}-2\cdot9 \\
+                                       & = 4(511)-36-18                                      \\
+                                       & = \fbox{1990}.
 \end{align*}
+
+\section*{17 September 2021}
+Right off the bat, we can ignore dividing by 1 since every number is divisible by 1.
+\begin{claim*}
+    All \(n=11(2k+1), k \in \ZZ\) fail.
+\end{claim*}
+\begin{proof}
+    Note that
+    \begin{align*}
+        n & \equiv 22k+11 \equiv 1 & \pmod{2}   \\
+        n & \equiv 0               & \pmod{11}.
+    \end{align*}
+    Since \(1>0\), this is a decerasing sequence.
+\end{proof}
+\begin{claim*}
+    The remainders of 11, 22, 121, and 242 always follow a non-decreasing sequence except for \(n \in [121,131]\).
+\end{claim*}
+\begin{proof}
+    We will start with \((11,22)\). We can represent \(n = 22q_1+r_1\) with \(0 \leq r_1 < 22\). Then
+    \begin{align*}
+        n & = 22q_1 + r_1          \\
+          & = 11(2q_1) + r_1       \\
+          & = 11(2q_1) + 11k + r_2 \\
+          & = 11(2q_1+k) + r_2,
+    \end{align*}
+    where \(0\leq r_2 < 11\). If \(r_1\geq 11,\) then \(k=1\) and \(r_1 > r_2\). If \(r_1 < 11\), then \(k=0\) and \(r_1=r_2\). Thus \(n\pmod{22}>n\pmod{11}\). Very similar arguments apply between \((11,121),(11,242),\) and \((121,242)\) since, in each pair, one is a multiple of the other. Additionally, since each pair cannot decrease the remainder of \(n\), together they must form a non-decreasing sequence.
+    
+    However, we are not done, since we must still consider \((22,121)\) because 121 is not a multiple of 22. Write \(n=121q_1+r_1\) with \(0 \leq r_1 < 121\). Note that if \(q_1\) is even, we are done since we can follow a very similar line of reasoning as above to show that \(r_1 \geq r_2\). We will now deal with the case if \(q_1\) is odd. Note that
+    \begin{align*}
+        n & = 121q_1+r_1         \\
+          & = 121(2k+1)+r_1      \\
+          & = 2\cdot121k+121+r_1 \\
+          & = 22(11k+5)+11+r_1,
+    \end{align*}
+    where \(k\geq0\). If \(r_1\geq11\), then \(r_1 > r_2\), so we are good here. However, if \(r_1 <11\), then \(r_2=11+r_1>r_1\), so this case fails here. The only possible odd value that \(q_1\) can be and still have \(n\leq 242\) is 1, so \(n \in \{121,122,...,131\}\) all fail.
+\end{proof}
+Now, counting up how many \(n\) fail and subtracting from 242 we get \(242-\underbrace{11}_{\text{first claim}}-\underbrace{11}_{\text{second claim}}+\underbrace{1}_{\text{double counting } 121} = \fbox{221}\).
 \end{document}
