@@ -227,4 +227,17 @@ Right off the bat, we can ignore dividing by 1 since every number is divisible b
     where \(k\geq0\). If \(r_1\geq11\), then \(r_1 > r_2\), so we are good here. However, if \(r_1 <11\), then \(r_2=11+r_1>r_1\), so this case fails here. The only possible odd value that \(q_1\) can be and still have \(n\leq 242\) is 1, so \(n \in \{121,122,...,131\}\) all fail.
 \end{proof}
 Now, counting up how many \(n\) fail and subtracting from 242 we get \(242-\underbrace{11}_{\text{first claim}}-\underbrace{11}_{\text{second claim}}+\underbrace{1}_{\text{double counting } 121} = \fbox{221}\).
+
+\section*{20 September 2021}
+First note that \(a_k=\frac{k(k+1)}{2}\). We will now manipulate our product as follows:
+\begin{align*}
+    \prod_{t=2}^{2021} \frac{a_t}{a_t-1} &= \prod_{t=2}^{2021} \frac{\tfrac{t(t+1)}{2}}{\tfrac{t(t+1)}{2}-1}\\
+    &= \prod_{t=2}^{2021} \frac{\tfrac{t(t+1)}{2}}{\tfrac{t(t+1)-2}{2}}\\
+    &= \prod_{t=2}^{2021} \frac{t(t+1)}{t(t+1)-2}\\
+    &= \prod_{t=2}^{2021} \frac{t(t+1)}{(t+2)(t-1)}\\
+    &= \frac{2\cdot3}{4\cdot1}\cdot\frac{3\cdot4}{5\cdot2}\cdot\frac{4\cdot5}{6\cdot3}\cdots\frac{2021\cdot2022}{2023\cdot2020}\\
+    &= \frac{3}{1}\cdot\frac{2021}{2023}\\
+    &= \frac{6063}{2023}.
+\end{align*}
+Hence our final answer is \(6063+2023 = \fbox{8086}\).
 \end{document}
