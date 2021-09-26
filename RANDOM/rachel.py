@@ -12,8 +12,10 @@ sum = 0.0
 
 def randomWalk():
     global x, y, count
+    # If Rachel is out of the 3x3 box, return her pathlength
     if abs(x) > 1 or abs(y) > 1:
         return count
+    # Rachel will move up, down, left, or right, each with 1/4 
     else:
         r = random()
         if r <= 0.25:
