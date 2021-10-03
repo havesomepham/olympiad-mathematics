@@ -350,6 +350,7 @@
   \[\dang H_BH_AH = \dang H_BCH = \dang ACH_C = 90\degree - \dang BAC.\]
   Thus, \(\dang HH_AH_C = \dang H_BH_AH,\) so \(H\) lies on the angle bisector of \(\dang H_BH_AH_C\). Similarly, \(H\) lies on the angle bisectors of \(\dang H_AH_CH_B\) and \(\dang H_CH_BH_A\), so \(H\) is the incenter of \(\triangle H_AH_BH_C\), as desired.
 \end{proof}
+\newpage
 \begin{problem*}
   [100 Geometry Problems \#32, AMC 10A 2013] In \(\triangle ABC, AB = 86\), and \(AC = 97\). A circle with center \(A\) and radius \(AB\) intersects \(\ol{BC}\) at points \(B\) and \(X\). Moreover \(\ol{BX}\) and \(\ol{CX}\) have integer lengths. What is \(BC\)?
 \end{problem*}
@@ -357,5 +358,43 @@
   Let \(BX = x\) and \(CX = y\). By Power of a Point on \(C\), we have 
   \[(97-86)(97+86) = 11\cdot183 = 3\cdot11\cdot61=y(x+y).\]
   Note that \(y,x+y\) are both positive integers, and \(y<x+y\). If \((y,x+y) = (1,3\cdot11\cdot61),(3,11\cdot61),\) or \((11,3\cdot61)\), the triangle inequality on \(\triangle ACX\) would be violated. Therefore \(BC = x+y = \fbox{61}\), our only remaining possiblity.
+\end{soln}
+\begin{problem*}
+  [The CALT Induction Handout Exercise 2.3, NICE Spring 2021]
+  Fifty rooms of a castle are lined in a row. The first room contains 100 knights, while the remaining 49 rooms contain one knight each. These knights wish to escape the castle by breaking the barriers between consecutive rooms, ending with the barrier from room 50 to the outside. At the stroke of midnight, each knight in the \(i\)-th room begins breaking the barrier between the \(i\)-th and \((i + 1)\)-st rooms, where we count the 51st room as the exterior. Each person works at a constant rate and is able to break down a barrier in 1 hour, and once a group of knights breaks down the \(i\)-th barrier, they immediately join the knight breaking down the \((i + 1)\)-st barrier. The number of hours it takes for the knights to escape the castle is \(\tfrac{m}{n}\), where \(m\) and \(n\) are positive relatively prime integers. Compute the product \(mn\).
+\end{problem*}
+\begin{soln}
+  Denote by ``room 0'' the first room and every remaining room analagously. Denote by \(t_n\) the time it takes to break down the wall in room \(n\). Note that 
+  \begin{align*}
+    t_0 &= \frac{1}{100} \\
+    t_1 &= t_0 + (1-t_0)\cdot\frac{1}{100+1} = \frac{100}{101}t_0+\frac{1}{101} = \frac{2}{101}\\
+    t_2 &= t_1 + (1-t_1)\cdot\frac{1}{100+2} = \frac{101}{102}t_1+\frac{1}{102} = \frac{3}{102}\\
+    t_3 &= t_2 + (1-t_2)\cdot\frac{1}{100+3} = \frac{102}{103}t_2+\frac{1}{103} = \frac{4}{103}\\
+    &\vdots \\
+    t_i &= \underbrace{t_{i-1}}_{\substack{\text{current wall already}\\\text{done by } i\text{-th person}}} + \underbrace{(1-t_{i-1})\cdot\frac{1}{100+i}}_{\substack{\text{rest of wall with}\\100 + i \text{ people}}} = \frac{i+1}{100+i}. 
+  \end{align*}
+  Thus, \(t_{49} = \frac{50}{149}\), so our final answer is \(50\cdot149 = \fbox{7450}\).
+\end{soln}
+\begin{problem*}
+  [CALT Induction Exercise 2.4, PUMaC 2018]
+  If \(a_1,a_2,\dots\) is a sequence of real numbers such that for all \(n\), \[\sum_{k=1}^n a_k\left(\frac{k}{n}\right)^2=1,\] find the smallest \(n\) such that \(a_n < \frac{1}{2018}\).
+\end{problem*}
+\begin{soln}
+  We will first begin by finding the first few values of \(a_k\). By some simple calculations it follows that
+  \begin{align*}
+    a_1\cdot\left(\tfrac{1}{1}\right)^2&= 1 \Longrightarrow a_1 = \tfrac{1}{1}\\
+    a_1\cdot\left(\tfrac{1}{2}\right)^2+a_2\cdot\left(\tfrac{2}{2}\right)^2&= 1 \Longrightarrow a_2 = \tfrac{3}{4}\\
+    a_1\cdot\left(\tfrac{1}{3}\right)^2+a_2\cdot\left(\tfrac{2}{3}\right)^2+a_3\cdot\left(\tfrac{3}{3}\right)^2 &= 1 \Longrightarrow a_3 = \tfrac{5}{9}\\
+    a_1\cdot\left(\tfrac{1}{4}\right)^2+a_2\cdot\left(\tfrac{2}{4}\right)^2+a_3\cdot\left(\tfrac{3}{4}\right)^2 + a_4\cdot\left(\tfrac{4}{4}\right)^2&= 1 \Longrightarrow a_4 = \tfrac{7}{16}.
+  \end{align*}
+  We can now conjecture that
+  \[a_k = \frac{2k-1}{k^2}.\]
+  Now we need to find an \(n\) such that
+  \[\frac{2n-1}{n^2}<\frac{1}{2018}.\]
+  Reciprocating both sides and doing polynomial long division on the LHS gives us
+  \[\frac{n^2}{2n-1} = \frac{1}{2}n+\frac{1}{4}+\frac{\tfrac14}{2n-1}>2018.\]
+  Multiplying both sides by 4 gives us 
+  \[2n+1+\frac{1}{2n-1}>4\cdot2018.\]
+  Note that \(n=2\cdot2018\) satsifies this inequality while \(n=2\cdot2018-1\) does not. Hence our answer is \(2\cdot2018 = \fbox{4036}\).
 \end{soln}
 \end{document}
