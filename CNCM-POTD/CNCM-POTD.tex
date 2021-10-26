@@ -240,4 +240,29 @@ First note that \(a_k=\frac{k(k+1)}{2}\). We will now manipulate our product as 
     &= \frac{6063}{2023}.
 \end{align*}
 Hence our final answer is \(6063+2023 = \fbox{8086}\).
+
+\section*{6 October 2021 INCOMPLETE SOLUTION}
+Note that for \(x,y=0,\) we have \(f(0) = -1\). For \(y=1\) and \(x\) free, we have
+\[f(x+1)-f(x)=x+2.\]
+Making the substitution \(x \mapsto x+1,\) we obtain 
+\[f(x+2)-f(x+1)=x+3.\]
+Then, for any integer \(k\), making the substitution \(x \mapsto x+k\) gets us
+\[f(x+k)-f(x+k-1)=x+k+1.\]
+Adding up all the equations from \(k=1\) to \(k=n\) gives us (this equation does not match what I have on paper)
+\[f(x+n)-f(x)=nx+\frac{n(n+1)}{2}. \]
+
+\section*{25 October 2021}
+Denote by \(D\) the foot of the altitude from \(M\) to \(OC\), and let \(x = MD\). Note that since \(AM = 3, AC = 6\), and \(\angle AMC = 90\degree\), we have that \(MC = 3\sqrt3\) by Pythagoras on \(\triangle AMC\). Similarly, by Pythagoras on \(\triangle AMO\), we have that \(MO = 6\sqrt2\). Note that \(OD + DC = 9\). Thus, by using Pythagoras on \(\triangle MOD\) and \(\triangle MCD\), we have the following equation:
+\begin{align*}
+    \sqrt{(6\sqrt2)^2-x^2}+\sqrt{(3\sqrt3)^2-x^2} &= 9 \\
+    \sqrt{72-x^2}+\sqrt{27-x^2} &= 9.
+\end{align*}
+We can make the substitution \(u^2=27-x^2\). Note that \(u^2+45=72-x^2\). Now we have
+\begin{align*}
+    \sqrt{u^2+45} + \sqrt{u^2} &= 9 \\
+    u^2+45 &= (9-u)^2 \\
+    45 &= 81-18u \\
+    u &= 2.
+\end{align*}
+Hence \(x^2 = 27-u^2 = \fbox{23}.\)
 \end{document}
