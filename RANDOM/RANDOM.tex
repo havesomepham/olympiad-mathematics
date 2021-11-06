@@ -455,4 +455,27 @@ Using partial fraction decomposition on the summand gets us
 \[\frac12\left[\sum_{i=1}^{\infty}\frac{1}{i+1}-\sum_{i=1}^{\infty}\frac{1}{i+2}\right].\]
 Note that we have a telescoping sum. It is not hard to see by writing out a few terms that our sum is equal to \(\fbox{\(\frac14\)}\).
 \end{soln}
+
+\begin{problem*}
+  [Christmas Math Competitions 12B 2021 \#15]
+  There are $n$ values of $x$ which satisfy
+  \[\lfloor x \rfloor ^2 = \{x\}^2 + \dfrac{2020}{2021}x^2.\]
+  What is the remainder when $n$ is divided by $5$? (Here, $\lfloor\bullet\rfloor$ is the greatest integer function and $\{\bullet\}$ is the fractional part function.)
+\end{problem*}
+\begin{soln}
+  Let \(x=A+\varepsilon\) where \(A\) is the integer part of \(x\) and \(\varepsilon\) is the fractional part. Substituting this into our given equation gives us
+  \[A^2 = \varepsilon^2 + \frac{2020}{2021}(A+\varepsilon)^2 = \varepsilon^2 + \frac{2020}{2021}(A^2+2A\varepsilon+\varepsilon^2).\]
+  Distributing \(\tfrac{2020}{2021}\) and moving all the terms to the LHS gives us
+  \begin{align*}
+    \frac{1}{2021}A^2-\frac{4040}{2021}A\varepsilon - \frac{4041}{2021}\varepsilon^2 &= 0\\
+    A^2-4040A\varepsilon-4041\varepsilon^2 &= 0 \\
+    (A-4041\varepsilon)(A+\varepsilon) &= 0.
+  \end{align*}
+  Thus we have two cases. 
+  \begin{itemize}
+    \ii  For the case where \(A+\varepsilon=0,\) since \(A\) is an integer, the only possible value for \(\varepsilon\) is 0, which then implies that \(A=0,\) giving us one value of \(x\) in this case.
+    \ii For the case where \(A-4041\varepsilon =0,\) for the LHS to be an integer, the denominator of \(\varepsilon\) must be 4041. Thus \(\varepsilon = \tfrac{1}{4041},\tfrac{2}{4041},\dots,\tfrac{4040}{4041},\) giving us 4040 values of \(x\) in this case.
+  \end{itemize}
+  Finally, note that \(1+4040 \equiv \fbox{1} \pmod{5}.\)
+\end{soln}
 \end{document}
