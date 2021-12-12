@@ -52,30 +52,54 @@ draw(g, p, ar);
 return g;
 }
 
-import graph;
-import olympiad;
-import cse5;
-defaultpen(fontsize(10pt));
-usepackage("amsmath");
-usepackage("amssymb");
-settings.tex="latex";
-settings.outformat="pdf";
-size(7cm);
+/* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(10cm);
+real labelscalefactor = 0.3; /* changes label-to-point distance */
+pen dps = linewidth(0.2) + fontsize(10); defaultpen(dps); /* default pen style */
+pen dotstyle = black; /* point style */
+real xmin = -0.42556342993481877, xmax = 2.1913854979166096, ymin = -0.25556833596774753, ymax = 1.2709852052789172; /* image dimensions */
+pen zzttqq = rgb(0.6,0.2,0); pen cqcqcq = rgb(0.7529411764705882,0.7529411764705882,0.7529411764705882);
 
-pair A = (0,1);
-pair B = (1,1);
-pair C = (1,0);
-pair D = (0,0);
+draw((0,1)--(1,1)--(1,0)--(0,0)--cycle, linewidth(1) + zzttqq);
+/* draw grid of horizontal/vertical lines */
+pen gridstyle = linewidth(0.7) + cqcqcq; real gridx = 0.2, gridy = 0.2; /* grid intervals */
+for(real i = ceil(xmin/gridx)*gridx; i <= floor(xmax/gridx)*gridx; i += gridx)
+draw((i,ymin)--(i,ymax), gridstyle);
+for(real i = ceil(ymin/gridy)*gridy; i <= floor(ymax/gridy)*gridy; i += gridy)
+draw((xmin,i)--(xmax,i), gridstyle);
+/* end grid */
 
-draw(A--B--C--D--cycle);
-draw(B--D);
-pair Q1 = midpoint(C--D);
-draw(A--Q1);
-pair P1 = IP(B--D,A--Q1);
-
-dot("$A = (0,1)$", A, dir(A));
-dot("$B = (1,1)$", B, dir(B));
-dot("$C = (1,0)$", C, dir(270));
-dot("$D = (0,0)$", D, dir(225));
-dot("$Q_1 = (\tfrac12,0)$", Q1, dir(270));
-dot("$P_1$", P1, dir(0));
+Label laxis; laxis.p = fontsize(10);
+xaxis(xmin, xmax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true);
+yaxis(ymin, ymax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true); /* draws axes; NoZero hides '0' label */
+/* draw figures */
+draw((0,1)--(1,1), linewidth(1) + zzttqq);
+draw((1,1)--(1,0), linewidth(1) + zzttqq);
+draw((1,0)--(0,0), linewidth(1) + zzttqq);
+draw((0,0)--(0,1), linewidth(1) + zzttqq);
+draw((1,1)--(0,0), linewidth(1));
+draw((0,0.5)--(1,0), linewidth(1));
+draw((0,0.3333333333333333)--(0.3333333333333333,0.3333333333333333), linewidth(1));
+draw((0,0.3333333333333333)--(1,0), linewidth(1));
+draw((0,0.25)--(0.25,0.25), linewidth(1));
+/* dots and labels */
+dot((1,0),dotstyle);
+label("$A$", (1.0301144111825382,0.02520847608297849), NE * labelscalefactor);
+dot((1,1),dotstyle);
+label("$B$", (1.0110324919169549,1.028372231759358), NE * labelscalefactor);
+dot((0,1),dotstyle);
+label("$C$", (0.010594724707085943,1.028372231759358), NE * labelscalefactor);
+dot((0,0),linewidth(4pt) + dotstyle);
+label("$D$", (0.016046701640109753,-0.06202315484540235), SE * labelscalefactor);
+dot((0,0.5),linewidth(4pt) + dotstyle);
+label("$Q_1$", (-0.08208888315431881,0.507708434655585), NE);
+dot((0.3333333333333333,0.3333333333333333),linewidth(4pt) + dotstyle);
+label("$P_1$", (0.35406927148758593,0.27327342653556147), NE * labelscalefactor);
+dot((0,0.3333333333333333),linewidth(4pt) + dotstyle);
+label("$Q_2$", (-0.07936289468780691,0.3305191843323114), W * labelscalefactor);
+dot((0.25,0.25),linewidth(4pt) + dotstyle);
+label("$P_2$", (0.2750156059587407,0.18331580714066875), S * labelscalefactor);
+dot((0,0.25),linewidth(4pt) + dotstyle);
+label("$Q_3$", (-0.0739109177547831,0.2569174957364901), W * labelscalefactor);
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);
+/* end of picture */
