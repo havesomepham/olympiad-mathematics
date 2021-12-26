@@ -855,14 +855,14 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   We also have $\angle TMB = \angle BMK,$ thus $\triangle TMB \sim \triangle BMK$ by $AA\sim$.
 \end{proof}
 \begin{problem*}
-  [4.34]
+  [4.34, Curvilinear Incircles]
   Prove that the points $C,L,I,T$ are concyclic.
 \end{problem*}
 \begin{proof}
   We want to show that $\dang TCI = \dang TCM = \dang TLK.$ This is equivalent to showing that the arc measures of $\overset{\frown}{TK}$ and $\overset{\frown}{TM}$ are equal. Since there is a homothety centered at $T$ that sends $K$ to $M,$ the circle $\omega$ will be sent to the circle $\Omega,$ so the two arc measures are equal. Hence, we are done.
 \end{proof}
 \begin{problem*}
-  [4.35] Show that \(\triangle MKI \sim \triangle MIT\), and that the triangles are oppositely oriented. 
+  [4.35, Curvilinear Incircles] Show that \(\triangle MKI \sim \triangle MIT\), and that the triangles are oppositely oriented. 
 \end{problem*}
 \begin{proof}
   Trivially \(\dang KMI = \dang TMI\). We would like to show that \(\dang IKM = \dang MIT\) to finish off with \(AA \sim\). Note that 
@@ -874,5 +874,32 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
     &= \dang MIT.
   \end{align*}
   Note that \(\dang MIT = -\dang MKI,\) so the two triangles are oppositely oriented.
+\end{proof}
+\begin{problem*}
+  [4.37, Mixtilinear Incircles]
+  Using the fact that \(I\) lies on \(\ol{KL}\), check that \(I\) is in fact the midpoint of \(\ol{KL}\). 
+\end{problem*}
+\begin{proof}
+  Note that \(\angle KAI = \angle LAI\) because $I$ is the incenter, \(\angle AKI = \angle ALI\) by tangency, and \(AK = AL\) again by tangency, so \(\triangle KAI \cong \triangle LAI\) by \(ASA\cong\). This implies that \(KI = LI,\) and we are done.
+\end{proof}
+\begin{problem*}
+  [4.38, Mixtilinear Incircles]
+  Prove that \(\angle ATK = \angle LTI\).
+\end{problem*}
+\begin{proof}
+  By angle chase we have
+  \[\angle LTI = \angle LCI = \angle ACM_C = \angle ATM_C = \angle ATK.\]
+\end{proof}
+\begin{problem*}
+  [4.39, Mixtilinear Incircles]
+  Prove that $S$ is the midpoint of the arc \(\overset{\frown}{BC}\) containing $A$.
+\end{problem*}
+\begin{proof}
+  By angle chase we have
+  \begin{align*}
+  \dang SBC &= \dang STC = \dang ITC = \dang ILC = \dang ILA \\
+  = \dang AKI &= \dang BKI = \dang BTI = \dang BTS = \dang BCS.
+  \end{align*}
+  Since we have that \(\angle SBC = \angle SCB,\) this implies the result.
 \end{proof}
 \end{document}
