@@ -861,4 +861,18 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   We want to show that $\dang TCI = \dang TCM = \dang TLK.$ This is equivalent to showing that the arc measures of $\overset{\frown}{TK}$ and $\overset{\frown}{TM}$ are equal. Since there is a homothety centered at $T$ that sends $K$ to $M,$ the circle $\omega$ will be sent to the circle $\Omega,$ so the two arc measures are equal. Hence, we are done.
 \end{proof}
+\begin{problem*}
+  [4.35] Show that \(\triangle MKI \sim \triangle MIT\), and that the triangles are oppositely oriented. 
+\end{problem*}
+\begin{proof}
+  Trivially \(\dang KMI = \dang TMI\). We would like to show that \(\dang IKM = \dang MIT\) to finish off with \(AA \sim\). Note that 
+  \begin{align*}
+    \dang IKM &= \dang IKT \\
+    &= \dang LKT \\
+    &= \dang CLT \quad \text{(Tangency Criterion)}\\
+    &= \dang CIT \quad (\text{since } C,L,I,T \text{ concyclic})\\
+    &= \dang MIT.
+  \end{align*}
+  Note that \(\dang MIT = -\dang MKI,\) so the two triangles are oppositely oriented.
+\end{proof}
 \end{document}
