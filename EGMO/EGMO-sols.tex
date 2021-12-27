@@ -904,9 +904,16 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \end{proof}
 \begin{problem*}
   [4.41, Hong Kong 1998]
-  Let $PQRS$ be a cyclic quadrilateral with $ \angle PSR = 90$ and let $H$ and $K$ be the feet of the altitudes from $Q$ to lines $PR$ and $PS$. Prove that $HK$ bisects $QS$.
+  Let $PQRS$ be a cyclic quadrilateral with $ \angle PSR = 90\degree$ and let $H$ and $K$ be the feet of the altitudes from $Q$ to lines $PR$ and $PS$. Prove that $HK$ bisects $QS$.
 \end{problem*}
 \begin{proof}
-  Note that \(\ol{HK}\) is the Simson Line of \(Q\) with respect to \(\triangle SPR\). Since \(\angle PSR = 90,\) \(S\) is the orthocenter of \(\triangle SPR.\) Hence by Lemma 4.4 (the Simson Line Bisection Lemma) we have shown that \(HK\) bisects \(QS\).
+  Note that \(\ol{HK}\) is the Simson Line of \(Q\) with respect to \(\triangle SPR\). Denote by \(L\) the foot of the altitude from \(Q\) to \(\ol{RS}\). Since \(\angle KSL = \angle PSR = 90\degree,\) \(\angle QKS = 90\degree\), and \(\angle SLQ = 90\degree,\) quadrilateral \(KSLQ\) is a rectangle, so its diagonals bisect each other. Thus, \(\ol{KL} = \ol{HK}\) (our Simson Line!) bisects \(SQ\) so we are done.
+\end{proof}
+\begin{problem*}
+  [4.42, USAMO 1998/4]
+  Let $ABC$ be a triangle with incenter $I$ and circumcenter $O$. Show that the circumcircles of $\triangle IBC$, $\triangle ICA$ and $\triangle IAB$ lie on a circle with center $O$.
+\end{problem*}
+\begin{proof}
+  Call the circumcenter of $(BIC)$ point $O_A$ and define $O_B$ and $O_C$ similarly. By the Incenter-Excenter Lemma, $O_A$ is the midpoint of arc \(\overset{\frown}{BC}\), $O_B$ is the midpoint of arc \(\overset{\frown}{AC}\), and $O_C$ is the midpoint of arc \(\overset{\frown}{AB}\). This implies that \(O_A, O_B, O_C\) are all on the circumcirle of \(\triangle ABC\) so we are done. (trivial)
 \end{proof}
 \end{document}
