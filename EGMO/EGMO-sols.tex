@@ -916,4 +916,21 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
 \begin{proof}
   Call the circumcenter of $(BIC)$ point $O_A$ and define $O_B$ and $O_C$ similarly. By the Incenter-Excenter Lemma, $O_A$ is the midpoint of arc \(\widehat{BC}\), $O_B$ is the midpoint of arc \(\widehat{AC}\), and $O_C$ is the midpoint of arc \(\widehat{AB}\). This implies that \(O_A, O_B, O_C\) are all on the circumcirle of \(\triangle ABC\) so we are done. (trivial)
 \end{proof}
+\begin{problem*}
+  [4.43, USAMO 1995/3]
+  Given a non-isosceles, non-right triangle $ABC$, let $O$ denote its circumcenter, and let $A_1$, $B_1$ and $C_1$ be the midpoints of its sides. Point $A_2$ is on ray $OA_1$ so that $\triangle OAA_1$ is similar to $\triangle OA_2A$. Points $B_2$ and $C_2$ are defined similarly. Prove that $AA_2$, $BB_2$ and $CC_2$ are concurrent.
+\end{problem*}
+\begin{proof}
+  We begin with the following claim that seems plausible upon inspection.
+  \begin{claim*}
+    \(\ol{A_2B}\) and \(\ol{A_2C}\) are tangent to \((ABC)\). Equivalently, \(\ol{AA_2}\) is the $A$-symmedian of \(\triangle ABC\).
+  \end{claim*}
+  \begin{subproof}
+    We leverage the fact that \(\triangle OAA_1 \sim \triangle OA_2A\). Note that 
+    \[\frac{OA_1}{OA} = \frac{OA}{OA_2} \Rightarrow OA_1 \cdot OA_2 = {OA}^2 = R^2 = {OC}^2\]
+    where $R$ is the circumradius of \(\triangle ABC\).
+    Now consider the power of \(O\) with respect to \((A_1A_2C)\). Our equation above clearly implies that \(OC\) is tangent to \((A_1A_2C)\), and since \(\angle A_2A_1C = 90\degree\), \(\ol{A_2C}\) is a diameter of \((A_1A_2C)\). Thus \(\ol{OC} \perp \ol{A_2C}\), and since \(OC\) is itself a radius of \((ABC)\), we have shown that \(\ol{A_2C}\) is tangent to \((ABC)\). A very similar line of reasoning holds for \(\ol{A_2B}\).
+  \end{subproof}
+  We can follow two other very similar arguments to prove that \(\ol{BB_2}\) and \(\ol{CC_2}\) are the $B$- and $C$-symmedians of \(\triangle ABC\), respectively. Since the three medians coincide at a single point (namely, the centroid), the symmedians (which are the isogonal conjugates of the medians) must also coincide at a single point, namely, the symmedian point. Hence, we are done.
+\end{proof}
 \end{document}
