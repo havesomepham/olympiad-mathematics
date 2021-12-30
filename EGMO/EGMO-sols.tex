@@ -939,6 +939,75 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Let $ABC$ be an acute triangle and let $X$ be a variable point on the minor arc $BC$. Let $P$ and $Q$ be the feet of the perpendiculars from $X$ to lines $CA$ and $CB$, respectively. Let $R$ be the intersection of line $PQ$ and the perpendicular from $B$ to $\overline{AC}$. Let $\ell$ be the line through $P$ parallel to $\overline{XR}$. Prove that as $X$ varies along minor arc $BC$, the line $\ell$ always passes through a fixed point.
 \end{problem*}
 \begin{proof}
-  We claim this fixed point is the orthocenter of \(\triangle ABC\). Call this point $H$. Note that  \(\ol{PX} \parallel \ol{RB}\), \(\ol{QX} \parallel \ol{AH}\), and \(\ol{RX} \parallel \ell\). Because \(\ol{PX}, \ol{QX}, \text{ and } \ol{RX}\) all pass through the single point \(X\), the lines \(\ol{RB}, \ol{AH},\text{ and } \ell\) must also pass through a single point, which is easy to see by translation of \(X\). Since \(H\) lies on both \(\ol{AH}\) and \(\ol{RB}\) by construction of the orthocenter, \(\ell\) must also pass through the orthocenter as well. Note that this argument holds for any placement of $X$ along minor arc $\widehat{BC}$, so we are done.
+  We claim this fixed point is the orthocenter $H$ of \(\triangle ABC\). Note that \(\ol{PQ}\) is the Simson Line of \(X\) with respect to \(\triangle ABC\). By the Simson Line Bisection Lemma (4.4) we know that \(PXRH\) is a parallelogram, so we have that \(H\) is always on \(\ell\). Note that this argument holds for any placement of $X$ along minor arc $\widehat{BC}$, so we are done.
 \end{proof}
+\begin{problem*}
+  [4.45, USA TST 2011/1]
+  In an acute scalene triangle $ABC$, points $D$, $E$, $F$ lie on sides $BC$, $CA$, $AB$ respectively, such that $\overline{AD} \perp \overline{BC}$, $\overline{BE} \perp \overline{CA}$, $\overline{CF} \perp \overline{AB}$. Altitudes $\overline{AB}$, $\overline{BE}$, $\overline{CF}$ meet at the orthocenter $H$. Points $P$ and $Q$ lie on the segment $\overline{EF}$ such that $\overline{AP} \perp \overline{EF}$ and $\overline{HQ} \perp \overline{EF}$. Lines $DP$ and $QH$ intersect at point $R$. Compute $HQ/HR$.
+\end{problem*}
+\begin{soln}
+  We claim \(HQ/HR = 1\). First, by the Duality of Orthocenters and Excenters (Lemma 4.6) we have that \(H\) is the incenter and \(A\) is the \(D\)-excenter of orthic triangle \(DEF\). Since \(Q\) is the foot of the altitude from \(H\) to \(\ol{EF}\), \(HQ\) is a radius of the incircle of \(\triangle DEF\). 
+  
+  Now note that since \(D,R,P\) are collinear and \(\ol{AP} \perp \ol{EF} \perp \ol{QR} \Longrightarrow \ol{AP} \parallel \ol{QR}\), a homothety centered at \(D\) that sends \(A\) to \(H\) will send \(P\) to \(R\). Thus, \(HR\) is a radius of the incircle of \(\triangle DEF\). Hence the ratio of \(HQ\) and \(HR\) is equal to 1 and we are done.
+\end{soln}
+
+\begin{figure}[h]
+  \centering
+  \begin{asy}
+    /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+    import graph; size(10cm); 
+    real labelscalefactor = 0.5; /* changes label-to-point distance */
+    defaultpen(fontsize(10pt));
+    pen dotstyle = black; /* point style */ 
+    real xmin = 10.089067137849216, xmax = 16, ymin = -5, ymax = 0.7001096900360797;  /* image dimensions */
+    pen zzttqq = rgb(0.6,0.2,0.); pen ttttff = rgb(0.2,0.2,1.); 
+    pair A = (13.48692277822345,-4.931143874499144), B = (10.692916432535156,-1.4356945224882818), C = (15.579773773604833,-0.08484925111597325), D = (12.390949065760713,-0.9663173352412872), F = (11.939198252148614,-2.994858833447501), H = (12.768459041839456,-2.3320084599200497), P = (13.492744683604744,-2.9995412667249157), Q = (12.766453676805392,-2.9973522049045127), R = (12.770464406873522,-1.666664714935594); 
+    
+    draw(A--B--C--cycle, zzttqq); 
+    draw(D--(14.320000108261523,-3.0020346381819274)--F--cycle, ttttff); 
+     /* draw figures */
+    draw(A--B, zzttqq); 
+    draw(B--C, zzttqq); 
+    draw(C--A, zzttqq); 
+    draw(A--D); 
+    draw(C--F); 
+    draw(B--(14.320000108261523,-3.0020346381819274)); 
+    draw((14.320000108261523,-3.0020346381819274)--F); 
+    draw(A--P); 
+    draw(R--Q); 
+    draw(D--P, linetype("2 2")); 
+    draw(D--F); 
+    draw(D--(14.320000108261523,-3.0020346381819274)); 
+    draw(D--(14.320000108261523,-3.0020346381819274), ttttff); 
+    draw((14.320000108261523,-3.0020346381819274)--F, ttttff); 
+    draw(F--D, ttttff); 
+    draw(circle(H, 0.6653467670913191)); 
+    draw(circle(A, 1.931611381448781), linetype("2 2")); 
+    
+     /* dots and labels */
+    dot(A,dotstyle); 
+    label("$A$", (13.53890942283245,-4.964308771436398), NE * labelscalefactor); 
+    dot(B,dotstyle); 
+    label("$B$", B, NW * labelscalefactor); 
+    dot(C,dotstyle); 
+    label("$C$", (15.603250532072417,-0.028808599210378677), NE * labelscalefactor); 
+    dot(D,linewidth(4.pt) + dotstyle); 
+    label("$D$", (12.33146462308832,-0.8857049087062152), NE * labelscalefactor); 
+    dot((14.320000108261523,-3.0020346381819274),linewidth(4.pt) + dotstyle); 
+    label("$E$", (14.390241470578314,-3.066895514695618), NE * labelscalefactor); 
+    dot(F,linewidth(4.pt) + dotstyle); 
+    label("$F$", F, SW); 
+    dot(H,linewidth(4.pt) + dotstyle); 
+    label("$H$", H, dir(75)*2); 
+    dot(P,linewidth(4.pt) + dotstyle); 
+    label("$P$", P, NE * labelscalefactor); 
+    dot(Q,linewidth(4.pt) + dotstyle); 
+    label("$Q$", Q, NW * labelscalefactor); 
+    dot(R,linewidth(4.pt) + dotstyle); 
+    label("$R$", R, dir(60)); 
+    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+     /* end of picture */
+  \end{asy}
+  \caption{Problem 4.45}
+\end{figure}
 \end{document}
