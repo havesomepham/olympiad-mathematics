@@ -128,7 +128,7 @@
 
 \begin{proof}  Let the circle with diameter $\overline{AB}$ be called $\omega_1$ and the circle with diameter $\overline{AC}$ be called $\omega_2.$  By Theorem 2.9, it suffices to show that the intersection of $\overline{MN}$ and $\overline{PQ}$ lies on the radical axis of $\omega_1$ and $\omega_2.$ Since $\overline{MN}$ and $\overline{PQ}$ are altitudes of $\triangle ABC,$ their intersection is the orthocenter of $\triangle ABC.$ We will call this point $H.$ Note that $\overline{AH}$ is the third altitude of $\triangle ABC.$ Call the foot of this altitude $A'.$ Now note that $\angle AA'B = \angle AA'C = 90\degree,$ and since $\overline{AB}$ and $\overline{AC}$ are diameters of their respective circles, $\omega_1$ and $\omega_2$ must intersect at $A'.$ Hence, $\overline{AA'}$ is the radical axis of $\omega_1$ and $\omega_2,$ and since $A,A',H$ are colinear, $H$ lies on this line. \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \begin{asy}
     import graph;
@@ -443,7 +443,7 @@
   Let $A',B',C'$ be the circumcenters of $({BCH}),({CAH}),({ABH}),$ respectively. Note that $H$ is the radical center of $({ABH}),({BCH}),({CAH}).$ Thus $\overline{AH} \perp \overline{B'C'}.$ Also notice by properties of circumcenters, $A'$ is on the perpendicular bisector of $\overline{BC}.$ Let $O$ be where the perpendicular bisectors of $\triangle ABC$ intersect (namely, the circumcenter of $\triangle ABC$). Since $\overline{A'O} \parallel \overline{AH},$ $\overline{A'O} \perp \overline{B'C'}.$ This follows similarly for $B'$ and $C',$ hence $O$ is the orthocenter of $\triangle A'B'C'.$ Also notice that, by construction, $H$ is the circumcenter of $\triangle A'B'C'.$ Therefore, a homothety of scale factor $-1$ exists that sends $H$ to $O$, $A$ to $A'$, $B$ to $B'$, and $C$ to $C'$. Hence, $\triangle ABC \cong \triangle A'B'C'.$
 \end{proof}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \begin{asy}
     import graph;
@@ -951,7 +951,7 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   Now note that since \(D,R,P\) are collinear and \(\ol{AP} \perp \ol{EF} \perp \ol{QR} \Longrightarrow \ol{AP} \parallel \ol{QR}\), a homothety centered at \(D\) that sends \(A\) to \(H\) will send \(P\) to \(R\). Thus, \(HR\) is a radius of the incircle of \(\triangle DEF\). Hence the ratio of \(HQ\) and \(HR\) is equal to 1 and we are done.
 \end{soln}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \begin{asy}
     /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
@@ -1010,4 +1010,43 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   \end{asy}
   \caption{Problem 4.45}
 \end{figure}
+\begin{problem*}
+  [4.46, ELMO Shortlist 2012]
+  Circles $\Omega$ and $\omega$ are internally tangent at point $C$. Chord $AB$ of $\Omega$ is tangent to $\omega$ at $E$, where $E$ is the midpoint of $\overline{AB}$. Another circle, $\omega_1$, is tangent to $\Omega$, $\omega$, and $\overline{AB}$ at $D$, $Z$, and $F$ respectively. Rays $CD$ and $AB$ meet at $P$. If $M\ne C$ is the midpoint of major arc $AB$, show that$$\tan\angle ZEP=\frac{PE}{CM}.$$
+\end{problem*}
+\newpage
+\begin{proof}
+  For ease of notation, denote by \(O_1,O_2,O_3\) the centers of circles \(\Omega,\omega,\omega_1\), respectively. We know that \(\angle ZEP = \angle ECZ\) by our tangency condition. Thus it suffices to show that \(\frac{EZ}{CZ} = \frac{EP}{CM}\). However, we must take care of a few things before we tackle this claim.
+  \begin{claim*}
+    Point \(M\) lies on the radical axis of \(\omega\) and \(\omega_1\).
+  \end{claim*}
+  \begin{subproof}
+    It is well known (also by Lemma 4.33) that \(\text{Pow}_\omega(M) = \text{Pow}_{\omega_1}\), so we are done with this claim.
+  \end{subproof}
+  \begin{claim*}
+    Points \(Z,P\) lie on \(\ol{O_2O_3}\)
+  \end{claim*}
+  \begin{subproof}
+    Call the second intersection of \(CD\) with \(\omega_1\) point \(X\). Since \(\angle XDF = \angle CDM = 90\degree\), we have that \(XF\) is a diameter of \(\omega_1\). So, considering the the homothety centered at \(P\) that sends \(\omega\) to \(\omega_1\), we have that \(O_2,O_3,P\) are all collinear. Finally note that \(Z\) obviously lies on \(\ol{O_2O_3}\) since it is the tangency point of the two circles, so we are done with this claim.
+  \end{subproof}
+  The equation \(\frac{EZ}{CZ} = \frac{EP}{CM}\) is equivalent to the following.
+  \begin{claim*}
+    \(\triangle CZM \sim \triangle EZP\)
+  \end{claim*}
+  \begin{subproof}
+    We already have that \(\angle MCZ = \angle ECZ = \angle PEZ\). Note that \(\angle CZM = \angle CZE + \angle EZM\) and \(\angle EZP = \angle EZM + \angle MZP\). Hence it suffices to show that \(\angle CZE = \angle MZP\). We already know that \(\angle CZE = 90\degree\) since \(CE\) is a diameter of \(\omega\). We also know that the radical axis of two circles is perpendicular to the line connecting their centers, so by our previous claims we have that \(\angle MZP = 90\degree\) and we have proven our claim by \(AA\sim\).
+  \end{subproof}
+  With this final claim proven, we are done.
+\end{proof}
+\hrulebar
+\begin{proof}
+  \textbf{INVALID} Denote by \(P'\) the foot of the altitude from \(P\) to the line passing through \(M\) tangent to \(\Omega\). Note that because \(\angle MEP, \angle EMP',\) and \(\angle MP'P\) are all right angles, quadrilateral \(MP'PE\) is a rectangle, which implies that \(PE = P'M\). Thus it suffices to show that \(\angle P'CM = \angle ZEP\) since \(\triangle P'CM\) is a right triangle with a right angle at \(M\), implying that \(\frac{PE}{CM} = \frac{P'M}{CM} = \tan\angle P'CM\).
+  \begin{claim*}
+    The points \(C,Z,P'\) are collinear.
+  \end{claim*}
+  \begin{subproof}
+    The homothety centered at \(Z\) that sends \(\omega\) to \(\omega_1\) will send \(C\) to \(F\) (if we say that \(C\) is at the ``North Pole'' of \(\omega\), then \(F\) is at the ``South Pole'' of \(\omega_1\)), so \(C,Z,F\) are collinear. A second homothety centered at \(C\) \textbf{[how do we know this exists?]} that sends \(\omega\) to \(\Omega\) will send \(F\) to \(P'\), so \(C,F,P'\) are collinear as well. Hence we have proven our claim.
+  \end{subproof}
+   Since \(\angle ZEP = \angle ZCE = \angle P'CM\), where the second equality holds by our claim, we are done.
+\end{proof}
 \end{document}
