@@ -1049,4 +1049,97 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   \end{subproof}
    Since \(\angle ZEP = \angle ZCE = \angle P'CM\), where the second equality holds by our claim, we are done.
 \end{proof}
+\begin{problem*}
+  [4.47, USAMO 2011/5]
+  Let $P$ be a point inside convex quadrilateral $ABCD$. Points $Q_1$ and $Q_2$ are located within $ABCD$ such that
+  \begin{align*}
+  \angle Q_1BC=\angle ABP,\quad\angle Q_1CB=\angle DCP,\\
+  \angle Q_2AD=\angle BAP,\quad\angle Q_2DA=\angle CDP.
+  \end{align*}
+  Prove that $\overline{Q_1Q_2}\parallel\overline{AB}$ if and only if $\overline{Q_1Q_2}\parallel\overline{CD}.$
+\end{problem*}
+\begin{proof}
+  We begin with the following claim.
+  \begin{claim*}
+    When \(\ol{AB},\ol{CD}\) are not parallel, \(\ol{AB},\ol{CD},\ol{Q_1Q_2}\) are concurrent at a single point.
+  \end{claim*}
+  \begin{subproof}
+    Call the intersection of \(\ol{AB}\) and \(\ol{CD}\) point \(X\). First consider the triangle \(\triangle ADX\). Since \(\dang XAP = \dang BAP = \dang Q_2AD\) and \(\dang XDP = \dang CDP = \dang Q_2DA\), we have that \(P\) and \(Q_2\) are isotomic conjugates with respect to \(\triangle ADX\). This implies that \[\dang AXP = \dang Q_2XD.\] Similarly, considering triangle \(\triangle BCX\), we have that \(\dang XBP = \dang ABP = \dang Q_1BC\) and \(\dang XCP = \dang DCP = \dang Q_1CB\), so \(P\) and \(Q_1\) are isotomic conjugates with respect to \(\triangle BCX\). This implies that \[\dang BXP = \dang Q_1XC.\] Putting this all together, we have that \[\dang Q_2XD = \dang AXP = \dang BXP = \dang Q_1XC = \dang Q_1XD,\] so \(Q_1,Q_2,X\) are collinear as desired.
+  \end{subproof}
+  Note that the intersection point \(X\) is at the point at infinity if \(\ol{AB} \parallel \ol{CD}\), so we have that \(\ol{Q_1Q_2}\) must meet \(\ol{AB},\ol{CD}\) at the point at infinity, implying that all 3 lines must be parallel. 
+\end{proof}
+\begin{figure}[ht]
+  \centering
+  \begin{asy}
+    /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+    import graph; size(11.673861633776283cm); 
+    real labelscalefactor = 0.2; /* changes label-to-point distance */
+    pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+    pen dotstyle = black; /* point style */ 
+    real xmin = 9.630320491405403, xmax = 21.304182125181686, ymin = -8.738510169822154, ymax = 2.1695304316289787;  /* image dimensions */
+    pen ssssss = rgb(0.13333333333333333,0.13333333333333333,0.13333333333333333); 
+    
+    draw((11.1412351047602,-0.1512017899611549)--(16.843876591401337,-3.551970169245992)--(18.,-6.)--(10.,-6.)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.4418198263414069,149.19027674416301,180.22058226201958)--(16.843876591401337,-3.551970169245992)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.4418198263414069,-95.75049118846586,-64.72018567060927)--(16.843876591401337,-3.551970169245992)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((18.,-6.),0.4418198263414069,151.82836050812972,180.)--(18.,-6.)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((18.,-6.),0.4418198263414069,115.27981432939075,143.45145382126103)--(18.,-6.)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((11.1412351047602,-0.1512017899611549),0.4418198263414069,-55.8905746962202,-30.809723255837003)--(11.1412351047602,-0.1512017899611549)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((10.,-6.),0.4418198263414069,0.,35.18760756021013)--(10.,-6.)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((11.1412351047602,-0.1512017899611549),0.4418198263414069,-101.0409985542662,-75.960147113883)--(11.1412351047602,-0.1512017899611549)--cycle, linewidth(1.) + ssssss); 
+    draw(arc((10.,-6.),0.4418198263414069,43.771393885523686,78.95900144573382)--(10.,-6.)--cycle, linewidth(1.) + ssssss); 
+     /* draw figures */
+    draw((11.1412351047602,-0.1512017899611549)--(16.843876591401337,-3.551970169245992), linewidth(1.) + ssssss); 
+    draw((16.843876591401337,-3.551970169245992)--(18.,-6.), linewidth(1.) + ssssss); 
+    draw((18.,-6.)--(10.,-6.), linewidth(1.) + ssssss); 
+    draw((10.,-6.)--(11.1412351047602,-0.1512017899611549), linewidth(1.) + ssssss); 
+    draw((16.843876591401337,-3.551970169245992)--(13.453385092205563,-3.56502324201283), linewidth(1.)); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.4418198263414069,149.19027674416301,180.22058226201958), linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.37800140698098145,149.19027674416301,180.22058226201958), linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.314182987620556,149.19027674416301,180.22058226201958), linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.4418198263414069,-95.75049118846586,-64.72018567060927), linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.37800140698098145,-95.75049118846586,-64.72018567060927), linewidth(1.) + ssssss); 
+    draw(arc((16.843876591401337,-3.551970169245992),0.314182987620556,-95.75049118846586,-64.72018567060927), linewidth(1.) + ssssss); 
+    draw((11.1412351047602,-0.1512017899611549)--(13.453385092205563,-3.56502324201283), linewidth(1.)); 
+    draw((10.,-6.)--(13.453385092205563,-3.56502324201283), linewidth(1.)); 
+    draw((18.,-6.)--(13.453385092205563,-3.56502324201283), linewidth(1.)); 
+    draw(arc((18.,-6.),0.4418198263414069,151.82836050812972,180.), linewidth(1.) + ssssss); 
+    draw((17.607175965104197,-5.901432770816313)--(17.535753413304963,-5.883511456419279), linewidth(1.) + ssssss); 
+    draw(arc((18.,-6.),0.4418198263414069,115.27981432939075,143.45145382126103), linewidth(1.) + ssssss); 
+    draw((17.74312094344695,-5.686887605858244)--(17.696415660437303,-5.629958079650652), linewidth(1.) + ssssss); 
+    draw((16.843876591401337,-3.551970169245992)--(16.69478439436794,-5.032478760758988), linewidth(1.)); 
+    draw((16.69478439436794,-5.032478760758988)--(18.,-6.), linewidth(1.)); 
+    draw(arc((10.,-6.),0.4418198263414069,0.,35.18760756021013), linewidth(1.) + ssssss); 
+    draw(arc((10.,-6.),0.37800140698098145,0.,35.18760756021013), linewidth(1.) + ssssss); 
+    draw(arc((10.,-6.),0.4418198263414069,43.771393885523686,78.95900144573382), linewidth(1.) + ssssss); 
+    draw(arc((10.,-6.),0.37800140698098145,43.771393885523686,78.95900144573382), linewidth(1.) + ssssss); 
+    draw((11.1412351047602,-0.1512017899611549)--(12.100594972971887,-3.9876141086758503), linewidth(1.)); 
+    draw((12.100594972971887,-3.9876141086758503)--(10.,-6.), linewidth(1.)); 
+    draw((12.100594972971887,-3.9876141086758503)--(16.69478439436794,-5.032478760758988), linewidth(1.)); 
+    draw((20.948900784883357,-6.)--(13.453385092205563,-3.56502324201283), linewidth(1.)); 
+    draw((11.1412351047602,-0.1512017899611549)--(20.948900784883357,-6.), linewidth(1.)); 
+    draw((10.,-6.)--(20.948900784883357,-6.), linewidth(1.)); 
+    draw((16.69478439436794,-5.032478760758988)--(20.948900784883357,-6.), linewidth(1.) + linetype("4 4")); 
+     /* dots and labels */
+    dot((11.1412351047602,-0.1512017899611549),dotstyle); 
+    label("$A$", (11.181598992781897,-0.04938691844118893), NE * labelscalefactor); 
+    dot((16.843876591401337,-3.551970169245992),dotstyle); 
+    label("$B$", (16.885983861767617,-3.456308690451579), NE * labelscalefactor); 
+    dot((18.,-6.),dotstyle); 
+    label("$C$", (18.034715410255274,-5.9010450628740205), NE * labelscalefactor); 
+    dot((10.,-6.),dotstyle); 
+    label("$D$", (9.767775548489396,-6.195591613768291), SE * labelscalefactor); 
+    dot((13.453385092205563,-3.56502324201283),dotstyle); 
+    label("$P$", (13.3,-4.0), NE * labelscalefactor); 
+    dot((16.69478439436794,-5.032478760758988),linewidth(4.pt) + dotstyle); 
+    label("$Q_1$", (16.2,-4.9), NE * labelscalefactor); 
+    dot((12.100594972971887,-3.9876141086758503),linewidth(4.pt) + dotstyle); 
+    label("$Q_2$", (12.14378439236985,-3.907946735156126), NE * labelscalefactor); 
+    dot((20.948900784883357,-6.),linewidth(4.pt) + dotstyle); 
+    label("$X$", (20.891816953929705,-5.704680695611174), NE * labelscalefactor); 
+    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+     /* end of picture */
+  \end{asy}
+  \caption{Problem 4.47}
+\end{figure}
 \end{document}
