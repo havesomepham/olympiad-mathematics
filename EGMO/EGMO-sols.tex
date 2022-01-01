@@ -1142,4 +1142,22 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   \end{asy}
   \caption{Problem 4.47}
 \end{figure}
+\begin{problem*}
+  [4.48, Japanese Olympiad 2009]
+  Triangle $ABC$ is inscribed in circle $\Gamma$. A circle with center $O$ is drawn, tangent to side $BC$ at a point $P$, and internally tangent to the arc $BC$ of $\Gamma $ not containing $A$ at a point $Q$. Show that if $\angle BAO=\angle CAO$ then $\angle PAO=\angle QAO$.
+\end{problem*}
+\begin{proof}
+  Note that \(\angle BAO = \angle CAO\) is equivalent to point \(I\), the incenter of \(\triangle ABC\), lying on \(\ol{AO}\). Denote by \(M\) the midpoint of the arc \(\widehat{BC}\) on the side containing point \(A\), and denote by \(N\) its antipodal point on \(\Gamma\). It is well known that \(M\) lies on \(\ol{PQ}\), and we note by Fact 5 that \(N\) lies on \(\ol{AI}\).
+  \begin{claim*}
+    Points \(A,P,O,Q\) are concyclic.
+  \end{claim*}
+  \begin{subproof}
+    We first note that \(\ol{OP} \parallel \ol{MN}\) since both are perpendicular to \(\ol{BC}\). It follows that 
+    \[\angle QPO = \angle QMN = \angle QAN = \angle QAO,\]
+    hence our claim is proven.
+  \end{subproof}
+  Since \(\triangle POQ\) is an isosceles triangle, our claim implies that 
+  \[\angle PAO = \angle PQO = \angle QPO = \angle QAO,\]
+  so we are done.
+\end{proof}
 \end{document}
