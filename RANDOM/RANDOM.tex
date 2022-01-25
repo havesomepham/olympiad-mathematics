@@ -500,4 +500,32 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \end{itemize}
   Finally, note that \(1+4040 \equiv \fbox{1} \pmod{5}.\)
 \end{soln}
+\newpage
+\begin{problem*}
+  [AIME 1998 \# 6]
+  Let $ABCD$ be a parallelogram. Extend $\overline{DA}$ through $A$ to a point $P,$ and let $\overline{PC}$ meet $\overline{AB}$ at $Q$ and $\overline{DB}$ at $R.$ Given that $PQ=735$ and $QR=112,$ find $RC.$
+\end{problem*}
+\begin{soln}
+  Let \(RC = x\). First, note that \(\triangle PAQ \sim \triangle PDC\). By projecting \(\ol{PC}\) onto \(\ol{PD}\), we have
+  \[(Q,P;R,C)\overset{B}{=}(A,P;D,P_\infty).\]
+  Computing cross ratios gives us the following.
+  \begin{align*}
+    \frac{QR}{PR}\cdot\frac{PC}{QC} &= \frac{AD}{PD} \\
+    &= \frac{PD-PA}{PD} \\
+    &= 1 - \frac{PA}{PD} \\
+    &= 1- \frac{PQ}{PC} \quad (\text{since } \triangle PAQ \sim \triangle PDC).
+  \end{align*}
+  Substituting the values given in the problem and letting \(u = 112+x\) gives us
+  \begin{align*}
+    \frac{112}{735+112}\cdot\frac{735+112+x}{112+x} &= 1 - \frac{735}{735+112+x} \\
+    \frac{112}{847}\cdot\frac{735+u}{u} &= \frac{u}{735+u} \\
+    112(735+u)^2 &= 847u^2 \\
+    735u^2-2\cdot112\cdot735u - 112\cdot735^2 &= 0 \\
+    u^2-2\cdot112u - 112\cdot735 &= 0
+  \end{align*}
+  Applying the quadratic formula then gives us
+  \[u = \frac{2\cdot112\pm \sqrt{2^2\cdot112^2 + 4\cdot 112\cdot735}}{2} = 112 \pm \sqrt{112(112+735)}.\]
+  Since \(u = x+112,\) we have that
+  \[x = \sqrt{112\cdot847} = \fbox{308}.\]
+\end{soln}
 \end{document}

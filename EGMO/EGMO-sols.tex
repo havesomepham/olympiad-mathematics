@@ -45,7 +45,15 @@
 \end{problem*}
 
 \begin{proof}
-  \textbf{INCOMPLETE} Call the center of the circle point $O.$ Let the point $T$ be where $AD = AT.$
+  (Pretty much stolen from \url{https://www.youtube.com/watch?v=tM0WhXNCWGU} sorry.)
+  Denote by \(O\) the center of the circle in question and by \(P\) the intersection of \((CDO)\) with \(\ol{AB}\).
+  \begin{claim*}
+    \(\triangle ADP\) is isoceles.
+  \end{claim*}
+  \begin{subproof}
+    Let \(\angle APD = \theta\). Then \(\angle DPO = 180\degree - \theta\) so \(\angle DCO = \theta\). Denote by \(R,S\) the feet of the altitudes from \(O\) to \(\ol{CD}\) and \(\ol{BC}\), respectively. Since \(CR = CS\),\(OR = OS\), and \(CR = CR\), we have that \(\triangle CRO \cong \triangle CSO\), so \(\angle DCO = \angle RCO = \angle SCO = \theta\). This means that \(\angle DCB = \angle RCO + \angle SCO = 2\theta\). Since \(ABCD\) is cyclic we also have \(\angle DAP = \angle DAB = 180\degree - \angle DCB = 180\degree - 2\theta\). Finally, \(\angle PDA = 180\degree - \angle DAP - \angle APD = 180\degree - (180\degree - 2\theta) - \theta = \theta\), hence our claim is proven.
+  \end{subproof}
+  Note that a very similar argument holds for \(\triangle BCP\), so \(AD+BC = AP + BP = AB\), as desired.
 \end{proof}
 \newpage
 \section{Circles}
@@ -252,8 +260,15 @@
   [2.32, USAMO 1998/2]
   Let $\mathcal{C}_1$ and $\mathcal{C}_2$ be concentric circles, with $\mathcal{C}_2$ in the interior of $\mathcal{C}_1$. From a point $A$ on $\mathcal{C}_1$ one draws the tangent $\overline{AB}$ to $\mathcal{C}_2$  ($B \in  \mathcal{C}_2$). Let $C$ be the second point of intersection of ray $AB$ and $\mathcal{C}_1$, and let $D$ be the midpoint of $\overline{AB}$. A line passing through $A$ intersects $\mathcal{C}_2$ at $E$ and $F$ in such a way that the perpendicular bisectors of $DE$ and $CF$ intersect at a point $M$ on $AB$. Find, with proof, the ratio $AM/MC$.
 \end{problem*}
-\begin{proof}  \textbf{INCOMPLETE}
-  Note that $CDEF$ is cyclic (need to prove). $M$ is the center of circle $(CDEF).$ Thus $CM=DM.$
+\begin{proof}  We begin with the following claim.
+  \begin{claim*}
+    \(CDEF\) is a cyclic quadrilateral.
+  \end{claim*}
+  \begin{subproof}
+     By power of a point, \(AE \cdot AF = AB \cdot AB = 2AD \cdot \frac{1}{2}AC = AD\cdot AC\), so we are done with this claim.
+  \end{subproof}
+  The remaining calculations are as follows.
+  \[\frac{AM}{MC} = \frac{AM}{AC - AM}\]
 \end{proof}
 \newpage
 \section{Lengths and Ratios}
@@ -1160,4 +1175,88 @@ Let $L$ be the midpoint of $II_A.$ Then in Figure 4.2A, $(ABCL)$ is in fact the 
   \[\angle PAO = \angle PQO = \angle QPO = \angle QAO,\]
   so we are done.
 \end{proof}
+\begin{problem*}
+  [4.49]
+  Let $ABC$ be a triangle and let its incircle touch $\overline{BC}$ at $D$. Let $T$ be the tangency point of the $A$-mixtilinear incircle with $(ABC)$. Prove that $ \angle BTA = \angle CTD $.
+\end{problem*}
+\begin{proof}
+  Our problem statement is equivalent to proving that the isogonal of \(\ol{TA}\) with respect to \(\triangle TBC\) passes through \(D\).
+
+  Let \(D'\) be the point on \(\ol{BC}\) such that \(\angle BAT = \angle D'AC\). It is well known that \(BD=D'C\) and that \(D'\) is the contact point of the \(A\)-excircle with \(\ol{BC}\). 
+
+  \begin{claim*}
+    \(\ol{DT}\) passes through the reflection of \(A\) over the perpendicular bisector of \(\ol{BC}\).
+  \end{claim*}
+  \begin{subproof}
+    Call this reflected point \(A_R\). First note that because \(BD = D'C\), \(D\) and \(D'\) are reflections of each other over the perpendicular bisector of \(\ol{BC}\), as are \(B\) and \(C\). Now note that
+    \[\angle BAT = \angle BA_RT\]
+    since \(A_R\) lies on \((ABC)\) and
+    \[\angle BAT = \angle D'AC = \angle DA_RB,\]
+    by a reflection over the perpendicular bisector. Thus \(\angle BA_RT = \angle BA_RD\) so \(A_R\) lies on \(\ol{DT}\) as desired.
+  \end{subproof}
+  We finish by noticing that 
+  \[\angle CTD = \angle CTA_R = \angle CBA_R = \angle BCA = \angle BTA.\]
+\end{proof}
+\begin{figure}[ht]
+  \centering
+  \begin{asy}
+    /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+    import graph; size(10.123753920308726cm); 
+    real labelscalefactor = 0.5; /* changes label-to-point distance */
+    pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+    pen dotstyle = black; /* point style */ 
+    real xmin = 7.063731654343177, xmax = 17.1874855746519, ymin = -5.820682457541045, ymax = 3.6389395823773527;  /* image dimensions */
+    
+    pair A = (10.878098565211666,3.139870141634499), T = (10.880811501464928,-5.202060487365133), B = (8.20848114420185,-3.168717779999867), C = (15.677094135266904,-3.1763375538736915), D = (11.401625340559473,-3.1719755517912116), A_R = (13.020354799389285,3.137684527236785); 
+    
+    draw(A--B--C--cycle, linewidth(1.)); 
+    draw(arc(T,0.34058045148221117,90.01863355125246,142.7329480677786)--(10.880811501464928,-5.202060487365133)--cycle, linewidth(1.)); 
+    draw(arc(T,0.34058045148221117,22.896896231967986,75.61121074849405)--(10.880811501464928,-5.202060487365133)--cycle, linewidth(1.)); 
+    draw(arc(A,0.42572556435276393,-112.93671807703336,-89.98136644874755)--(10.878098565211666,3.139870141634499)--cycle, linewidth(1.)); 
+    draw(arc(A,0.42572556435276393,-75.72812154112975,-52.77276991284394)--(10.878098565211666,3.139870141634499)--cycle, linewidth(1.)); 
+    draw(arc(A_R,0.42572556435276393,-127.34414087979162,-104.38878925150584)--(13.020354799389285,3.137684527236785)--cycle, linewidth(1.)); 
+     /* draw figures */
+    draw(circle((11.580176761072225,-2.4606803217626867), 2.8291830938813547), linewidth(1.)); 
+    draw(circle((11.944972767257683,-1.030748648563281), 4.304913664191435), linewidth(1.)); 
+    draw(A--B, linewidth(1.)); 
+    draw(B--C, linewidth(1.)); 
+    draw(C--A, linewidth(1.)); 
+    draw(circle((11.403786593299307,-1.0535976895375687), 2.1183789647510474), linewidth(1.)); 
+    draw(A--T, linewidth(1.)); 
+    draw(T--D, linewidth(1.)); 
+    draw(B--T, linewidth(1.)); 
+    draw(T--C, linewidth(1.)); 
+    draw(arc(A,0.42572556435276393,-112.93671807703336,-89.98136644874755), linewidth(1.)); 
+    draw(arc(A,0.3703812409869046,-112.93671807703336,-89.98136644874755), linewidth(1.)); 
+    draw(arc(A,0.42572556435276393,-75.72812154112975,-52.77276991284394), linewidth(1.)); 
+    draw(arc(A,0.3703812409869046,-75.72812154112975,-52.77276991284394), linewidth(1.)); 
+    draw(A--(12.483949938909284,-3.173079782082347), linewidth(1.)); 
+    draw(circle((12.477374859985755,-9.617722455039777), 6.444646027034126), linewidth(1.)); 
+    draw((xmin, 980.1620251122107*xmin-11709.039446114062)--(xmax, 980.1620251122107*xmax-11709.039446114062), linewidth(1.)); /* line */
+    draw((xmin, 3.8979089708969727*xmin-47.61447324956425)--(xmax, 3.8979089708969727*xmax-47.61447324956425), linewidth(1.) + linetype("4 4")); /* line */
+    draw(B--A_R, linewidth(1.)); 
+    draw(arc(A_R,0.42572556435276393,-127.34414087979162,-104.38878925150584), linewidth(1.)); 
+    draw(arc(A_R,0.3703812409869046,-127.34414087979162,-104.38878925150584), linewidth(1.)); 
+     /* dots and labels */
+    dot(A,linewidth(4.pt) + dotstyle); 
+    label("$A$", (10.5,3.2046995067375343), NE * labelscalefactor); 
+    dot(T,dotstyle); 
+    label("$T$", (10.4,-5.5), NE * labelscalefactor); 
+    dot(B,linewidth(4.pt) + dotstyle); 
+    label("$B$", (7.7,-3.3), NE * labelscalefactor); 
+    dot(C,linewidth(4.pt) + dotstyle); 
+    label("$C$", (15.8,-3.232271026276245), NE * labelscalefactor); 
+    dot(D,linewidth(4.pt) + dotstyle); 
+    label("$D$", (11.0,-3.1), NE * labelscalefactor); 
+    dot((12.483949938909284,-3.173079782082347),linewidth(4.pt) + dotstyle); 
+    label("$D'$", (12.521533389345608,-3.104553356970416), NE * labelscalefactor); 
+    dot((12.477374859985755,-9.617722455039777),linewidth(4.pt) + dotstyle); 
+    label("$A'$", (7.063731654343177,3.6389395823773527), NE * labelscalefactor); 
+    dot(A_R,linewidth(4.pt) + dotstyle); 
+    label("$A_R$", (13.1,3.1706414615893133), NE * labelscalefactor); 
+    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+     /* end of picture */
+  \end{asy}
+  \caption{Problem 4.49}
+\end{figure}
 \end{document}
