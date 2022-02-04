@@ -610,4 +610,25 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   From this we determine that \(PB = \frac{18}{5}\), so our desired answer is \(\fbox{023}.\)
 \end{soln}
 
+\begin{problem*}
+  [2018 HMMT Geometry \# 5]
+  In the quadrilateral $MARE$ inscribed in a unit circle $\omega,$ $AM$ is a diameter of $\omega,$ and $E$ lies on the angle bisector of $\angle RAM.$ Given that triangles $RAM$ and $REM$ have the same area, find the area of quadrilateral $MARE.$
+\end{problem*}
+\begin{soln}
+  Let \(\theta = \angle MAE = \angle RAE\). Since \(\angle ARM = 90\degree,\) \(\angle RMA = 90\degree - 2\theta.\) Since we know \(AM = 2,\) then \(AR = 2\sin(90\degree - 2\theta) = 2\cos(2\theta).\)
+
+  Next, let \(F\) denote the foot of the altitude from \(E\) to \(MR\). Since \([RAM] = [REM],\) and \(MR\) is a base of both triangles, we have that \(AR = EF\). Since \(AR\) and \(EF\) are also both perpendicular to \(MR,\) we know that \(AR \parallel EF.\) 
+  
+  Note that \(\triangle REM\) is isosceles since \(\angle MRE = \angle RME = \theta\). Thus the center of \(\omega\) lies on \(\ol{EF}\). If we then consider rotating \(\triangle REM\) about the center of \(\omega\) by \(180\degree,\) calling \(E'F'\) the segment that is the image of \(EF\) after this rotation, then we can translate \(AR\) so that \(A\) coincides with \(F'\) and \(R\) with \(F\). Clearly \(EF + AR +E'F' = EE'\) is a diameter of \(\omega\) and \(EF = AR = E'F'\). Thus, 
+  \[3\cdot2\cos(2\theta) = 2.\]
+
+  From this we derive that \(\cos(2\theta) = \frac13\) and \(\sin(2\theta) = \frac{2\sqrt2}{3}.\) Finally, it follows that 
+  \begin{align*}
+    [MARE] &= 2[RAM] \\
+    &= \tfrac12 \cdot 2\cdot AM\cdot AR\cdot \sin(\angle RAM)\\
+    &= \tfrac12\cdot2\cdot2\cos(2\theta)\sin(2\theta) \\
+    &= 2\cdot\tfrac13\cdot\tfrac{2\sqrt2}{3} \\
+    &= \fbox{$\displaystyle \frac{8\sqrt2}{9}$}
+  \end{align*}
+\end{soln}
 \end{document}
