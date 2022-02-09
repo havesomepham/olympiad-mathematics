@@ -631,4 +631,24 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
     &= \fbox{$\displaystyle \frac{8\sqrt2}{9}$}
   \end{align*}
 \end{soln}
+
+\begin{problem*}
+  [2018 PUMaC Geometry A5]
+  Let $\triangle ABC$ be a triangle with side lengths $AB = 9, BC = 10, CA = 11$. Let $O$ be the circumcenter of $\triangle ABC$. Denote $D = AO \cap BC, E = BO \cap CA, F = CO \cap AB$. If $\tfrac{1}{AD} + \tfrac{1}{BE} + \tfrac{1}{FC}$ can be written in simplest form as $\tfrac{a \sqrt{b}}{c}$, find $a + b + c$.
+\end{problem*}
+\begin{soln}
+  Note that \([ABC] = 30\sqrt2\) by Heron's Formula, and using the formula \([ABC] = \frac{abc}{4R}\), we have that the circumradius \(R = \frac{33\sqrt2}{8}\).
+
+  Let \(M_A\) denote the midpoint of \(BC\) and \(F_A\) denote the foot of the altitude from \(A\) to \(BC\). Denote \(M_B, M_C, F_B, F_C\) similarly. It is clear that \(\triangle AF_AD \sim \triangle OM_AD.\) From this we derive that 
+  \[\frac{OM_A}{AF_A} = \frac{OD}{AD} = \frac{AD-R}{AD} = 1 - \frac{R}{AD}.\] Rearranging this we have that 
+  \[\frac{1}{AD} = \frac{1}{R}\left(1 - \frac{OM_A}{AF_A}\right).\]
+  Similarly, we have that 
+  \[\frac{1}{BE} = \frac{1}{R}\left(1 - \frac{OM_B}{BF_B}\right)\]
+  \[\frac{1}{CF} = \frac{1}{R}\left(1 - \frac{OM_C}{CF_C}\right).\]
+  Adding these three equations together we have that 
+  \[\frac{1}{AD} + \frac{1}{BE} + \frac{1}{FC} = \frac{1}{R}\left(3 - \frac{OM_A}{AF_A} - \frac{OM_B}{BF_B} - \frac{OM_C}{CF_C}\right).\]
+  Using the facts that \(OM_A = \sqrt{R^2 - 5^2}\) and \(AF_A = \frac{2[ABC]}{10}\) (and the analogous facts for \(B\) and \(C\)), after a big bash, we compute
+  \[\frac{1}{AD} + \frac{1}{BE} + \frac{1}{FC}  = \frac{8\sqrt2}{33},\]
+  so our desired answer is \(\fbox{43}\).
+\end{soln}
 \end{document}
