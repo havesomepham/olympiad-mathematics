@@ -651,4 +651,78 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \[\frac{1}{AD} + \frac{1}{BE} + \frac{1}{FC}  = \frac{8\sqrt2}{33},\]
   so our desired answer is \(\fbox{43}\).
 \end{soln}
+\newpage
+\begin{problem*}
+  [IMO 1961/2]
+  Let \(a,b,\) and \(c\) be the lengths of a triangle whose area is \(S\). Prove that \[a^2 + b^2 + c^2 \ge 4S\sqrt{3}.\] In what case does equality hold?
+\end{problem*}
+\begin{proof}
+  We begin by proving the following lemma.\\
+  \textbf{Lemma.} The following inequality holds for all angles \(C\):
+  \[2 \geq \sqrt3\sin(C)+\cos(C).\]
+  \begin{subproof}
+    Rearranging, we have 
+    \begin{align*}
+      1 &\geq \frac{\sqrt3}{2}\sin(C) + \frac12\cos(C)\\
+      &= \cos\left(\frac{\pi}{6}\right)\sin(C)+\sin\left(\frac{\pi}{6}\right)\cos(C) \\
+      &= \sin\left(\frac{\pi}{6}+C\right).
+    \end{align*}
+    This clearly holds for all values of \(C\), and equality is achieved when \(C = \tfrac{\pi}{3} = 60\degree\).
+  \end{subproof}
+
+  Now note by AM-GM and our Lemma that 
+  \begin{align*}
+    a^2 + b^2 &\geq 2ab \\
+    &\geq \left(\sqrt3\sin(C)+\cos(C)\right)ab \\
+    a^2+b^2-ab\cos(C) &\geq ab\sin(C)\sqrt3 \\
+    a^2+b^2 +(a^2+b^2-2ab\cos(C)) &\geq 2\cdot\left(2\cdot\tfrac12ab\sin(C)\right)\sqrt3 \\
+    a^2+b^2 +c^2 &\geq 4S\sqrt3,
+  \end{align*}
+  as desired, where equality holds when both \(C = 60\degree\) and \(a=b,\) meaning the triangle in question is equilateral.
+\end{proof}
+\newpage
+\begin{problem*}
+  [Evan Chen's Intro to Functional Equations Handout 8.1]
+  Find all continuous functions \(f : \RR \rightarrow \RR\) such that for any real \(x\) and \(y\),
+  \[f(f(x+y)) = f(x)+f(y).\]
+\end{problem*}
+\begin{proof}
+  The answer is \(f(x) = x + b\) and \(f(x)=0\), both of which clearly work for all values of \(b\). We will now show that these are the only possible forms of \(f\). 
+
+  Plugging in \(y=0\) into our given equation gives us 
+  \[f(f(x)) = f(x) + f(0).\]
+  Now our original equation simplifies to 
+  \begin{align*}
+    f(x+y)+f(0) &= f(x) + f(y) \\
+    f(x+y)-f(0) &= f(x) - f(0) + f(y) - f(0).
+  \end{align*}
+  Now setting \(g(x) = f(x)-f(0)\) gives us 
+  \[g(x+y) = g(x) + g(y).\]
+  By Cauchy we have that \(g(x) = ax\), so \(f(x) = ax+b.\) Plugging this new \(f\) into our original equation gives us
+  \[a^2(x+y) + ab + b = a(x+y)+2b,\]
+  so \(a^2=a\) and \(ab=b\). Thus for \(a=0\) we have \(f(x)=0\), and when \(a=1\) we have \(f(x) = x+b\), as desired.
+\end{proof}
+\newpage
+\begin{problem*}
+  [Evan Chen's Intro to Functional Equations Handout 8.2]
+  Find all functions \(f: \RR \rightarrow \RR\) satisfying 
+  \[f(x^2+y) = f(f(x)-y)+4f(x)y\]
+  for all real numbers \(x\) and \(y\).
+\end{problem*}
+\begin{proof}
+  We claim the only solutions are \(f(x)=0\) and \(f(x)=x^2\), both of which clearly work. We would like \(f(x^2+y)\) and \(f(f(x)-y)\) to cancel, so setting \(x^2+y=f(x)-y\) we have 
+  \[4f(x)y = 0 \text{ and } y = \frac12\left(f(x)-x^2\right).\]
+  It follows that
+    \[4f(x)\cdot\frac12(f(x)-x^2) = 0,\]
+  so \(f(x)=0\) or \(f(x)=x^2\) for all values of \(x\).
+  
+  We must now deal with functions \(f\) for which there exist nonzero \(a,b\) where \(a \neq b\) and \(f(a)=0\) and \(f(b)=b^2\) (the so-called "Pointwise Trap"). Plugging in \(x=0\) into our given equation, recalling that \(f(0)=0\), we have that \(f(y)=f(-y),\) so \(f\) is even. Thus without loss of generality let \(b\) be negative. Plugging in \(x=a, y=-b\) into our given equation gives us 
+  \begin{align*}
+    f(a^2-b) &= f(b) \\
+    (a^2-b)^2 &= b^2 \\
+    a^4-2a^2b &= 0 \\
+    a^2(a^2-2b) &= 0.
+  \end{align*}
+  Since \(a\) is nonzero, we have that \(a^2 = 2b\), but the LHS is positive while the RHS is negative, a contradiction. Hence the only valid functions are \(f(x)=0\) and \(f(x)=x^2\), as desired.
+\end{proof}
 \end{document}
