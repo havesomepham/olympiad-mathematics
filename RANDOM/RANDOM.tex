@@ -356,7 +356,7 @@
   [100 Geometry Problems \#32, AMC 10A 2013] In \(\triangle ABC, AB = 86\), and \(AC = 97\). A circle with center \(A\) and radius \(AB\) intersects \(\ol{BC}\) at points \(B\) and \(X\). Moreover \(\ol{BX}\) and \(\ol{CX}\) have integer lengths. What is \(BC\)?
 \end{problem*}
 \begin{soln}
-  Let \(BX = x\) and \(CX = y\). By Power of a Point on \(C\), we have 
+  Let \(BX = x\) and \(CX = y\). By Power of a Point on \(C\), we have
   \[(97-86)(97+86) = 11\cdot183 = 3\cdot11\cdot61=y(x+y).\]
   Note that \(y,x+y\) are both positive integers, and \(y<x+y\). If \((y,x+y) = (1,3\cdot11\cdot61),(3,11\cdot61),\) or \((11,3\cdot61)\), the triangle inequality on \(\triangle ACX\) would be violated. Therefore \(BC = x+y = \fbox{61}\), our only remaining possibility.
 \end{soln}
@@ -365,14 +365,14 @@
   Fifty rooms of a castle are lined in a row. The first room contains 100 knights, while the remaining 49 rooms contain one knight each. These knights wish to escape the castle by breaking the barriers between consecutive rooms, ending with the barrier from room 50 to the outside. At the stroke of midnight, each knight in the \(i\)-th room begins breaking the barrier between the \(i\)-th and \((i + 1)\)-st rooms, where we count the 51st room as the exterior. Each person works at a constant rate and is able to break down a barrier in 1 hour, and once a group of knights breaks down the \(i\)-th barrier, they immediately join the knight breaking down the \((i + 1)\)-st barrier. The number of hours it takes for the knights to escape the castle is \(\tfrac{m}{n}\), where \(m\) and \(n\) are positive relatively prime integers. Compute the product \(mn\).
 \end{problem*}
 \begin{soln}
-  Denote by ``room 0'' the first room and every remaining room analogously. Denote by \(t_n\) the time it takes to break down the wall in room \(n\). Note that 
+  Denote by ``room 0'' the first room and every remaining room analogously. Denote by \(t_n\) the time it takes to break down the wall in room \(n\). Note that
   \begin{align*}
-    t_0 &= \frac{1}{100} \\
-    t_1 &= t_0 + (1-t_0)\cdot\frac{1}{100+1} = \frac{100}{101}t_0+\frac{1}{101} = \frac{2}{101}\\
-    t_2 &= t_1 + (1-t_1)\cdot\frac{1}{100+2} = \frac{101}{102}t_1+\frac{1}{102} = \frac{3}{102}\\
-    t_3 &= t_2 + (1-t_2)\cdot\frac{1}{100+3} = \frac{102}{103}t_2+\frac{1}{103} = \frac{4}{103}\\
-    &\vdots \\
-    t_i &= \underbrace{t_{i-1}}_{\substack{\text{current wall already}\\\text{done by } i\text{-th person}}} + \underbrace{(1-t_{i-1})\cdot\frac{1}{100+i}}_{\substack{\text{rest of wall with}\\100 + i \text{ people}}} = \frac{i+1}{100+i}. 
+    t_0 & = \frac{1}{100}                                                                        \\
+    t_1 & = t_0 + (1-t_0)\cdot\frac{1}{100+1} = \frac{100}{101}t_0+\frac{1}{101} = \frac{2}{101} \\
+    t_2 & = t_1 + (1-t_1)\cdot\frac{1}{100+2} = \frac{101}{102}t_1+\frac{1}{102} = \frac{3}{102} \\
+    t_3 & = t_2 + (1-t_2)\cdot\frac{1}{100+3} = \frac{102}{103}t_2+\frac{1}{103} = \frac{4}{103} \\
+        & \vdots                                                                                 \\
+    t_i & = \underbrace{t_{i-1}}_{\substack{\text{current wall already}                          \\\text{done by } i\text{-th person}}} + \underbrace{(1-t_{i-1})\cdot\frac{1}{100+i}}_{\substack{\text{rest of wall with}\\100 + i \text{ people}}} = \frac{i+1}{100+i}.
   \end{align*}
   Thus, \(t_{49} = \frac{50}{149}\), so our final answer is \(50\cdot149 = \fbox{7450}\).
 \end{soln}
@@ -383,10 +383,10 @@
 \begin{soln}
   We will first begin by finding the first few values of \(a_k\). By some simple calculations it follows that
   \begin{align*}
-    a_1\cdot\left(\tfrac{1}{1}\right)^2&= 1 \Longrightarrow a_1 = \tfrac{1}{1}\\
-    a_1\cdot\left(\tfrac{1}{2}\right)^2+a_2\cdot\left(\tfrac{2}{2}\right)^2&= 1 \Longrightarrow a_2 = \tfrac{3}{4}\\
-    a_1\cdot\left(\tfrac{1}{3}\right)^2+a_2\cdot\left(\tfrac{2}{3}\right)^2+a_3\cdot\left(\tfrac{3}{3}\right)^2 &= 1 \Longrightarrow a_3 = \tfrac{5}{9}\\
-    a_1\cdot\left(\tfrac{1}{4}\right)^2+a_2\cdot\left(\tfrac{2}{4}\right)^2+a_3\cdot\left(\tfrac{3}{4}\right)^2 + a_4\cdot\left(\tfrac{4}{4}\right)^2&= 1 \Longrightarrow a_4 = \tfrac{7}{16}.
+    a_1\cdot\left(\tfrac{1}{1}\right)^2                                                                                                               & = 1 \Longrightarrow a_1 = \tfrac{1}{1}   \\
+    a_1\cdot\left(\tfrac{1}{2}\right)^2+a_2\cdot\left(\tfrac{2}{2}\right)^2                                                                           & = 1 \Longrightarrow a_2 = \tfrac{3}{4}   \\
+    a_1\cdot\left(\tfrac{1}{3}\right)^2+a_2\cdot\left(\tfrac{2}{3}\right)^2+a_3\cdot\left(\tfrac{3}{3}\right)^2                                       & = 1 \Longrightarrow a_3 = \tfrac{5}{9}   \\
+    a_1\cdot\left(\tfrac{1}{4}\right)^2+a_2\cdot\left(\tfrac{2}{4}\right)^2+a_3\cdot\left(\tfrac{3}{4}\right)^2 + a_4\cdot\left(\tfrac{4}{4}\right)^2 & = 1 \Longrightarrow a_4 = \tfrac{7}{16}.
   \end{align*}
   We can now conjecture that
   \[a_k = \frac{2k-1}{k^2}.\]
@@ -394,7 +394,7 @@
   \[\frac{2n-1}{n^2}<\frac{1}{2018}.\]
   Reciprocating both sides and doing polynomial long division on the LHS gives us
   \[\frac{n^2}{2n-1} = \frac{1}{2}n+\frac{1}{4}+\frac{\tfrac14}{2n-1}>2018.\]
-  Multiplying both sides by 4 gives us 
+  Multiplying both sides by 4 gives us
   \[2n+1+\frac{1}{2n-1}>4\cdot2018.\]
   Note that \(n=2\cdot2018\) satisfies this inequality while \(n=2\cdot2018-1\) does not. Hence our answer is \(2\cdot2018 = \fbox{4036}\).
 \end{soln}
@@ -407,74 +407,74 @@
   \centering
   \begin{asy}
     /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-    import graph; size(10cm); 
+    import graph; size(10cm);
     real labelscalefactor = 0.3; /* changes label-to-point distance */
-    pen dps = linewidth(0.2) + fontsize(10); defaultpen(dps); /* default pen style */ 
-    pen dotstyle = black; /* point style */ 
+    pen dps = linewidth(0.2) + fontsize(10); defaultpen(dps); /* default pen style */
+    pen dotstyle = black; /* point style */
     real xmin = -0.42556342993481877, xmax = 2.1913854979166096, ymin = -0.25556833596774753, ymax = 1.2709852052789172;  /* image dimensions */
-    pen zzttqq = rgb(0.6,0.2,0); pen cqcqcq = rgb(0.7529411764705882,0.7529411764705882,0.7529411764705882); 
-    
-    draw((0,1)--(1,1)--(1,0)--(0,0)--cycle, linewidth(1) + zzttqq); 
-     /* draw grid of horizontal/vertical lines */
+    pen zzttqq = rgb(0.6,0.2,0); pen cqcqcq = rgb(0.7529411764705882,0.7529411764705882,0.7529411764705882);
+
+    draw((0,1)--(1,1)--(1,0)--(0,0)--cycle, linewidth(1) + zzttqq);
+    /* draw grid of horizontal/vertical lines */
     pen gridstyle = linewidth(0.7) + cqcqcq; real gridx = 0.2, gridy = 0.2; /* grid intervals */
     for(real i = ceil(xmin/gridx)*gridx; i <= floor(xmax/gridx)*gridx; i += gridx)
-     draw((i,ymin)--(i,ymax), gridstyle);
+    draw((i,ymin)--(i,ymax), gridstyle);
     for(real i = ceil(ymin/gridy)*gridy; i <= floor(ymax/gridy)*gridy; i += gridy)
-     draw((xmin,i)--(xmax,i), gridstyle);
-     /* end grid */ 
-    
-    Label laxis; laxis.p = fontsize(10); 
-    xaxis(xmin, xmax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true); 
-    yaxis(ymin, ymax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true); /* draws axes; NoZero hides '0' label */ 
-     /* draw figures */
-    draw((0,1)--(1,1), linewidth(1) + zzttqq); 
-    draw((1,1)--(1,0), linewidth(1) + zzttqq); 
-    draw((1,0)--(0,0), linewidth(1) + zzttqq); 
-    draw((0,0)--(0,1), linewidth(1) + zzttqq); 
-    draw((1,1)--(0,0), linewidth(1)); 
-    draw((0,0.5)--(1,0), linewidth(1)); 
-    draw((0,0.3333333333333333)--(0.3333333333333333,0.3333333333333333), linewidth(1)); 
-    draw((0,0.3333333333333333)--(1,0), linewidth(1)); 
-    draw((0,0.25)--(0.25,0.25), linewidth(1)); 
-     /* dots and labels */
-    dot((1,0),dotstyle); 
-    label("$A$", (1.0301144111825382,0.02520847608297849), NE * labelscalefactor); 
-    dot((1,1),dotstyle); 
-    label("$B$", (1.0110324919169549,1.028372231759358), NE * labelscalefactor); 
-    dot((0,1),dotstyle); 
-    label("$C$", (0.010594724707085943,1.028372231759358), NE * labelscalefactor); 
-    dot((0,0),linewidth(4pt) + dotstyle); 
-    label("$D$", (0.016046701640109753,-0.06202315484540235), SE * labelscalefactor); 
-    dot((0,0.5),linewidth(4pt) + dotstyle); 
-    label("$Q_1$", (-0.08208888315431881,0.507708434655585), NE); 
-    dot((0.3333333333333333,0.3333333333333333),linewidth(4pt) + dotstyle); 
-    label("$P_1$", (0.35406927148758593,0.27327342653556147), NE * labelscalefactor); 
-    dot((0,0.3333333333333333),linewidth(4pt) + dotstyle); 
-    label("$Q_2$", (-0.07936289468780691,0.3305191843323114), W * labelscalefactor); 
-    dot((0.25,0.25),linewidth(4pt) + dotstyle); 
-    label("$P_2$", (0.2750156059587407,0.18331580714066875), S * labelscalefactor); 
-    dot((0,0.25),linewidth(4pt) + dotstyle); 
-    label("$Q_3$", (-0.0739109177547831,0.2569174957364901), W * labelscalefactor); 
-    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
-     /* end of picture */
+    draw((xmin,i)--(xmax,i), gridstyle);
+    /* end grid */
+
+    Label laxis; laxis.p = fontsize(10);
+    xaxis(xmin, xmax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true);
+    yaxis(ymin, ymax, Ticks(laxis, Step = 0.5, Size = 2, NoZero),EndArrow(6), above = true); /* draws axes; NoZero hides '0' label */
+    /* draw figures */
+    draw((0,1)--(1,1), linewidth(1) + zzttqq);
+    draw((1,1)--(1,0), linewidth(1) + zzttqq);
+    draw((1,0)--(0,0), linewidth(1) + zzttqq);
+    draw((0,0)--(0,1), linewidth(1) + zzttqq);
+    draw((1,1)--(0,0), linewidth(1));
+    draw((0,0.5)--(1,0), linewidth(1));
+    draw((0,0.3333333333333333)--(0.3333333333333333,0.3333333333333333), linewidth(1));
+    draw((0,0.3333333333333333)--(1,0), linewidth(1));
+    draw((0,0.25)--(0.25,0.25), linewidth(1));
+    /* dots and labels */
+    dot((1,0),dotstyle);
+    label("$A$", (1.0301144111825382,0.02520847608297849), NE * labelscalefactor);
+    dot((1,1),dotstyle);
+    label("$B$", (1.0110324919169549,1.028372231759358), NE * labelscalefactor);
+    dot((0,1),dotstyle);
+    label("$C$", (0.010594724707085943,1.028372231759358), NE * labelscalefactor);
+    dot((0,0),linewidth(4pt) + dotstyle);
+    label("$D$", (0.016046701640109753,-0.06202315484540235), SE * labelscalefactor);
+    dot((0,0.5),linewidth(4pt) + dotstyle);
+    label("$Q_1$", (-0.08208888315431881,0.507708434655585), NE);
+    dot((0.3333333333333333,0.3333333333333333),linewidth(4pt) + dotstyle);
+    label("$P_1$", (0.35406927148758593,0.27327342653556147), NE * labelscalefactor);
+    dot((0,0.3333333333333333),linewidth(4pt) + dotstyle);
+    label("$Q_2$", (-0.07936289468780691,0.3305191843323114), W * labelscalefactor);
+    dot((0.25,0.25),linewidth(4pt) + dotstyle);
+    label("$P_2$", (0.2750156059587407,0.18331580714066875), S * labelscalefactor);
+    dot((0,0.25),linewidth(4pt) + dotstyle);
+    label("$Q_3$", (-0.0739109177547831,0.2569174957364901), W * labelscalefactor);
+    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);
+    /* end of picture */
   \end{asy}
   \caption{2016 AMC 12B \#21}
 \end{figure}
 
 \begin{soln}
-We will use coordbash. First, let \(D=(0,0),A=(0,1),B=(1,1), \text{and }C=(1,0)\). Note that \(\ol{AQ_1}\) is equivalent to \(y=-2x+1\) and \(\ol{BD}\) is equivalent to \(y=x\) in this setup. Solving this system gives us \(P_1 = (\tfrac13,\tfrac13)\). Since \(Q_2\) is the foot of the altitude from \(P_1\) to \(\ol{CD}\), the \(x\)-coordinate of \(Q_2\) is the same as for \(P_1\) while the \(y\)-coordinate is just 0. In other words, \(Q_2 = (\tfrac13,0)\). We now see that \(\ol{AQ_2}=(y=-3x+1)\), \(P_2 = (\tfrac14,\tfrac14)\), and \(Q_3 = (\tfrac14,0)\). In general, we have
-\begin{align*}
-  P_i &= \left(\frac{1}{i+2},\frac{1}{i+2}\right)\\
-  Q_i &= \left(\frac{1}{i+1},0\right).
-\end{align*}
+  We will use coordbash. First, let \(D=(0,0),A=(0,1),B=(1,1), \text{and }C=(1,0)\). Note that \(\ol{AQ_1}\) is equivalent to \(y=-2x+1\) and \(\ol{BD}\) is equivalent to \(y=x\) in this setup. Solving this system gives us \(P_1 = (\tfrac13,\tfrac13)\). Since \(Q_2\) is the foot of the altitude from \(P_1\) to \(\ol{CD}\), the \(x\)-coordinate of \(Q_2\) is the same as for \(P_1\) while the \(y\)-coordinate is just 0. In other words, \(Q_2 = (\tfrac13,0)\). We now see that \(\ol{AQ_2}=(y=-3x+1)\), \(P_2 = (\tfrac14,\tfrac14)\), and \(Q_3 = (\tfrac14,0)\). In general, we have
+  \begin{align*}
+    P_i & = \left(\frac{1}{i+2},\frac{1}{i+2}\right) \\
+    Q_i & = \left(\frac{1}{i+1},0\right).
+  \end{align*}
 
-In general, to find \([DQ_iP_i]\), note that \(DQ_i\) is the base of the triangle and \(P_iQ_{i+1}\) is the height. Thus
-\[[DQ_iP_i] = \frac{1}{2}\cdot\frac{1}{i+1}\cdot\frac{1}{i+2}.\]
-What we have left to evaluate is the following sum
-\[\frac12\sum_{i=1}^{\infty}\frac{1}{i+1}\cdot\frac{1}{i+2}.\]
-Using partial fraction decomposition on the summand gets us
-\[\frac12\left[\sum_{i=1}^{\infty}\frac{1}{i+1}-\sum_{i=1}^{\infty}\frac{1}{i+2}\right].\]
-Note that we have a telescoping sum. It is not hard to see by writing out a few terms that our sum is equal to \(\fbox{\(\frac14\)}\).
+  In general, to find \([DQ_iP_i]\), note that \(DQ_i\) is the base of the triangle and \(P_iQ_{i+1}\) is the height. Thus
+  \[[DQ_iP_i] = \frac{1}{2}\cdot\frac{1}{i+1}\cdot\frac{1}{i+2}.\]
+  What we have left to evaluate is the following sum
+  \[\frac12\sum_{i=1}^{\infty}\frac{1}{i+1}\cdot\frac{1}{i+2}.\]
+  Using partial fraction decomposition on the summand gets us
+  \[\frac12\left[\sum_{i=1}^{\infty}\frac{1}{i+1}-\sum_{i=1}^{\infty}\frac{1}{i+2}\right].\]
+  Note that we have a telescoping sum. It is not hard to see by writing out a few terms that our sum is equal to \(\fbox{\(\frac14\)}\).
 \end{soln}
 
 \begin{problem*}
@@ -488,11 +488,11 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \[A^2 = \varepsilon^2 + \frac{2020}{2021}(A+\varepsilon)^2 = \varepsilon^2 + \frac{2020}{2021}(A^2+2A\varepsilon+\varepsilon^2).\]
   Distributing \(\tfrac{2020}{2021}\) and moving all the terms to the LHS gives us
   \begin{align*}
-    \frac{1}{2021}A^2-\frac{4040}{2021}A\varepsilon - \frac{4041}{2021}\varepsilon^2 &= 0\\
-    A^2-4040A\varepsilon-4041\varepsilon^2 &= 0 \\
-    (A-4041\varepsilon)(A+\varepsilon) &= 0.
+    \frac{1}{2021}A^2-\frac{4040}{2021}A\varepsilon - \frac{4041}{2021}\varepsilon^2 & = 0  \\
+    A^2-4040A\varepsilon-4041\varepsilon^2                                           & = 0  \\
+    (A-4041\varepsilon)(A+\varepsilon)                                               & = 0.
   \end{align*}
-  Thus we have two cases. 
+  Thus we have two cases.
   \begin{itemize}
     \ii  For the case where \(A+\varepsilon=0,\) since \(A\) is an integer, the only possible value for \(\varepsilon\) is 0, which then implies that \(A=0,\) giving us one value of \(x\) in this case.
     \ii For the case where \(A-4041\varepsilon =0,\) for the LHS to be an integer, the denominator of \(\varepsilon\) must be 4041. Thus \(\varepsilon = \tfrac{1}{4041},\tfrac{2}{4041},\dots,\tfrac{4040}{4041},\) giving us 4040 values of \(x\) in this case.
@@ -509,18 +509,18 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \[(Q,P;R,C)\overset{B}{=}(A,P;D,P_\infty).\]
   Computing cross ratios gives us the following.
   \begin{align*}
-    \frac{QR}{PR}\cdot\frac{PC}{QC} &= \frac{AD}{PD} \\
-    &= \frac{PD-PA}{PD} \\
-    &= 1 - \frac{PA}{PD} \\
-    &= 1- \frac{PQ}{PC} \quad (\text{since } \triangle PAQ \sim \triangle PDC).
+    \frac{QR}{PR}\cdot\frac{PC}{QC} & = \frac{AD}{PD}                                                            \\
+                                    & = \frac{PD-PA}{PD}                                                         \\
+                                    & = 1 - \frac{PA}{PD}                                                        \\
+                                    & = 1- \frac{PQ}{PC} \quad (\text{since } \triangle PAQ \sim \triangle PDC).
   \end{align*}
   Substituting the values given in the problem and letting \(u = 112+x\) gives us
   \begin{align*}
-    \frac{112}{735+112}\cdot\frac{735+112+x}{112+x} &= 1 - \frac{735}{735+112+x} \\
-    \frac{112}{847}\cdot\frac{735+u}{u} &= \frac{u}{735+u} \\
-    112(735+u)^2 &= 847u^2 \\
-    735u^2-2\cdot112\cdot735u - 112\cdot735^2 &= 0 \\
-    u^2-2\cdot112u - 112\cdot735 &= 0
+    \frac{112}{735+112}\cdot\frac{735+112+x}{112+x} & = 1 - \frac{735}{735+112+x} \\
+    \frac{112}{847}\cdot\frac{735+u}{u}             & = \frac{u}{735+u}           \\
+    112(735+u)^2                                    & = 847u^2                    \\
+    735u^2-2\cdot112\cdot735u - 112\cdot735^2       & = 0                         \\
+    u^2-2\cdot112u - 112\cdot735                    & = 0
   \end{align*}
   Applying the quadratic formula then gives us
   \[u = \frac{2\cdot112\pm \sqrt{2^2\cdot112^2 + 4\cdot 112\cdot735}}{2} = 112 \pm \sqrt{112(112+735)}.\]
@@ -535,45 +535,45 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \centering
   \begin{asy}
     /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-    import graph; size(6cm); 
+    import graph; size(6cm);
     real labelscalefactor = 0.5; /* changes label-to-point distance */
-    pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
-    pen dotstyle = black; /* point style */ 
+    pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */
+    pen dotstyle = black; /* point style */
     real xmin = -3.598272074286483, xmax = 6.317221331944386, ymin = -3.8871212599842413, ymax = 3.3759776600798737;  /* image dimensions */
-    
-    pair O = (0.,0.), B = (-1.9996096666319851,-2.2364170409634965), C = (2.0003902724334726,-2.2357188459091937), A = (-1.2827507406522278,2.711927457981898), Q = (2.500390264816655,-2.235631571527406), D = (2.2364170409634965,-1.999609666631985), P = (-1.4834712399265602,1.326390998277188); 
-    
-    draw((2.000323982402849,-1.8559394177669797)--(1.620544554260635,-1.8560057077976033)--(1.6206108442912586,-2.235785135939817)--C--cycle); 
-     /* draw figures */
-    draw(circle(O, 3.)); 
-    draw(A--B); 
-    draw(B--C); 
-    draw(C--A); 
-    draw(B--(1.9996096666319851,2.2364170409634965)); 
-    draw(B--Q); 
-    draw((-2.2364170409634965,1.9996096666319851)--Q); 
-    draw((1.9996096666319851,2.2364170409634965)--C); 
-     /* dots and labels */
-    dot(O,linewidth(4.pt) + dotstyle); 
-    label("$O$", (-0.2, -0.45), NE * labelscalefactor); 
-    dot(B,dotstyle); 
-    label("$B$", (-2.4,-2.5), NE * labelscalefactor); 
-    dot(C,linewidth(4.pt) + dotstyle); 
-    label("$C$", (2.053559167265112,-2.57), NE * labelscalefactor); 
-    dot(A,linewidth(4.pt) + dotstyle); 
-    label("$A$", (-1.4,2.8), NE * labelscalefactor); 
-    dot((1.9996096666319851,2.2364170409634965),linewidth(4.pt) + dotstyle); 
-    label("$B'$", (2.0287704337495347,2.3017992077381955), NE * labelscalefactor); 
-    dot(Q,linewidth(4.pt) + dotstyle); 
-    label("$Q$", (2.6,-2.4080601602214693), NE * labelscalefactor); 
-    dot(D,linewidth(4.pt) + dotstyle); 
-    label("$D$", (2.3262352359364606,-2.0844920686596704), NE * labelscalefactor); 
-    dot((-2.2364170409634965,1.9996096666319851),linewidth(4.pt) + dotstyle); 
-    label("$D'$", (-2.5,2.062174783754283), NE * labelscalefactor); 
-    dot(P,linewidth(4.pt) + dotstyle); 
-    label("$P$", (-1.4003377025719743,1.3515644229744037), NE * labelscalefactor); 
-    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
-     /* end of picture */
+
+    pair O = (0.,0.), B = (-1.9996096666319851,-2.2364170409634965), C = (2.0003902724334726,-2.2357188459091937), A = (-1.2827507406522278,2.711927457981898), Q = (2.500390264816655,-2.235631571527406), D = (2.2364170409634965,-1.999609666631985), P = (-1.4834712399265602,1.326390998277188);
+
+    draw((2.000323982402849,-1.8559394177669797)--(1.620544554260635,-1.8560057077976033)--(1.6206108442912586,-2.235785135939817)--C--cycle);
+    /* draw figures */
+    draw(circle(O, 3.));
+    draw(A--B);
+    draw(B--C);
+    draw(C--A);
+    draw(B--(1.9996096666319851,2.2364170409634965));
+    draw(B--Q);
+    draw((-2.2364170409634965,1.9996096666319851)--Q);
+    draw((1.9996096666319851,2.2364170409634965)--C);
+    /* dots and labels */
+    dot(O,linewidth(4.pt) + dotstyle);
+    label("$O$", (-0.2, -0.45), NE * labelscalefactor);
+    dot(B,dotstyle);
+    label("$B$", (-2.4,-2.5), NE * labelscalefactor);
+    dot(C,linewidth(4.pt) + dotstyle);
+    label("$C$", (2.053559167265112,-2.57), NE * labelscalefactor);
+    dot(A,linewidth(4.pt) + dotstyle);
+    label("$A$", (-1.4,2.8), NE * labelscalefactor);
+    dot((1.9996096666319851,2.2364170409634965),linewidth(4.pt) + dotstyle);
+    label("$B'$", (2.0287704337495347,2.3017992077381955), NE * labelscalefactor);
+    dot(Q,linewidth(4.pt) + dotstyle);
+    label("$Q$", (2.6,-2.4080601602214693), NE * labelscalefactor);
+    dot(D,linewidth(4.pt) + dotstyle);
+    label("$D$", (2.3262352359364606,-2.0844920686596704), NE * labelscalefactor);
+    dot((-2.2364170409634965,1.9996096666319851),linewidth(4.pt) + dotstyle);
+    label("$D'$", (-2.5,2.062174783754283), NE * labelscalefactor);
+    dot(P,linewidth(4.pt) + dotstyle);
+    label("$P$", (-1.4003377025719743,1.3515644229744037), NE * labelscalefactor);
+    clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);
+    /* end of picture */
   \end{asy}
   \caption{2015 AIME II \#11}
 \end{figure}
@@ -582,15 +582,15 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
 
   By Pythagoras on \(\triangle BOQ\) we have
   \begin{align*}
-    {OQ}^2 &= {BQ}^2 - {BO}^2 \\
-    &= \left(\frac{9}{2}\right)^2 - R^2.
+    {OQ}^2 & = {BQ}^2 - {BO}^2                   \\
+           & = \left(\frac{9}{2}\right)^2 - R^2.
   \end{align*}
   Also note that
   \begin{align*}
-    \text{Pow}_\omega(Q) = QC \cdot QB &= QD \cdot QD' \\
-    \frac12 \cdot \frac92 &= (OQ-R)(OQ+R)\\
-    \frac94 &= {OQ}^2 - R^2 \\
-    \frac94 &= \left(\frac{9}{2}\right)^2 - 2R^2.
+    \text{Pow}_\omega(Q) = QC \cdot QB & = QD \cdot QD'                       \\
+    \frac12 \cdot \frac92              & = (OQ-R)(OQ+R)                       \\
+    \frac94                            & = {OQ}^2 - R^2                       \\
+    \frac94                            & = \left(\frac{9}{2}\right)^2 - 2R^2.
   \end{align*}
   From this we determine that \(R = 3\).
 
@@ -598,14 +598,14 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \[\alpha = \angle PBO = \angle ABB' = \angle ACB' = 90\degree - \angle BCA.\]
   Rearranging this gives us \(\angle BCA = 90\degree - \alpha\).
 
-  Next, let \(\angle BAC = \angle BB'C = \theta\). Since \(\triangle BB'C\) is a right triangle with a right angle at \(C\), we have 
+  Next, let \(\angle BAC = \angle BB'C = \theta\). Since \(\triangle BB'C\) is a right triangle with a right angle at \(C\), we have
   \[\sin(\theta) = \frac{BC}{BB'} = \frac{4}{6}= \frac23.\]
 
-  Lastly, note that since \(\triangle PBO\) is a right triangle with a right angle at \(O\), we have that \(\cos(\alpha) = \frac{3}{PB}\). Applying the Law of Sines on \(\triangle ABC\) gives us 
+  Lastly, note that since \(\triangle PBO\) is a right triangle with a right angle at \(O\), we have that \(\cos(\alpha) = \frac{3}{PB}\). Applying the Law of Sines on \(\triangle ABC\) gives us
   \begin{align*}
-    \frac{5}{\sin(90\degree - \alpha)} &= \frac{4}{\sin(\theta)} \\
-    \cos(\alpha) &= \frac54 \cdot \frac23 \\
-    \frac{3}{PB} &= \frac56.
+    \frac{5}{\sin(90\degree - \alpha)} & = \frac{4}{\sin(\theta)} \\
+    \cos(\alpha)                       & = \frac54 \cdot \frac23  \\
+    \frac{3}{PB}                       & = \frac56.
   \end{align*}
   From this we determine that \(PB = \frac{18}{5}\), so our desired answer is \(\fbox{023}.\)
 \end{soln}
@@ -617,18 +617,18 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
 \begin{soln}
   Let \(\theta = \angle MAE = \angle RAE\). Since \(\angle ARM = 90\degree,\) \(\angle RMA = 90\degree - 2\theta.\) Since we know \(AM = 2,\) then \(AR = 2\sin(90\degree - 2\theta) = 2\cos(2\theta).\)
 
-  Next, let \(F\) denote the foot of the altitude from \(E\) to \(MR\). Since \([RAM] = [REM],\) and \(MR\) is a base of both triangles, we have that \(AR = EF\). Since \(AR\) and \(EF\) are also both perpendicular to \(MR,\) we know that \(AR \parallel EF.\) 
-  
-  Note that \(\triangle REM\) is isosceles since \(\angle MRE = \angle RME = \theta\). Thus the center of \(\omega\) lies on \(\ol{EF}\). If we then consider rotating \(\triangle REM\) about the center of \(\omega\) by \(180\degree,\) calling \(E'F'\) the segment that is the image of \(EF\) after this rotation, then we can translate \(AR\) so that \(A\) coincides with \(F'\) and \(R\) with \(F\). Clearly \(EF + AR +E'F' = EE'\) is a diameter of \(\omega\) and \(EF = AR = E'F'\). Thus, 
+  Next, let \(F\) denote the foot of the altitude from \(E\) to \(MR\). Since \([RAM] = [REM],\) and \(MR\) is a base of both triangles, we have that \(AR = EF\). Since \(AR\) and \(EF\) are also both perpendicular to \(MR,\) we know that \(AR \parallel EF.\)
+
+  Note that \(\triangle REM\) is isosceles since \(\angle MRE = \angle RME = \theta\). Thus the center of \(\omega\) lies on \(\ol{EF}\). If we then consider rotating \(\triangle REM\) about the center of \(\omega\) by \(180\degree,\) calling \(E'F'\) the segment that is the image of \(EF\) after this rotation, then we can translate \(AR\) so that \(A\) coincides with \(F'\) and \(R\) with \(F\). Clearly \(EF + AR +E'F' = EE'\) is a diameter of \(\omega\) and \(EF = AR = E'F'\). Thus,
   \[3\cdot2\cos(2\theta) = 2.\]
 
-  From this we derive that \(\cos(2\theta) = \frac13\) and \(\sin(2\theta) = \frac{2\sqrt2}{3}.\) Finally, it follows that 
+  From this we derive that \(\cos(2\theta) = \frac13\) and \(\sin(2\theta) = \frac{2\sqrt2}{3}.\) Finally, it follows that
   \begin{align*}
-    [MARE] &= 2[RAM] \\
-    &= \tfrac12 \cdot 2\cdot AM\cdot AR\cdot \sin(\angle RAM)\\
-    &= \tfrac12\cdot2\cdot2\cos(2\theta)\sin(2\theta) \\
-    &= 2\cdot\tfrac13\cdot\tfrac{2\sqrt2}{3} \\
-    &= \fbox{$\displaystyle \frac{8\sqrt2}{9}$}
+    [MARE] & = 2[RAM]                                                 \\
+           & = \tfrac12 \cdot 2\cdot AM\cdot AR\cdot \sin(\angle RAM) \\
+           & = \tfrac12\cdot2\cdot2\cos(2\theta)\sin(2\theta)         \\
+           & = 2\cdot\tfrac13\cdot\tfrac{2\sqrt2}{3}                  \\
+           & = \fbox{$\displaystyle \frac{8\sqrt2}{9}$}
   \end{align*}
 \end{soln}
 
@@ -639,13 +639,13 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
 \begin{soln}
   Note that \([ABC] = 30\sqrt2\) by Heron's Formula, and using the formula \([ABC] = \frac{abc}{4R}\), we have that the circumradius \(R = \frac{33\sqrt2}{8}\).
 
-  Let \(M_A\) denote the midpoint of \(BC\) and \(F_A\) denote the foot of the altitude from \(A\) to \(BC\). Denote \(M_B, M_C, F_B, F_C\) similarly. It is clear that \(\triangle AF_AD \sim \triangle OM_AD.\) From this we derive that 
-  \[\frac{OM_A}{AF_A} = \frac{OD}{AD} = \frac{AD-R}{AD} = 1 - \frac{R}{AD}.\] Rearranging this we have that 
+  Let \(M_A\) denote the midpoint of \(BC\) and \(F_A\) denote the foot of the altitude from \(A\) to \(BC\). Denote \(M_B, M_C, F_B, F_C\) similarly. It is clear that \(\triangle AF_AD \sim \triangle OM_AD.\) From this we derive that
+  \[\frac{OM_A}{AF_A} = \frac{OD}{AD} = \frac{AD-R}{AD} = 1 - \frac{R}{AD}.\] Rearranging this we have that
   \[\frac{1}{AD} = \frac{1}{R}\left(1 - \frac{OM_A}{AF_A}\right).\]
-  Similarly, we have that 
+  Similarly, we have that
   \[\frac{1}{BE} = \frac{1}{R}\left(1 - \frac{OM_B}{BF_B}\right)\]
   \[\frac{1}{CF} = \frac{1}{R}\left(1 - \frac{OM_C}{CF_C}\right).\]
-  Adding these three equations together we have that 
+  Adding these three equations together we have that
   \[\frac{1}{AD} + \frac{1}{BE} + \frac{1}{FC} = \frac{1}{R}\left(3 - \frac{OM_A}{AF_A} - \frac{OM_B}{BF_B} - \frac{OM_C}{CF_C}\right).\]
   Using the facts that \(OM_A = \sqrt{R^2 - 5^2}\) and \(AF_A = \frac{2[ABC]}{10}\) (and the analogous facts for \(B\) and \(C\)), after a big bash, we compute
   \[\frac{1}{AD} + \frac{1}{BE} + \frac{1}{FC}  = \frac{8\sqrt2}{33},\]
@@ -661,22 +661,22 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \textbf{Lemma.} The following inequality holds for all angles \(C\):
   \[2 \geq \sqrt3\sin(C)+\cos(C).\]
   \begin{subproof}
-    Rearranging, we have 
+    Rearranging, we have
     \begin{align*}
-      1 &\geq \frac{\sqrt3}{2}\sin(C) + \frac12\cos(C)\\
-      &= \cos\left(\frac{\pi}{6}\right)\sin(C)+\sin\left(\frac{\pi}{6}\right)\cos(C) \\
-      &= \sin\left(\frac{\pi}{6}+C\right).
+      1 & \geq \frac{\sqrt3}{2}\sin(C) + \frac12\cos(C)                                 \\
+        & = \cos\left(\frac{\pi}{6}\right)\sin(C)+\sin\left(\frac{\pi}{6}\right)\cos(C) \\
+        & = \sin\left(\frac{\pi}{6}+C\right).
     \end{align*}
     This clearly holds for all values of \(C\), and equality is achieved when \(C = \tfrac{\pi}{3} = 60\degree\).
   \end{subproof}
 
-  Now note by AM-GM and our Lemma that 
+  Now note by AM-GM and our Lemma that
   \begin{align*}
-    a^2 + b^2 &\geq 2ab \\
-    &\geq \left(\sqrt3\sin(C)+\cos(C)\right)ab \\
-    a^2+b^2-ab\cos(C) &\geq ab\sin(C)\sqrt3 \\
-    a^2+b^2 +(a^2+b^2-2ab\cos(C)) &\geq 2\cdot\left(2\cdot\tfrac12ab\sin(C)\right)\sqrt3 \\
-    a^2+b^2 +c^2 &\geq 4S\sqrt3,
+    a^2 + b^2                     & \geq 2ab                                              \\
+                                  & \geq \left(\sqrt3\sin(C)+\cos(C)\right)ab             \\
+    a^2+b^2-ab\cos(C)             & \geq ab\sin(C)\sqrt3                                  \\
+    a^2+b^2 +(a^2+b^2-2ab\cos(C)) & \geq 2\cdot\left(2\cdot\tfrac12ab\sin(C)\right)\sqrt3 \\
+    a^2+b^2 +c^2                  & \geq 4S\sqrt3,
   \end{align*}
   as desired, where equality holds when both \(C = 60\degree\) and \(a=b,\) meaning the triangle in question is equilateral.
 \end{proof}
@@ -687,16 +687,16 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   \[f(f(x+y)) = f(x)+f(y).\]
 \end{problem*}
 \begin{proof}
-  The answer is \(f(x) = x + b\) and \(f(x)=0\), both of which clearly work for all values of \(b\). We will now show that these are the only possible forms of \(f\). 
+  The answer is \(f(x) = x + b\) and \(f(x)=0\), both of which clearly work for all values of \(b\). We will now show that these are the only possible forms of \(f\).
 
-  Plugging in \(y=0\) into our given equation gives us 
+  Plugging in \(y=0\) into our given equation gives us
   \[f(f(x)) = f(x) + f(0).\]
-  Now our original equation simplifies to 
+  Now our original equation simplifies to
   \begin{align*}
-    f(x+y)+f(0) &= f(x) + f(y) \\
-    f(x+y)-f(0) &= f(x) - f(0) + f(y) - f(0).
+    f(x+y)+f(0) & = f(x) + f(y)                \\
+    f(x+y)-f(0) & = f(x) - f(0) + f(y) - f(0).
   \end{align*}
-  Now setting \(g(x) = f(x)-f(0)\) gives us 
+  Now setting \(g(x) = f(x)-f(0)\) gives us
   \[g(x+y) = g(x) + g(y).\]
   By Cauchy we have that \(g(x) = ax\), so \(f(x) = ax+b.\) Plugging this new \(f\) into our original equation gives us
   \[a^2(x+y) + ab + b = a(x+y)+2b,\]
@@ -705,23 +705,23 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
 \newpage
 \begin{problem*}
   [Evan Chen's Intro to Functional Equations Handout 8.2]
-  Find all functions \(f: \RR \rightarrow \RR\) satisfying 
+  Find all functions \(f: \RR \rightarrow \RR\) satisfying
   \[f(x^2+y) = f(f(x)-y)+4f(x)y\]
   for all real numbers \(x\) and \(y\).
 \end{problem*}
 \begin{proof}
-  We claim the only solutions are \(f(x)=0\) and \(f(x)=x^2\), both of which clearly work. We would like \(f(x^2+y)\) and \(f(f(x)-y)\) to cancel, so setting \(x^2+y=f(x)-y\) we have 
+  We claim the only solutions are \(f(x)=0\) and \(f(x)=x^2\), both of which clearly work. We would like \(f(x^2+y)\) and \(f(f(x)-y)\) to cancel, so setting \(x^2+y=f(x)-y\) we have
   \[4f(x)y = 0 \text{ and } y = \frac12\left(f(x)-x^2\right).\]
   It follows that
-    \[4f(x)\cdot\frac12(f(x)-x^2) = 0,\]
+  \[4f(x)\cdot\frac12(f(x)-x^2) = 0,\]
   so \(f(x)=0\) or \(f(x)=x^2\) for all values of \(x\).
-  
-  We must now deal with functions \(f\) for which there exist nonzero \(a,b\) where \(a \neq b\) and \(f(a)=0\) and \(f(b)=b^2\) (the so-called "Pointwise Trap"). Plugging in \(x=0\) into our given equation, recalling that \(f(0)=0\), we have that \(f(y)=f(-y),\) so \(f\) is even. Thus without loss of generality let \(b\) be negative. Plugging in \(x=a, y=-b\) into our given equation gives us 
+
+  We must now deal with functions \(f\) for which there exist nonzero \(a,b\) where \(a \neq b\) and \(f(a)=0\) and \(f(b)=b^2\) (the so-called "Pointwise Trap"). Plugging in \(x=0\) into our given equation, recalling that \(f(0)=0\), we have that \(f(y)=f(-y),\) so \(f\) is even. Thus without loss of generality let \(b\) be negative. Plugging in \(x=a, y=-b\) into our given equation gives us
   \begin{align*}
-    f(a^2-b) &= f(b) \\
-    (a^2-b)^2 &= b^2 \\
-    a^4-2a^2b &= 0 \\
-    a^2(a^2-2b) &= 0.
+    f(a^2-b)    & = f(b) \\
+    (a^2-b)^2   & = b^2  \\
+    a^4-2a^2b   & = 0    \\
+    a^2(a^2-2b) & = 0.
   \end{align*}
   Since \(a\) is nonzero, we have that \(a^2 = 2b\), but the LHS is positive while the RHS is negative, a contradiction. Hence the only valid functions are \(f(x)=0\) and \(f(x)=x^2\), as desired.
 \end{proof}
@@ -731,26 +731,26 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   Solve \(f(t^2+u)=tf(t)+f(u)\) over \(\RR\).
 \end{problem*}
 \begin{proof}
-  We claim \(f(t)=mt\) for any value of \(m\). This clearly works. 
+  We claim \(f(t)=mt\) for any value of \(m\). This clearly works.
 
-  First, setting \(t=1\) in our original equation gives us 
+  First, setting \(t=1\) in our original equation gives us
   \[f(u+1) = f(u) + f(1). \quad (\clubsuit)\]
   Also, setting \(u=0\) in \((\clubsuit)\) gives us \(f(0)=0.\)
 
-  Second, setting \(u=0\) in our original equation gives us 
+  Second, setting \(u=0\) in our original equation gives us
   \[f(t^2) = tf(t). \quad (\spadesuit)\]
-  Substituting the \(tf(t)\) term in our original equation for \(f(t^2)\) gives us 
+  Substituting the \(tf(t)\) term in our original equation for \(f(t^2)\) gives us
   \[f(t^2+u) = f(t^2) + f(u).\]
-  Therefore \(f\) is additive over the nonnegative reals (since \(t^2\) is always nonnegative). 
-  
-  Next, substituting \(-t\) for \(t\) in \((\spadesuit)\) gives us 
+  Therefore \(f\) is additive over the nonnegative reals (since \(t^2\) is always nonnegative).
+
+  Next, substituting \(-t\) for \(t\) in \((\spadesuit)\) gives us
   \[-tf(-t) = f((-t)^2) = f(t^2) = tf(t).\]
   This implies \(f\) is odd. Hence \(f\) is additive over all reals now.
 
-  We are almost done. Substituting \(t+1\) for \(t\) in \((\spadesuit)\) and using additivity gives us both 
+  We are almost done. Substituting \(t+1\) for \(t\) in \((\spadesuit)\) and using additivity gives us both
   \begin{align*}
-    f((t+1)^2) &= f(t^2+2t+1) = f(t^2) + 2f(t) + f(1) = tf(t) + 2f(t) + f(1)\\
-    f((t+1)^2) &= (t+1)f(t+1) \overset{\clubsuit}{=} (t+1)(f(t)+f(1)) = tf(t) + f(t) + tf(1) + f(1).
+    f((t+1)^2) & = f(t^2+2t+1) = f(t^2) + 2f(t) + f(1) = tf(t) + 2f(t) + f(1)                         \\
+    f((t+1)^2) & = (t+1)f(t+1) \overset{\clubsuit}{=} (t+1)(f(t)+f(1)) = tf(t) + f(t) + tf(1) + f(1).
   \end{align*}
   Subtracting these two gives us \(f(t) = tf(1),\) as desired.
 \end{proof}
@@ -762,51 +762,51 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
 \begin{proof}
   Note that \((2,1,0) \prec (3,0,0),\) so by Muirhead's inequality we proceed as follows:
   \begin{align*}
-    \sum_{\text{sym}} a^2b &\leq \sum_{\text{sym}} a^3 \\
-    a^2b+ab^2 + b^2c+bc^2 + c^2a+ca^2 &\leq a^3+a^3+b^3+b^3+c^3+c^3 \\
-    ab(a+b) + bc(b+c) + ca(c+a) &\leq 2\left(a^3+b^3+c^3\right).
+    \sum_{\text{sym}} a^2b            & \leq \sum_{\text{sym}} a^3      \\
+    a^2b+ab^2 + b^2c+bc^2 + c^2a+ca^2 & \leq a^3+a^3+b^3+b^3+c^3+c^3    \\
+    ab(a+b) + bc(b+c) + ca(c+a)       & \leq 2\left(a^3+b^3+c^3\right).
   \end{align*}
   Dividing both sides by \(abc\) gives us
   \begin{align*}
-    \frac{a+b}{c} + \frac{b+c}{a} + \frac{c+a}{b} &\leq 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc} \\
-    1 + \frac{a}{c} + \frac{b}{c} + 1 + \frac{b}{a} + \frac{c}{a} + 1 + \frac{c}{b} + \frac{a}{b} &\leq 3 + 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc} \\
-    (a+b+c)\left(\frac1a + \frac1b + \frac1c\right) &\leq 3 + 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc}.
+    \frac{a+b}{c} + \frac{b+c}{a} + \frac{c+a}{b}                                                 & \leq 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc}      \\
+    1 + \frac{a}{c} + \frac{b}{c} + 1 + \frac{b}{a} + \frac{c}{a} + 1 + \frac{c}{b} + \frac{a}{b} & \leq 3 + 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc}  \\
+    (a+b+c)\left(\frac1a + \frac1b + \frac1c\right)                                               & \leq 3 + 2\cdot\frac{\left(a^3+b^3+c^3\right)}{abc}.
   \end{align*}
   Since \(a+b+c=1,\) we have the desired result.
 \end{proof}
 \newpage
 \begin{problem*}
   [Evan Chen's Intro to Olympiad Inequalities Problem \#2.4.3]
-  If \(a+b+c=3\) then 
+  If \(a+b+c=3\) then
   \[\sum_{\text{cyc}} \frac{a}{2a^2+a+1} \leq \frac34.\]
 \end{problem*}
 \begin{proof}
-  First note that \(a,b,c\) are on the interval \([0,3]\). 
-  Define \(f(x) = \frac{x}{2x^2+x+1}.\) By taking the derivative twice we have that 
+  First note that \(a,b,c\) are on the interval \([0,3]\).
+  Define \(f(x) = \frac{x}{2x^2+x+1}.\) By taking the derivative twice we have that
   \[f''(x) = \frac{8x^3-12x-2}{\left(2x^2+x+1\right)^3}.\]
-  We want to find the inflection points of \(f\), so we define a new function 
+  We want to find the inflection points of \(f\), so we define a new function
   \(g(x) = 8x^3-12x-2\) in the hopes of finding where this new function has roots. It is not important to know exactly what the roots of \(g\) are but only if they are in the interval \([0,3]\) or not.
 
   \begin{table}[ht]
     \centering
     \begin{tabular}{|l|l|}
-    \hline
-    $x$ & $g(x)$ \\ \hline
-    -2  & -42    \\ \hline
-    -1  & 2      \\ \hline
-    0   & -2     \\ \hline
-    3   & 178    \\ \hline
+      \hline
+      $x$ & $g(x)$ \\ \hline
+      -2  & -42    \\ \hline
+      -1  & 2      \\ \hline
+      0   & -2     \\ \hline
+      3   & 178    \\ \hline
     \end{tabular}
-    \end{table}
+  \end{table}
   By the Intermediate Value Theorem, since \(g\) is continuous, if \(g\) switches sign on an interval, then \(g\) must have a root on that interval. Since \(g\) is a degree 3 polynomial, it is evident that only one root of \(g\) (and thus only one inflection point of \(f\)) falls in the interval \([0,3].\)
 
   We are now motivated to use the \(n-1\) EV principle. In other words, when the quantity \(f(a)+f(b)+f(c)\) achieves a maximum, two of the variables are equal, and without loss of generality we let \(b=c\). Given that \(a+b+c=3\), we only have to check the maximum value of \(f(a)+2f(b) = f(3-2b) + 2f(b),\) represented in the following inequality, which is left for us to verify.
 
   \begin{align*}
-    &f(3-2b)+2f(b) = \frac{3-2b}{2(3-2b)^2+(3-2b)+1} + \frac{2b}{2b^2+b+1} \leq \frac34 \\
-    &\Longleftrightarrow (b-1)^2(8b^2-14b+9) \geq 0.
+     & f(3-2b)+2f(b) = \frac{3-2b}{2(3-2b)^2+(3-2b)+1} + \frac{2b}{2b^2+b+1} \leq \frac34 \\
+     & \Longleftrightarrow (b-1)^2(8b^2-14b+9) \geq 0.
   \end{align*}
-  Calculating the discriminant of \(8b^2-14b+9\) reveals that this factor is always positive. Thus we have verified this inequality with the equality case at \(a,b,c=1\), so we are done. 
+  Calculating the discriminant of \(8b^2-14b+9\) reveals that this factor is always positive. Thus we have verified this inequality with the equality case at \(a,b,c=1\), so we are done.
 \end{proof}
 
 \begin{problem*}
@@ -814,30 +814,53 @@ Note that we have a telescoping sum. It is not hard to see by writing out a few 
   Given a sequence of real numbers, a move consists of choosing two terms and replacing each with their arithmetic mean. Show that there exists a sequence of 2015 distinct real numbers such that after one initial move is applied to the sequence -- no matter what move -- there is always a way to continue with a finite sequence of moves so as to obtain in the end a constant sequence.
 \end{problem*}
 \begin{proof}
-  Denote a move between two terms \(x,y\) by \((x,y)\). They are replaced by \(\frac{x+y}{2},\frac{x+y}{2}\). Note that the sum of the two terms before and after the move is invariant. 
+  Denote a move between two terms \(x,y\) by \((x,y)\). They are replaced by \(\frac{x+y}{2},\frac{x+y}{2}\). Note that the sum of the two terms before and after the move is invariant.
 
   We are motivated by this invariance to consider the sequence
   \[\{a_n\} = -1007,\dots,-2,-1,0,1,2,\dots,1007,\]
   whence our goal contains 2015 zeroes
-  since the sums of all \(a_n\) (as well as all the terms in the final sequence) is 0. 
-  We claim that after any initial move done to \(a_n\), 
-  there will always be a set of moves that will take 
-  the resulting sequence all the way to \(b_n\). 
+  since the sums of all \(a_n\) (as well as all the terms in the final sequence) is 0.
+  We claim that after any initial move done to \(a_n\),
+  there will always be a set of moves that will take
+  the resulting sequence all the way to \(b_n\).
   We proceed with casework.
 
   \textbf{Case 1}: The first move does not contain the 0 term.
 
-  Say the first move was \((a,b)\) for nonzero \(a,b\) where \(a \neq b\). We can then perform the moves 
-  \[(-a,-b), (\tfrac{a+b}{2},\tfrac{-a-b}{2}), (\tfrac{a+b}{2},\tfrac{-a-b}{2})\] and then \[(c,-c)\]
-  for all remaining pairs of nonzero terms \(c,-c\). 
+  Say the first move was \((a,b)\) for nonzero \(a,b\) where \(a \neq b\). We can then perform the moves
+  \[(-a,-b), (\tfrac{a+b}{2},\tfrac{-a-b}{2}), (\tfrac{a+b}{2},\tfrac{-a-b}{2})\]
+  and then \((c,-c)\) for all remaining pairs of nonzero terms \(\{c,-c\}\).
   If \(a=-b,\) our work is even easier since we can
   just perform the move \((a,-b)\) and finish off with \((c,-c)\) for all remaining nonzero pairs of terms. In either case, we are left with a sequence of 2015 zeroes, as desired.
 
   \textbf{Case 2}: The first move does contain the 0 term.
 
-  Say the first move was \((0,a)\). We can combine all pairs \((c,-c)\) similarly as before leaving a sequence with only the terms \(\tfrac{a}{2}, \tfrac{a}{2}, -a\), and 2012 zeroes. 
+  Say the first move was \((0,a)\). We can combine all pairs \((c,-c)\) similarly as before leaving a sequence with only the terms \(\tfrac{a}{2}, \tfrac{a}{2}, -a\), and 2012 zeroes.
   We can then perform the remaining moves
   \[(-a,0),(\tfrac{a}{2},\tfrac{-a}{2}),(\tfrac{a}{2},\tfrac{-a}{2})\]
   to end up with a sequence of 2015 zeroes, as desired.
+\end{proof}
+\newpage
+\begin{problem*}
+  [Evan Chen's Intro to Olympiad Inequalities Problem \#3.3.2]
+  If \(a^2+b^2+c^2=12\), then \(a\cdot\sqrt[3]{b^2+c^2}+b\cdot\sqrt[3]{c^2+a^2}+c\cdot\sqrt[3]{a^2+b^2} \leq 12.\)
+\end{problem*}
+\begin{proof}
+  We first make the substitution \(a^2=x,b^2=y,c^2=z\) so that \(x+y+z=12\). We can rewrite the LHS of our inequality in the following way.
+  \[
+    \sum_{cyc}a\sqrt[3]{b^2+c^2} 
+    = \sum_{cyc}a\sqrt[3]{12-a^2}
+    = \sum_{cyc}\sqrt{x}\sqrt[3]{12-x}.
+  \]
+  Define \(f(x) = \sqrt{x}\sqrt[3]{12-x}.\) The interval that we care about is when \(x \in (0,12)\), otherwise the value of \(f(x)\) is clearly nonpositive or complex. Note that
+  \[f'(x) = \frac{\sqrt[3]{12-x}}{2\sqrt{x}} - \frac{\sqrt{x}}{3\left(12-x\right)^{2/3}} = \frac{36-5x}{6\sqrt{x}\left(12-x\right)^{2/3}}.\]Now note that \(f'\) is decreasing since \(f'\) has a decreasing function in the numerator and an increasing function in the denominator for all \(x\) on our interval. This then implies that \(f\) is concave on the interval \((0,12)\). We are motivated to use Jensen's Inequality.
+
+  Our inequality is finished as follows.
+  \begin{align*}
+    \sum_{cyc}\sqrt{x}\sqrt[3]{12-x} & = f(x)+f(y)+f(z)                    \\
+                                     & \leq 3f\left(\frac{x+y+z}{3}\right) \\
+                                     & = 3f(4)                             \\
+                                     & = 12.
+  \end{align*}
 \end{proof}
 \end{document}
